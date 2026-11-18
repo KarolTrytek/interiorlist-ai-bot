@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import argparse
 import logging
-import random
+import os
 import sys
 import time
 
@@ -25,12 +25,14 @@ from bot.ekstrakcja import analizuj_html, status_produktu, wybierz_oferte, zdjec
 from bot.mail import odmiana, wyslij, zbuduj
 from bot.porownanie import BLAD, WYMAGA_ZAMIENNIKOW, ZMIANA_CENY, Problem, istotna_zmiana, ocen, zl
 from bot.stan import Stan, teraz
-from bot.strona import Strona, pobierz, zamknij_przegladarke
+from bot.pobieranie import pobierz_wszystkie
+from bot.strona import Strona, domena, pobierz
 from bot import sklepy
 from bot import zamienniki as modul_zamiennikow
 
 log = logging.getLogger("bot")
 MAX_PROB_ZAMIENNIKOW = 3
+KATALOG_STRON = "strony-do-sprawdzenia"
 
 
 def test_url(url: str) -> None:
@@ -83,17 +85,6 @@ def pobierz_i_odczytaj(url: str):
     return strona, wynik
 
 
-def _sprawdz_produkt(p, pamiec: dict) -> tuple[list[Problem], str]:
-    """Sprawdza jeden produkt. Zwraca (problemy, adres zdjęcia ze strony sklepu)."""
-    if p.url in pamiec:
-        strona, wynik = pamiec[p.url]
-    else:
-        strona, wynik = pobierz_i_odczytaj(p.url)
-        pamiec[p.url] = (strona, wynik)
-        time.sleep(config.PRZERWA_MIEDZY_STRONAMI_S + random.uniform(0, 1.5))
-    return ocen(p, strona, wynik), zdjecie_og(strona.html)
-
-
 def _cena_sie_zmienila(stare: dict, nowe: dict) -> bool:
     """Znana sprawa „zmiana ceny” wraca jako nowa tylko, gdy cena znowu istotnie się ruszyła."""
     a, b = stare.get("cena"), nowe.get("cena")
@@ -111,15 +102,23 @@ def przebieg(args) -> int:
     wszystkie: list[Problem] = []
     bledne_ids: set[str] = set()
     czekajace = 0
-    pamiec: dict[str, tuple] = {}  # ten sam link w kilku rekordach sprawdzamy raz
+    strony, problemowe_sklepy = pobierz_wszystkie([p.url for p in produkty])
+    os.makedirs(KATALOG_STRON, exist_ok=True)
 
     for i, p in enumerate(produkty, 1):
         log.info("[%d/%d] %s", i, len(produkty), p.nazwa)
+        strona, wynik = strony.get(p.url, (Strona(url=p.url, blad="nie pobrano"), None))
         try:
-            problemy, zdjecie = _sprawdz_produkt(p, pamiec)
+            problemy, zdjecie = ocen(p, strona, wynik), zdjecie_og(strona.html)
         except Exception as e:  # noqa: BLE001 — jedna dziwna strona nie może zatrzymać całego przebiegu
             log.exception("   Nieoczekiwany błąd przy sprawdzaniu")
             problemy, zdjecie = ocen(p, Strona(url=p.url, blad=f"błąd bota: {type(e).__name__}"), None), ""
+        if strona.przez_przegladarke:
+            log.info("   (odczytane przez przeglądarkę)")
+        if any(x.typ == BLAD for x in problemy) and strona.html and not strona.zablokowana:
+            # Strona się wczytała, ale bot jej nie rozumie — zapisujemy do wglądu (artefakt w GitHub Actions).
+            with open(os.path.join(KATALOG_STRON, f"{domena(p.url)}__{p.id}.html"), "w", encoding="utf-8") as f:
+                f.write(f"<!-- {p.url} -->\n" + strona.html)
 
         # Chwilowe błędy sklepu: zgłaszamy dopiero po kilku nieudanych próbach z rzędu.
         if any(x.typ == BLAD for x in problemy):
@@ -150,7 +149,6 @@ def przebieg(args) -> int:
             log.info("   → %s: %s", x.etykieta, x.opis)
         wszystkie += problemy
 
-    zamknij_przegladarke()
     if not czesciowy:
         znane_ids = {p.id for p in produkty}
         stan.bledy = {k: v for k, v in stan.bledy.items() if k in znane_ids}
@@ -200,6 +198,8 @@ def przebieg(args) -> int:
         f"Sprawdzono {n} {odmiana(n, 'produkt', 'produkty', 'produktów')} w {czas // 60} min {czas % 60} s"
         + (f" · {len(bledne_ids)} nie dało się dziś sprawdzić" if bledne_ids else "")
         + (f" · {czekajace} czeka na potwierdzenie wycofania" if czekajace else "")
+        + (" · sklepy blokujące bota: " + ", ".join(f"{d} ({n})" for d, n in problemowe_sklepy.most_common(8))
+           if problemowe_sklepy else "")
         + f" · {teraz():%d.%m.%Y, %H:%M}"
     )
     log.info(podsumowanie)

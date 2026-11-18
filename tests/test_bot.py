@@ -460,3 +460,179 @@ def test_polecany_materac_160_nie_myli_ceny():
     html = ld({"@type": "Product", "offers": {"price": 3699, "availability": "InStock"}}).replace(
         "<body>x</body>", f'<body><script type="application/json">{dane}</script></body>')
     assert sprawdz(produkt(nazwa="Łóżko Theo", cena=3958.0), html) == []
+
+
+# ------------------------------------------------------------ sklepy bez danych strukturalnych (np. Shoper)
+
+def test_shoper_cena_z_klasy_main_price():
+    html = """<html><body><div class="product-main">
+      <h1>Sofa Adapt 3-osobowa z poduchami</h1>
+      <div class="price"><em class="main-price">5 289,00 zł</em></div>
+      <div class="availability"><span class="second">dostępny na zamówienie</span></div>
+    </div>
+    <div class="related-products"><em class="main-price">299,00 zł</em> Koc Nook</div></body></html>"""
+    w = analizuj_html(html)
+    assert w.ceny == [5289.0] and w.zrodlo == "cena widoczna na stronie"
+    assert sprawdz(produkt(nazwa="Sofa Adapt", cena=5289.0), html) == []
+    problemy = sprawdz(produkt(nazwa="Sofa Adapt", cena=4999.0), html)
+    assert [x.typ for x in problemy] == [ZMIANA_CENY] and problemy[0].nowa_cena == 5289.0
+
+
+def test_cena_z_tekstu_cena_zl():
+    html = "<html><body><h1>Sofa</h1><p>Poszczególne warianty mogą różnić się ceną</p><p>Cena 5 289,00 zł</p>" \
+           "<p>dostępny na zamówienie</p></body></html>"
+    assert analizuj_html(html).ceny == [5289.0]
+    assert sprawdz(produkt(cena=5289.0), html) == []
+
+
+def test_widoczna_cena_nie_wycofuje_przy_slabej_frazie():
+    html = "<html><body><em class='main-price'>5 289,00 zł</em><p>Tkanina Deluxe 05 chwilowo niedostępna</p></body></html>"
+    assert sprawdz(produkt(cena=5289.0), html) == []
+
+
+def test_widoczna_cena_nie_bierze_koszyka():
+    html = "<html><body><div class='basket'>Koszyk: 0,00 zł</div><h1>Stolik</h1></body></html>"
+    assert analizuj_html(html).ceny == []
+
+
+def test_kategoria_z_wieloma_cenami_to_nie_produkt():
+    kafelki = "".join(f'<div class="product"><em class="main-price">{c} zł</em></div>' for c in ("999,00", "1 299,00", "2 499,00", "3 199,00"))
+    html = f"<html><head><title>Sofy</title></head><body>{kafelki}</body></html>"
+    assert analizuj_html(html).ceny == []
+    assert [x.typ for x in sprawdz(produkt(cena=1299.0), html, url_koncowy="https://jysk.pl/sofy")] == [BLAD]
+
+
+# ------------------------------------------------------------ WooCommerce Store API
+
+WOO = {"id": 5895, "name": "Panel węglowy Bambu Naturale", "is_in_stock": True, "is_purchasable": True,
+       "low_stock_remaining": None, "stock_availability": {"text": "", "class": "in-stock"},
+       "prices": {"price": "19920", "regular_price": "24900", "sale_price": "19920",
+                  "currency_code": "PLN", "currency_minor_unit": 2}}
+
+
+def test_woocommerce_api_cena_i_dostepnosc():
+    from bot.sklepy import wynik_z_woocommerce
+    w = wynik_z_woocommerce(WOO, 20)
+    assert w.ceny == [199.2] and w.jest_produkt
+    assert ocen(produkt(cena=199.2), strona("<html>wp-content</html>"), w) == []
+    problemy = ocen(produkt(cena=249.0), strona("<html>wp-content</html>"), w)
+    assert [x.typ for x in problemy] == [ZMIANA_CENY] and problemy[0].nowa_cena == 199.2
+
+
+def test_woocommerce_api_brak_na_stanie_i_malo():
+    from bot.sklepy import wynik_z_woocommerce
+    brak = {**WOO, "is_in_stock": False, "stock_availability": {"class": "out-of-stock"}}
+    assert [x.typ for x in ocen(produkt(cena=199.2), strona("<html></html>"), wynik_z_woocommerce(brak, 20))] == [NIEDOST]
+    malo = {**WOO, "low_stock_remaining": 3}
+    assert [x.typ for x in ocen(produkt(cena=199.2), strona("<html></html>"), wynik_z_woocommerce(malo, 20))] == [MALO_SZTUK]
+
+
+def test_slug_woocommerce():
+    from bot.sklepy import _slug_woocommerce
+    url = "https://monteforest.com/product/panel-weglowy-bambu-a5895-2/?_gl=1*x&gclid=abc"
+    assert _slug_woocommerce(url, "<html><link href='/wp-content/x.css'></html>") == "panel-weglowy-bambu-a5895-2"
+    assert _slug_woocommerce("https://scandicsofa.pl/pl/p/Sofa/5444", "<html></html>") == ""
+
+
+def test_pobierz_i_odczytaj_uzywa_api_bez_przegladarki(monkeypatch):
+    import sprawdz
+    from bot import sklepy, strona as modul_strony
+    html = "<html><head><link href='/wp-content/themes/x.css'></head><body>" + \
+           "".join(f"<span class='woocommerce-Price-amount'>{c} zł</span>" for c in (199, 249, 289, 435)) + "</body></html>"
+    monkeypatch.setattr(modul_strony, "pobierz_http", lambda url: Strona(url=url, url_koncowy=url, kod=200, html=html))
+    monkeypatch.setattr(modul_strony, "pobierz_przegladarka", lambda url: (_ for _ in ()).throw(AssertionError("przeglądarka niepotrzebna")))
+    monkeypatch.setattr(sklepy, "z_api", lambda url, h: sklepy.wynik_z_woocommerce(WOO, 20))
+    s, w = sprawdz.pobierz_i_odczytaj("https://monteforest.com/product/panel/")
+    assert w.ceny == [199.2] and w.zrodlo.startswith("API")
+
+
+# ------------------------------------------------------------ dywany/plakaty: rozmiar z Airtable
+
+def test_dywan_cena_innego_rozmiaru_nie_alarmuje():
+    html = ld({"@type": "Product", "name": "Dywan Avafors", "offers": {"price": 399, "availability": "InStock"}})
+    assert sprawdz(produkt(nazwa="Dywan wełniany - Avafors Wool Bubble", cena=1989.0, wymiar="200 x 300 cm"), html) == []
+
+
+def test_dywan_wariant_z_rozmiarem_porownany():
+    html = ld({"@type": "ProductGroup", "hasVariant": [
+        {"@type": "Product", "name": "Dywan 80x150", "offers": {"price": 399, "availability": "InStock"}},
+        {"@type": "Product", "name": "Dywan 200x300", "offers": {"price": 2199, "availability": "InStock"}},
+    ]})
+    problemy = sprawdz(produkt(nazwa="Dywan wełniany Avafors", cena=1989.0, wymiar="200x300"), html)
+    assert [x.typ for x in problemy] == [ZMIANA_CENY] and problemy[0].nowa_cena == 2199.0
+
+
+def test_dywan_bez_wymiaru_w_airtable_dziala_jak_zwykle():
+    html = ld({"@type": "Product", "offers": {"price": 399, "availability": "InStock"}})
+    assert [x.typ for x in sprawdz(produkt(nazwa="Dywan Retro", cena=749.0, wymiar=""), html)] == [ZMIANA_CENY]
+
+
+def test_sofa_nie_jest_scisla():
+    from bot.porownanie import staly_wariant
+    assert staly_wariant(produkt(nazwa="Sofa Marsala", wymiar="220 x 95")) == ""
+    assert staly_wariant(produkt(nazwa="Pure Dywan wełniany Rocco", wymiar="160x230")) == "160x230"
+    assert staly_wariant(produkt(nazwa="Plakat Green Canopy", wymiar="50x70")) == "50x70"
+
+
+# ------------------------------------------------------------ pobieranie: tempo i blokady
+
+def test_pobieranie_pomija_sklep_ktory_nie_odpowiada(monkeypatch):
+    from bot import pobieranie
+    wywolania = []
+    def fake_http(url):
+        wywolania.append(url)
+        return Strona(url=url, blad="ConnectTimeout", brak_polaczenia=True)
+    monkeypatch.setattr(pobieranie, "pobierz_http", fake_http)
+    monkeypatch.setattr(pobieranie.time, "sleep", lambda s: None)
+    monkeypatch.setattr(pobieranie.config, "UZYJ_PRZEGLADARKI", False)
+    adresy = [f"https://decormarket.pl/p{i}" for i in range(6)]
+    wyniki, problemowe = pobieranie.pobierz_wszystkie(adresy)
+    assert len(wywolania) == 2  # po dwóch brakach odpowiedzi reszta pominięta
+    assert all(wyniki[u][0].blad for u in adresy) and problemowe["decormarket.pl"] == 6
+
+
+def test_pobieranie_429_czeka_i_ponawia(monkeypatch):
+    from bot import pobieranie
+    odpowiedzi = iter([Strona(url="u", kod=429, retry_after="5", zablokowana=True),
+                       Strona(url="u", kod=200, html=ld({"@type": "Product", "offers": {"price": 10}}))])
+    spanie = []
+    monkeypatch.setattr(pobieranie, "pobierz_http", lambda url: next(odpowiedzi))
+    monkeypatch.setattr(pobieranie.time, "sleep", lambda s: spanie.append(s))
+    monkeypatch.setattr(pobieranie.config, "UZYJ_PRZEGLADARKI", False)
+    wyniki, _ = pobieranie.pobierz_wszystkie(["https://desenio.pl/a"])
+    assert 5 in spanie and wyniki["https://desenio.pl/a"][1].ceny == [10.0]
+
+
+def test_przegladarka_nie_meczy_blokujacego_sklepu(monkeypatch):
+    from bot import pobieranie
+    monkeypatch.setattr(pobieranie, "pobierz_http", lambda url: Strona(url=url, kod=403, html="x", zablokowana=True))
+    proby = []
+    def fake_browser(url):
+        proby.append(url)
+        return Strona(url=url, kod=403, html="x", zablokowana=True, przez_przegladarke=True)
+    monkeypatch.setattr(pobieranie, "pobierz_przegladarka", fake_browser)
+    monkeypatch.setattr(pobieranie, "zamknij_przegladarke", lambda: None)
+    monkeypatch.setattr(pobieranie.time, "sleep", lambda s: None)
+    monkeypatch.setattr(pobieranie.config, "UZYJ_PRZEGLADARKI", True)
+    pobieranie.pobierz_wszystkie([f"https://gornapolka.com/p{i}" for i in range(10)])
+    assert len(proby) == 2
+
+
+def test_chwilowe_404_odsiane_ponownym_sprawdzeniem(monkeypatch):
+    from bot import pobieranie
+    odpowiedzi = iter([Strona(url="u", kod=404, html="<html></html>"),
+                       Strona(url="u", kod=200, html=ld({"@type": "Product", "offers": {"price": 10}}))])
+    monkeypatch.setattr(pobieranie, "pobierz_http", lambda url: next(odpowiedzi))
+    monkeypatch.setattr(pobieranie.time, "sleep", lambda s: None)
+    monkeypatch.setattr(pobieranie.config, "UZYJ_PRZEGLADARKI", False)
+    wyniki, _ = pobieranie.pobierz_wszystkie(["https://jysk.pl/a"])
+    assert wyniki["https://jysk.pl/a"][0].kod == 200
+
+
+def test_prawdziwe_404_zostaje(monkeypatch):
+    from bot import pobieranie
+    monkeypatch.setattr(pobieranie, "pobierz_http", lambda url: Strona(url=url, kod=404, html="<html></html>"))
+    monkeypatch.setattr(pobieranie.time, "sleep", lambda s: None)
+    monkeypatch.setattr(pobieranie.config, "UZYJ_PRZEGLADARKI", False)
+    wyniki, _ = pobieranie.pobierz_wszystkie(["https://jysk.pl/a"])
+    assert wyniki["https://jysk.pl/a"][0].kod == 404

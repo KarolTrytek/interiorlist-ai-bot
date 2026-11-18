@@ -4,3 +4,4 @@ __pycache__/
 .venv/
 raport*.html
 stan/*.tmp
+strony-do-sprawdzenia/

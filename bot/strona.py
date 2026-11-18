@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import logging
 import re
+import threading
 from dataclasses import dataclass
 from urllib.parse import urlparse
 
@@ -37,6 +38,9 @@ class Strona:
     blad: str = ""
     zablokowana: bool = False
     przez_przegladarke: bool = False
+    retry_after: str = ""
+    brak_polaczenia: bool = False  # serwer w ogóle nie odpowiedział (timeout, zerwane połączenie)
+    pominieta: bool = False  # nie sprawdzana, bo sklep wcześniej w tym przebiegu nie odpowiadał
 
     @property
     def nie_istnieje(self) -> bool:
@@ -64,13 +68,13 @@ def _wyglada_na_blokade(kod: int | None, html: str) -> bool:
     return False
 
 
-_sesja: requests.Session | None = None
+_watek = threading.local()  # osobna sesja HTTP dla każdego wątku pobierającego
 
 
 def _pobierz_sesje() -> requests.Session:
-    global _sesja
+    _sesja = getattr(_watek, "sesja", None)
     if _sesja is None:
-        _sesja = requests.Session()
+        _sesja = _watek.sesja = requests.Session()
         _sesja.headers.update(
             {
                 "User-Agent": config.USER_AGENT,
@@ -92,9 +96,21 @@ def pobierz_http(url: str) -> Strona:
             odp.encoding = odp.apparent_encoding or "utf-8"
         strona.html = odp.text
         strona.zablokowana = _wyglada_na_blokade(odp.status_code, odp.text)
+        strona.retry_after = odp.headers.get("Retry-After", "")
     except requests.RequestException as e:
-        strona.blad = f"{type(e).__name__}: {e}"[:300]
+        strona.blad = krotki_blad(e)
+        strona.brak_polaczenia = isinstance(e, (requests.ConnectionError, requests.Timeout))
     return strona
+
+
+def krotki_blad(e: Exception) -> str:
+    """Jednolinijkowy opis błędu (bez wielolinijkowych logów Playwrighta)."""
+    tekst = re.sub(r" at https?://\S+", "", str(e).split("\n")[0])
+    if "Timeout" in type(e).__name__ or "timeout" in tekst.lower():
+        return f"{type(e).__name__}: sklep nie odpowiedział w {int(config.TIMEOUT_S)} s"
+    if "RemoteDisconnected" in tekst or "Connection aborted" in tekst:
+        return "sklep zerwał połączenie"
+    return f"{type(e).__name__}: {tekst}"[:200]
 
 
 # ---------------------------------------------------------------- przeglądarka
@@ -150,7 +166,8 @@ def pobierz_przegladarka(url: str) -> Strona:
         finally:
             kontekst.close()
     except Exception as e:  # noqa: BLE001
-        strona.blad = f"przeglądarka: {type(e).__name__}: {e}"[:300]
+        strona.blad = f"przeglądarka: {krotki_blad(e)}"
+        strona.brak_polaczenia = "ERR_" in str(e) or "Timeout" in type(e).__name__
     return strona
 
 

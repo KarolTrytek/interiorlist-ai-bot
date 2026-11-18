@@ -2,8 +2,9 @@ name: Sprawdzanie produktów
 
 on:
   schedule:
-    # Godziny w UTC. Zimą to 7:00, 12:00, 17:00 i 21:00 w Polsce (latem o godzinę później).
-    - cron: "0 6,11,16,20 * * *"
+    # Raz dziennie. Godzina w UTC: 5:00 UTC = 6:00 w Polsce zimą (latem 7:00).
+    # GitHub potrafi opóźnić start o kilkanaście minut.
+    - cron: "0 5 * * *"
   workflow_dispatch:
     inputs:
       limit:
@@ -91,6 +92,15 @@ jobs:
         with:
           name: podglad-maila
           path: raport.html
+          if-no-files-found: ignore
+
+      - name: Strony, których bot nie umie odczytać (do wglądu)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: strony-do-sprawdzenia
+          path: strony-do-sprawdzenia/
+          retention-days: 7
           if-no-files-found: ignore
 
       - name: Zapis pamięci bota

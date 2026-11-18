@@ -7,7 +7,7 @@ lub są niedostępne, dołącza propozycje zamienników przygotowane przez Claud
 ## Jak to działa
 
 ```
-GitHub Actions (4× dziennie, darmowe minuty)
+GitHub Actions (raz dziennie o 6:00, darmowe minuty)
  1. Airtable → lista produktów (tylko odczyt)
  2. Strona sklepu → cena i dostępność z danych, które sklep publikuje dla Google (JSON-LD),
     zapasowo mikrodane, meta tagi i frazy typu „ostatnie sztuki”, „oferta zakończona”.

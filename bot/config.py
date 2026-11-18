@@ -57,6 +57,11 @@ STALE_WARIANTY: list[tuple[str, str]] = [
     (r"^(?:\S+\s+)?(?<!na )(?<!do )(?<!pod )(?<!przy )(?<!nad )ł[oó]żk[oa]\b", "160x200"),
 ]
 
+# Produkty sprzedawane w wielu rozmiarach (dywany, plakaty…): cenę porównujemy tylko z wariantem
+# o rozmiarze z pola Dimension w Airtable. Gdy strona go nie pokazuje — pomijamy porównanie ceny
+# (domyślny wariant na stronie to zwykle inny rozmiar, więc wyszedłby fałszywy alarm).
+SCISLE_ROZMIARY = r"^(?:\S+\s+){0,3}?(?:dywan|chodnik|wycieraczk|plakat|obraz|fototapet|materac|zasłon|firan|roleta)"
+
 # --- Progi ---
 # Zmiana ceny jest zgłaszana, gdy różnica przekracza OBA progi.
 PROG_CENY_PROCENT = _env_float("PROG_CENY_PROCENT", 2.0)
@@ -65,9 +70,11 @@ PROG_CENY_ZL = _env_float("PROG_CENY_ZL", 5.0)
 PROG_MALO_SZTUK = int(_env_float("PROG_MALO_SZTUK", 20))
 # Ile kolejnych nieudanych sprawdzeń, zanim zgłosimy "nie udało się sprawdzić".
 PROG_BLEDOW = int(_env_float("PROG_BLEDOW", 3))
-# Ile przebiegów z rzędu produkt musi wyglądać na wycofany, zanim wyślemy alarm
-# (chroni przed chwilowym 404 czy przerwą w sklepie; przy 4 przebiegach dziennie = alarm w ciągu ~5 h).
-PROG_WYCOFANIA = int(_env_float("PROG_WYCOFANIA", 2))
+# Ile przebiegów z rzędu produkt musi wyglądać na wycofany, zanim wyślemy alarm.
+# Przy jednym przebiegu dziennie: 1 — chwilowe 404 odsiewa ponowne sprawdzenie w tym samym przebiegu.
+PROG_WYCOFANIA = int(_env_float("PROG_WYCOFANIA", 1))
+# Po ilu sekundach ponownie sprawdzić strony, które wyglądają na usunięte (404, „nie znaleziono”).
+PONOWNE_SPRAWDZENIE_S = _env_float("PONOWNE_SPRAWDZENIE_S", 90)
 
 # --- Pobieranie stron ---
 PRZERWA_MIEDZY_STRONAMI_S = _env_float("PRZERWA_S", 2.5)
@@ -119,7 +126,7 @@ MAIL_HASLO = _env("GMAIL_APP_PASSWORD") or _env("GMAIL_APPPASWORD")
 MAIL_ODBIORCY = [a.strip() for a in _env("GMAIL_RECEIVER").split(",") if a.strip()]
 # Raz dziennie (pierwszy przebieg po tej godzinie) przypomnienie o wciąż otwartych sprawach.
 PRZYPOMNIENIE_CODZIENNE = _env_bool("PRZYPOMNIENIE_CODZIENNE", True)
-GODZINA_PRZYPOMNIENIA = int(_env_float("GODZINA_PRZYPOMNIENIA", 7))
+GODZINA_PRZYPOMNIENIA = int(_env_float("GODZINA_PRZYPOMNIENIA", 0))
 
 STREFA = ZoneInfo("Europe/Warsaw")
 SCIEZKA_STANU = _env("SCIEZKA_STANU", "stan/stan.json")

@@ -87,11 +87,16 @@ def _opis_airtable(p: Produkt) -> str:
 
 
 def staly_wariant(p: Produkt) -> str:
-    """Rozmiar, który zawsze sprawdzamy dla tego typu produktu (np. łóżka -> 160x200), albo ""."""
+    """Rozmiar, którego wariant MUSI się zgadzać, żeby porównać cenę (np. łóżka -> 160x200,
+    dywany -> rozmiar z Airtable), albo "" gdy produkt nie ma wariantów rozmiaru."""
     nazwa = p.nazwa.strip().lower()
     for wzor, wymiar in config.STALE_WARIANTY:
         if re.search(wzor, nazwa):
-            return wymiar
+            # Rozmiar wpisany w nazwie („Łóżko Minima (140x200)”) ma pierwszeństwo przed domyślnym.
+            w_nazwie = re.search(r"(\d{2,3})\s*[x×]\s*(\d{3})", nazwa)
+            return f"{w_nazwie.group(1)}x{w_nazwie.group(2)}" if w_nazwie else wymiar
+    if re.search(config.SCISLE_ROZMIARY, nazwa) and len(re.findall(r"\d{2,4}", p.wymiar or "")) >= 2:
+        return p.wymiar
     return ""
 
 
