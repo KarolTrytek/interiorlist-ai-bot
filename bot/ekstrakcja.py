@@ -117,6 +117,8 @@ class WynikStrony:
     sztuk_z_tekstu: int | None = None
     fraza: str = ""
     soft_404: bool = False
+    # warianty (rozmiary) wyczytane z danych konfiguratora na stronie — tylko do dopasowania ceny
+    warianty_html: list[Oferta] = field(default_factory=list)
 
     @property
     def jest_produkt(self) -> bool:
@@ -278,6 +280,91 @@ def _z_json_ld(soup: BeautifulSoup) -> tuple[list[Oferta], str]:
     return oferty, nazwa
 
 
+# ---------------------------------------------------------------- warianty z konfiguratora
+
+_KLUCZE_CENY = ("display_price", "price", "final_price", "finalPrice", "price_gross", "priceGross",
+                "gross", "cena", "cena_brutto", "salePrice", "sale_price")
+_KLUCZ_WARIANTOW = re.compile(r"variant|variation|wariant|combination|kombinac", re.I)
+
+
+def _napisy(obiekt: dict, glebokosc: int = 2) -> list[str]:
+    """Krótkie napisy z obiektu wariantu (nazwa, atrybuty) — bez adresów i długich opisów."""
+    wynik = []
+    for wartosc in obiekt.values():
+        if isinstance(wartosc, str) and len(wartosc) <= 80 and "://" not in wartosc:
+            wynik.append(wartosc)
+        elif isinstance(wartosc, dict) and glebokosc > 1:
+            wynik += _napisy(wartosc, glebokosc - 1)
+        elif isinstance(wartosc, list) and glebokosc > 1:
+            for el in wartosc[:20]:
+                if isinstance(el, str) and len(el) <= 80:
+                    wynik.append(el)
+                elif isinstance(el, dict):
+                    wynik += _napisy(el, glebokosc - 1)
+    return wynik
+
+
+def _cena_wariantu(obiekt: dict, w_groszach: bool) -> float | None:
+    for k in _KLUCZE_CENY:
+        if k in obiekt and not isinstance(obiekt[k], (dict, list)):
+            cena = parsuj_cene(obiekt[k])
+            if cena:
+                return round(cena / 100, 2) if w_groszach and isinstance(obiekt[k], int) else cena
+    return None
+
+
+def _warianty_z_listy(lista: list, w_groszach: bool) -> list[Oferta]:
+    wynik = []
+    for el in lista:
+        if isinstance(el, dict):
+            cena = _cena_wariantu(el, w_groszach)
+            etykieta = " | ".join(_napisy(el))
+            if cena and etykieta:
+                wynik.append(Oferta(cena=cena, nazwa=etykieta))
+    return wynik
+
+
+def _szukaj_list_wariantow(dane, w_groszach: bool, glebokosc: int = 0) -> list[Oferta]:
+    if glebokosc > 8:
+        return []
+    wynik = []
+    if isinstance(dane, dict):
+        for klucz, wartosc in dane.items():
+            if isinstance(wartosc, list) and _KLUCZ_WARIANTOW.search(str(klucz)):
+                wynik += _warianty_z_listy(wartosc, w_groszach)
+            elif isinstance(wartosc, (dict, list)):
+                wynik += _szukaj_list_wariantow(wartosc, w_groszach, glebokosc + 1)
+    elif isinstance(dane, list):
+        for el in dane[:200]:
+            wynik += _szukaj_list_wariantow(el, w_groszach, glebokosc + 1)
+    return wynik
+
+
+def _z_konfiguratora(soup: BeautifulSoup) -> list[Oferta]:
+    """Ceny poszczególnych rozmiarów z danych, którymi sklep zasila konfigurator.
+    Tylko listy jawnie opisane jako warianty — nie łapiemy np. materaców z „polecanych”."""
+    warianty: list[Oferta] = []
+    # WooCommerce: <form class="variations_form" data-product_variations="[...]">
+    for el in soup.find_all(attrs={"data-product_variations": True}):
+        dane = _wczytaj_json(el["data-product_variations"])
+        if isinstance(dane, list):
+            warianty += _warianty_z_listy(dane, w_groszach=False)
+    # JSON w <script> (Shopify i inne): listy pod kluczami "variants", "variations" itp.
+    for skrypt in soup.find_all("script"):
+        typ = (skrypt.get("type") or "").lower()
+        if "ld+json" in typ:
+            continue
+        tekst = (skrypt.string or "").strip()
+        if not tekst.startswith(("{", "[")) or len(tekst) > 3_000_000:
+            continue
+        dane = _wczytaj_json(tekst)
+        if dane is None:
+            continue
+        shopify = "shopify" in str(skrypt.attrs).lower() or '"compare_at_price"' in tekst
+        warianty += _szukaj_list_wariantow(dane, w_groszach=shopify)
+    return warianty
+
+
 # ---------------------------------------------------------------- mikrodane i meta
 
 def _z_mikrodanych(soup: BeautifulSoup) -> list[Oferta]:
@@ -397,6 +484,11 @@ def analizuj_html(html: str, prog_malo: int = 20) -> WynikStrony:
                     o.status = statusy[0]
                 break
 
+    try:
+        wynik.warianty_html = _z_konfiguratora(soup)
+    except Exception:  # noqa: BLE001 — to tylko dodatek, nie może zepsuć odczytu strony
+        wynik.warianty_html = []
+
     tekst = tekst_strony(soup)
     _frazy(tekst, wynik, prog_malo)
 
@@ -419,22 +511,34 @@ def zdjecie_og(html: str) -> str:
     return url if url.startswith("https://") else ""
 
 
-def wybierz_oferte(wynik: WynikStrony, wymiar: str) -> Oferta | None:
-    """Gdy produkt ma warianty, wybiera wariant pasujący do wymiaru z Airtable — ale tylko
-    jeśli pasuje dokładnie jeden wariant i zgadzają się wszystkie liczby. Inaczej None
-    (wtedy oceniamy wszystkie warianty łącznie, co jest bezpieczniejsze)."""
-    if not wynik.oferty:
-        return None
-    if len(wynik.oferty) == 1:
-        return wynik.oferty[0]
+def _pasuje_do_wymiaru(nazwa: str, liczby: set[str]) -> bool:
+    return bool(nazwa) and all(re.search(rf"(?<!\d){n}(?!\d)", nazwa) for n in liczby)
+
+
+def wybierz_oferte(wynik: WynikStrony, wymiar: str, scisle: bool = False) -> Oferta | None:
+    """Gdy produkt ma warianty, wybiera wariant pasujący do wymiaru — ale tylko jeśli pasuje
+    dokładnie jeden wariant i zgadzają się wszystkie liczby. Inaczej None (wtedy oceniamy
+    wszystkie warianty łącznie, co jest bezpieczniejsze).
+
+    `scisle=True` (np. łóżka zawsze 160x200): nawet jedyna oferta na stronie musi mieć ten
+    rozmiar w nazwie — sklepy z konfiguratorem pokazują w danych cenę najmniejszego rozmiaru."""
     liczby = set(re.findall(r"\d{2,4}", wymiar or ""))
-    if not liczby:
+    if not scisle and len(wynik.oferty) == 1:
+        return wynik.oferty[0]
+    if not wynik.oferty or not liczby:
+        return wynik.oferty[0] if len(wynik.oferty) == 1 and not scisle else None
+    pasujace = [o for o in wynik.oferty if _pasuje_do_wymiaru(o.nazwa, liczby)]
+    if len(pasujace) == 1:
+        return pasujace[0]
+    if pasujace:
         return None
-    pasujace = [
-        o for o in wynik.oferty
-        if o.nazwa and all(re.search(rf"(?<!\d){n}(?!\d)", o.nazwa) for n in liczby)
-    ]
-    return pasujace[0] if len(pasujace) == 1 else None
+    # Ceny wariantów z danych konfiguratora (WooCommerce, Shopify i podobne).
+    ceny = {o.cena for o in wynik.warianty_html if _pasuje_do_wymiaru(o.nazwa, liczby)}
+    if len(ceny) == 1:
+        statusy = {o.status for o in wynik.oferty if o.status != NIEZNANY}
+        status = statusy.pop() if len(statusy) == 1 else NIEZNANY
+        return Oferta(cena=ceny.pop(), status=status, nazwa=f"wariant {wymiar} (z konfiguratora)")
+    return None
 
 
 def status_produktu(wynik: WynikStrony, oferta: Oferta | None, prog_malo: int = 20) -> tuple[str, str]:

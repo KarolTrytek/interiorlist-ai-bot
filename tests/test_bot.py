@@ -400,3 +400,63 @@ def test_claude_nie_dostaje_hasel(monkeypatch):
     env = _srodowisko_dla_claude()
     assert "AIRTABLE_TOKEN" not in env and "GMAIL_APP_PASSWORD" not in env
     assert env["CLAUDE_CODE_OAUTH_TOKEN"] == "ok" and "PATH" in env
+
+
+# ------------------------------------------------------------ łóżka zawsze 160x200
+
+@pytest.mark.parametrize("nazwa,wynik", [
+    ("Łóżko Theo", "160x200"), ("Rama łóżka Nordic", "160x200"), ("Łóżko tapicerowane Velvet", "160x200"),
+    ("Tapicerowane łóżko Ava", "160x200"), ("Narzuta na łóżko Boho", ""), ("Pościel do łóżka len", ""),
+    ("Stolik nocny przy łóżku", ""), ("Sofa Marsala", ""),
+])
+def test_staly_wariant(nazwa, wynik):
+    from bot.porownanie import staly_wariant
+    assert staly_wariant(produkt(nazwa=nazwa)) == wynik
+
+
+def test_lozko_cena_mniejszego_rozmiaru_nie_alarmuje():
+    # Konfigurator: w danych strony tylko cena najmniejszego rozmiaru.
+    html = ld({"@type": "Product", "name": "Łóżko Theo", "offers": {"price": 3699, "availability": "InStock"}})
+    assert sprawdz(produkt(nazwa="Łóżko Theo", cena=3958.0), html) == []
+
+
+def test_lozko_wariant_160_z_json_ld():
+    html = ld({"@type": "ProductGroup", "name": "Łóżko Theo", "hasVariant": [
+        {"@type": "Product", "name": "Łóżko Theo 140x200", "offers": {"price": 3699, "availability": "InStock"}},
+        {"@type": "Product", "name": "Łóżko Theo 160x200", "offers": {"price": 4199, "availability": "InStock"}},
+    ]})
+    problemy = sprawdz(produkt(nazwa="Łóżko Theo", cena=3958.0), html)
+    assert [x.typ for x in problemy] == [ZMIANA_CENY] and problemy[0].nowa_cena == 4199.0
+
+
+def test_lozko_wariant_160_z_woocommerce():
+    warianty = json.dumps([
+        {"attributes": {"attribute_pa_rozmiar": "140x200"}, "display_price": 3699, "variation_id": 1},
+        {"attributes": {"attribute_pa_rozmiar": "160x200"}, "display_price": 3958, "variation_id": 2},
+    ]).replace('"', "&quot;")
+    html = ld({"@type": "Product", "name": "Łóżko Theo", "offers": {"price": 3699, "availability": "InStock"}}).replace(
+        "<body>x</body>", f'<body><form class="variations_form" data-product_variations="{warianty}"></form></body>')
+    assert sprawdz(produkt(nazwa="Łóżko Theo", cena=3958.0), html) == []
+    assert [x.typ for x in sprawdz(produkt(nazwa="Łóżko Theo", cena=3500.0), html)] == [ZMIANA_CENY]
+
+
+def test_lozko_shopify_ceny_w_groszach():
+    dane = json.dumps({"product": {"title": "Łóżko Theo", "variants": [
+        {"title": "140 x 200", "price": 369900, "compare_at_price": None},
+        {"title": "160 x 200", "price": 395800, "compare_at_price": None},
+    ]}})
+    html = ld({"@type": "Product", "offers": {"price": 3699, "availability": "InStock"}}).replace(
+        "<body>x</body>", f'<body><script type="application/json" data-product-json>{dane}</script></body>')
+    assert sprawdz(produkt(nazwa="Łóżko Theo", cena=3958.0), html) == []
+
+
+def test_lozko_niedostepne_nadal_wykrywane():
+    html = ld({"@type": "Product", "name": "Łóżko Theo", "offers": {"price": 3699, "availability": "OutOfStock"}})
+    assert [x.typ for x in sprawdz(produkt(nazwa="Łóżko Theo", cena=3958.0), html)] == [NIEDOST]
+
+
+def test_polecany_materac_160_nie_myli_ceny():
+    dane = json.dumps({"recommended": [{"name": "Materac 160x200", "price": 1299}]})
+    html = ld({"@type": "Product", "offers": {"price": 3699, "availability": "InStock"}}).replace(
+        "<body>x</body>", f'<body><script type="application/json">{dane}</script></body>')
+    assert sprawdz(produkt(nazwa="Łóżko Theo", cena=3958.0), html) == []

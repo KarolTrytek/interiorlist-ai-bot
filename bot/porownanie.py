@@ -86,6 +86,15 @@ def _opis_airtable(p: Produkt) -> str:
     return " · ".join(czesci)
 
 
+def staly_wariant(p: Produkt) -> str:
+    """Rozmiar, który zawsze sprawdzamy dla tego typu produktu (np. łóżka -> 160x200), albo ""."""
+    nazwa = p.nazwa.strip().lower()
+    for wzor, wymiar in config.STALE_WARIANTY:
+        if re.search(wzor, nazwa):
+            return wymiar
+    return ""
+
+
 def istotna_zmiana(stara: float, nowa: float) -> bool:
     roznica = abs(nowa - stara)
     return roznica > config.PROG_CENY_ZL and (roznica / stara * 100) > config.PROG_CENY_PROCENT
@@ -144,7 +153,9 @@ def ocen(p: Produkt, strona: Strona, wynik: WynikStrony | None) -> list[Problem]
                            na_stronie="Brak danych produktu")
 
     # 3. Mamy dane produktu — status i cena.
-    oferta = wybierz_oferte(wynik, p.wymiar)
+    staly = staly_wariant(p)
+    wymiar = staly or p.wymiar
+    oferta = wybierz_oferte(wynik, wymiar, scisle=bool(staly))
     status, zrodlo = status_produktu(wynik, oferta, config.PROG_MALO_SZTUK)
     problemy: list[Problem] = []
 
@@ -165,8 +176,14 @@ def ocen(p: Produkt, strona: Strona, wynik: WynikStrony | None) -> list[Problem]
     if p.cena:
         ceny = wynik.ceny
         cena_wariantu = oferta.cena if oferta is not None else None
+        if cena_wariantu is not None and "konfiguratora" in oferta.nazwa and not 0.5 <= cena_wariantu / p.cena <= 2:
+            cena_wariantu = None  # nieprawdopodobna cena z konfiguratora — nie ryzykujemy alarmu
+        if staly and cena_wariantu is None:
+            # Strona nie podaje ceny rozmiaru 160x200 (np. konfigurator „Skonfiguruj i kup”).
+            # Lepiej nie porównywać niż zgłaszać cenę mniejszego rozmiaru.
+            return problemy
         uwaga = ""
-        if p.wymiar and len(wynik.ceny) == 1 and re.search(r"\d", p.wymiar):
+        if not staly and p.wymiar and len(wynik.ceny) == 1 and re.search(r"\d", p.wymiar):
             uwaga = f"Sprawdź, czy strona pokazuje wariant {p.wymiar} — sklep mógł podać cenę innego wariantu."
         if cena_wariantu is not None:
             if istotna_zmiana(p.cena, cena_wariantu):

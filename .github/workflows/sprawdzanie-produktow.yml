@@ -13,6 +13,10 @@ on:
         description: "Nie wysyłaj maila"
         type: boolean
         default: false
+      z_zamiennikami:
+        description: "Tryb testowy: szukaj też zamienników (zużywa limit subskrypcji Claude)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write # zapis pliku stan/stan.json (pamięć bota)
@@ -55,9 +59,10 @@ jobs:
           key: playwright-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
 
       - name: Przeglądarka zapasowa (dla sklepów, które blokują zwykłe zapytania)
-        if: vars.PRZEGLADARKA != '0'
         continue-on-error: true # bez niej bot i tak sprawdzi większość sklepów
-        run: python -m playwright install --with-deps chromium
+        run: |
+          if [ "$PRZEGLADARKA" = "0" ]; then echo "Przeglądarka wyłączona."; exit 0; fi
+          python -m playwright install --with-deps chromium
 
       - name: Claude Code (do zamienników)
         continue-on-error: true # bez niego bot działa, tylko bez zamienników
@@ -69,10 +74,12 @@ jobs:
         env:
           LIMIT: ${{ inputs.limit }}
           BEZ_MAILA: ${{ inputs.bez_maila }}
+          Z_ZAMIENNIKAMI: ${{ inputs.z_zamiennikami }}
         run: |
           ARGS=()
           if [[ "$LIMIT" =~ ^[0-9]+$ ]]; then ARGS+=(--limit "$LIMIT" --podglad raport.html); fi
           if [ "$BEZ_MAILA" = "true" ]; then ARGS+=(--bez-maila); fi
+          if [ "$Z_ZAMIENNIKAMI" = "true" ]; then ARGS+=(--z-zamiennikami); fi
           python sprawdz.py "${ARGS[@]}"
 
       - name: Podgląd maila (tryb testowy)

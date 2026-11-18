@@ -49,6 +49,14 @@ STATUS_DOSTEPNY = "Dostępny"
 STATUS_MALO = "Mało sztuk"
 STATUS_WYCOFANY = "Wycofany"
 
+# Rozmiar, który ZAWSZE wybieramy dla danego typu produktu (dopasowanie po nazwie z Airtable).
+# Łóżka na listach są zawsze 160x200 — bot sprawdza cenę właśnie tego rozmiaru, a jeśli sklep
+# jej nie pokazuje w danych strony, pomija porównanie ceny (dostępność sprawdza normalnie).
+STALE_WARIANTY: list[tuple[str, str]] = [
+    # „Łóżko Theo”, „Rama łóżka X”, „Łóżko tapicerowane …” — ale nie „Narzuta na łóżko”
+    (r"^(?:\S+\s+)?(?<!na )(?<!do )(?<!pod )(?<!przy )(?<!nad )ł[oó]żk[oa]\b", "160x200"),
+]
+
 # --- Progi ---
 # Zmiana ceny jest zgłaszana, gdy różnica przekracza OBA progi.
 PROG_CENY_PROCENT = _env_float("PROG_CENY_PROCENT", 2.0)

@@ -162,6 +162,7 @@ def przebieg(args) -> int:
     swieze_zamienniki: set[str] = set()
     if not czesciowy:
         stan.wyczysc_zamienniki(wycofane_ids)
+    if not czesciowy or args.z_zamiennikami:  # w testach zamienniki tylko na życzenie (zużywają limit Claude)
         swieze_zamienniki = _szukaj_zamiennikow(args, stan, wszystkie, wycofane_ids)
 
     for x in wszystkie:
@@ -262,6 +263,7 @@ def main() -> int:
     parser.add_argument("--formula", help="własna formuła Airtable (tryb testowy, bez zapisu stanu)")
     parser.add_argument("--bez-maila", action="store_true", help="nie wysyłaj maila")
     parser.add_argument("--bez-zamiennikow", action="store_true", help="nie szukaj zamienników")
+    parser.add_argument("--z-zamiennikami", action="store_true", help="w trybie testowym też szukaj zamienników")
     parser.add_argument("--podglad", metavar="PLIK.html", help="zapisz treść maila do pliku")
     parser.add_argument("--nie-zapisuj-stanu", action="store_true")
     args = parser.parse_args()
