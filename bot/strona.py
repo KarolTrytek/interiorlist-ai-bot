@@ -167,6 +167,12 @@ def pobierz(url: str, potrzebna_przegladarka=None) -> Strona:
         return strona
     log.info("   ↻ ponawiam przez przeglądarkę (%s)", strona.blad or f"HTTP {strona.kod}")
     druga = pobierz_przegladarka(url)
+    if druga.blad:
+        log.info("   ✗ przeglądarka też nie dała rady: %s", druga.blad)
+    elif druga.zablokowana:
+        log.info("   ✗ przeglądarka: sklep blokuje także ją (HTTP %s)", druga.kod)
+    else:
+        log.info("   ✓ przeglądarka: strona pobrana (HTTP %s)", druga.kod)
     # Bierzemy wynik przeglądarki, chyba że ona też poległa, a HTTP coś zwrócił.
     if druga.blad and not strona.blad and strona.html:
         return strona

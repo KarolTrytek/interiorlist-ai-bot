@@ -113,6 +113,10 @@ def przebieg(args) -> int:
             bledne_ids.add(p.id)
             stan.bledy[p.id] = stan.bledy.get(p.id, 0) + 1
             if stan.bledy[p.id] < config.PROG_BLEDOW:
+                for x in problemy:
+                    if x.typ == BLAD:
+                        log.info("   · nie udało się sprawdzić (%d/%d, zgłoszę po %d z rzędu): %s",
+                                 stan.bledy[p.id], config.PROG_BLEDOW, config.PROG_BLEDOW, x.opis)
                 problemy = [x for x in problemy if x.typ != BLAD]
         else:
             stan.bledy.pop(p.id, None)
