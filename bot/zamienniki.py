@@ -217,8 +217,29 @@ _POTRZEBNE_CLAUDE = {"CLAUDE_CODE_OAUTH_TOKEN", "ANTHROPIC_API_KEY"}
 def _srodowisko_dla_claude() -> dict:
     """Claude dostaje tylko swój token — bez haseł do Airtable i Gmaila."""
     env = {k: v for k, v in os.environ.items() if k in _POTRZEBNE_CLAUDE or not _TAJNE.search(k)}
+    # Token skopiowany z terminala często ma złamania linii albo spacje — wtedy API zwraca 401.
+    for k in _POTRZEBNE_CLAUDE:
+        if env.get(k):
+            env[k] = re.sub(r"\s+", "", env[k])
     env["DISABLE_AUTOUPDATER"] = "1"
     return env
+
+
+def opis_tokenu() -> str:
+    """Diagnostyka bez ujawniania tokenu: czy wygląda poprawnie i ile ma znaków."""
+    token = re.sub(r"\s+", "", os.getenv("CLAUDE_CODE_OAUTH_TOKEN") or "")
+    if not token:
+        return "brak tokenu CLAUDE_CODE_OAUTH_TOKEN"
+    surowy = os.getenv("CLAUDE_CODE_OAUTH_TOKEN") or ""
+    uwagi = []
+    if not token.startswith("sk-ant-oat"):
+        uwagi.append("nie zaczyna się od sk-ant-oat01- — to chyba nie token z `claude setup-token`")
+    if surowy != surowy.strip() or re.search(r"\s", surowy.strip()):
+        uwagi.append("zawierał spacje/złamania linii (usunięte automatycznie)")
+    return f"token: {len(token)} znaków" + (" — " + "; ".join(uwagi) if uwagi else ", format OK")
+
+
+_BLEDY_LOGOWANIA = re.compile(r"401|invalid bearer|failed to authenticate|authentication|unauthori|oauth", re.I)
 
 
 def uruchom_claude(prompt: str, katalog: Path) -> tuple[dict | None, set[str], dict]:
@@ -330,8 +351,11 @@ def znajdz(p: Produkt) -> dict:
         zamknij_przegladarke()
         powod = meta.get("blad") or meta.get("result") or "brak odpowiedzi"
         log.warning("   Claude nie zwrócił propozycji: %s", str(powod)[:300])
+        blad_logowania = bool(_BLEDY_LOGOWANIA.search(str(powod)))
+        if blad_logowania:
+            log.warning("   Problem z tokenem Claude (%s). Wygeneruj nowy: `claude setup-token`.", opis_tokenu())
         return {"propozycje": [], "uwagi": f"Nie udało się wygenerować zamienników ({str(powod)[:200]}).",
-                "odrzucone": [], "blad": True}
+                "odrzucone": [], "blad": True, "blad_logowania": blad_logowania}
 
     try:
         zaakceptowane, odrzucone = weryfikuj(wynik.get("propozycje") or [], otwarte)

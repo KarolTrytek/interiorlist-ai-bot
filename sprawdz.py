@@ -247,6 +247,11 @@ def _szukaj_zamiennikow(args, stan: Stan, wszystkie: list[Problem], wycofane_ids
             log.exception("   Błąd przy szukaniu zamienników")
             dane = {"propozycje": [], "uwagi": f"Błąd bota przy szukaniu zamienników ({type(e).__name__}).",
                     "odrzucone": [], "blad": True}
+        if dane.get("blad_logowania"):
+            # Zły/wygasły token — nie liczymy tego jako próby i nie męczymy kolejnych produktów.
+            # Po poprawieniu tokenu zamienniki zostaną wyszukane w następnym przebiegu.
+            x.zamienniki = dane
+            break
         dane["data"] = teraz().isoformat(timespec="minutes")
         dane["proby"] = poprzednie_proby + 1
         stan.zamienniki[x.produkt.id] = dane

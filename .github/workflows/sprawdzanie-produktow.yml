@@ -33,9 +33,11 @@ jobs:
       AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
       BASE_ID: ${{ secrets.BASE_ID }}
       AIRTABLE_TABELA_ID: ${{ vars.AIRTABLE_TABELA_ID }}
-      GMAIL_SENDER: ${{ vars.GMAIL_SENDER }}
+      GMAIL_SENDER: ${{ vars.GMAIL_SENDER || secrets.GMAIL_SENDER }}
       GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
       GMAIL_RECEIVER: ${{ secrets.GMAIL_RECEIVER }}
+      SMTP_SERWER: ${{ vars.SMTP_SERWER }}
+      SMTP_PORT: ${{ vars.SMTP_PORT }}
       # Token z `claude setup-token` — zamienniki liczą się do Twojej subskrypcji Claude, nie do API.
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       MODEL_ZAMIENNIKOW: ${{ vars.MODEL_ZAMIENNIKOW }}
@@ -62,7 +64,8 @@ jobs:
         continue-on-error: true # bez niej bot i tak sprawdzi większość sklepów
         run: |
           if [ "$PRZEGLADARKA" = "0" ]; then echo "Przeglądarka wyłączona."; exit 0; fi
-          python -m playwright install --with-deps chromium
+          # Sama przeglądarka bez czcionek systemowych (biblioteki są już na maszynie GitHuba) — szybciej.
+          python -m playwright install --only-shell chromium
 
       - name: Claude Code (do zamienników)
         continue-on-error: true # bez niego bot działa, tylko bez zamienników
@@ -83,7 +86,7 @@ jobs:
           python sprawdz.py "${ARGS[@]}"
 
       - name: Podgląd maila (tryb testowy)
-        if: inputs.limit != ''
+        if: always() && inputs.limit != ''
         uses: actions/upload-artifact@v4
         with:
           name: podglad-maila

@@ -4,7 +4,10 @@ beżowe boksy #f5f2ef). Układ na tabelach, żeby dobrze wyglądał też w Outlo
 from __future__ import annotations
 
 import logging
+import re
 import smtplib
+import ssl
+import time
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from html import escape
@@ -257,8 +260,19 @@ def zbuduj(nowe: list[Problem], pozostale: list[Problem], linki_airtable: dict[s
     return temat, html
 
 
+def _polacz(serwer: str, port: int) -> smtplib.SMTP:
+    if port == 465:
+        return smtplib.SMTP_SSL(serwer, port, timeout=60, context=ssl.create_default_context())
+    polaczenie = smtplib.SMTP(serwer, port, timeout=60)
+    polaczenie.ehlo()
+    polaczenie.starttls(context=ssl.create_default_context())
+    polaczenie.ehlo()
+    return polaczenie
+
+
 def wyslij(temat: str, html: str) -> bool:
-    if not (config.MAIL_HASLO and config.MAIL_ODBIORCY):
+    haslo = re.sub(r"\s+", "", config.MAIL_HASLO or "")  # hasło aplikacji Google bywa wklejane ze spacjami
+    if not (haslo and config.MAIL_ODBIORCY):
         log.warning("Brak hasła albo odbiorców maila — pomijam wysyłkę.")
         return False
     wiadomosc = MIMEMultipart("alternative")
@@ -267,13 +281,23 @@ def wyslij(temat: str, html: str) -> bool:
     wiadomosc["To"] = ", ".join(config.MAIL_ODBIORCY)
     wiadomosc.attach(MIMEText("Raport bota produktów Interior List — otwórz w programie obsługującym HTML.", "plain", "utf-8"))
     wiadomosc.attach(MIMEText(html, "html", "utf-8"))
-    try:
-        with smtplib.SMTP(config.SMTP_SERWER, config.SMTP_PORT, timeout=60) as serwer:
-            serwer.starttls()
-            serwer.login(config.MAIL_NADAWCA, config.MAIL_HASLO)
-            serwer.sendmail(config.MAIL_NADAWCA, config.MAIL_ODBIORCY, wiadomosc.as_string())
-        log.info("📧 Mail wysłany: %s", temat)
-        return True
-    except (smtplib.SMTPException, OSError) as e:
-        log.error("Nie udało się wysłać maila: %s", e)
-        return False
+
+    # Najpierw ustawiony port, a gdy połączenie zostanie zerwane — drugi standardowy (587 <-> 465).
+    porty = [config.SMTP_PORT] + [p for p in (587, 465) if p != config.SMTP_PORT]
+    for proba, port in enumerate(porty, 1):
+        try:
+            with _polacz(config.SMTP_SERWER, port) as serwer:
+                serwer.login(config.MAIL_NADAWCA, haslo)
+                serwer.sendmail(config.MAIL_NADAWCA, config.MAIL_ODBIORCY, wiadomosc.as_string())
+            log.info("📧 Mail wysłany: %s", temat)
+            return True
+        except smtplib.SMTPAuthenticationError as e:
+            log.error("Serwer %s odrzucił logowanie jako %s (%s). Sprawdź GMAIL_SENDER i hasło aplikacji.",
+                      config.SMTP_SERWER, config.MAIL_NADAWCA, e.smtp_code)
+            return False
+        except (smtplib.SMTPException, OSError) as e:
+            log.warning("Wysyłka przez %s:%d nie wyszła (%s: %s)%s", config.SMTP_SERWER, port, type(e).__name__, e,
+                        " — próbuję innego portu" if proba < len(porty) else "")
+            time.sleep(3)
+    log.error("Nie udało się wysłać maila (nadawca: %s, serwer: %s).", config.MAIL_NADAWCA, config.SMTP_SERWER)
+    return False
