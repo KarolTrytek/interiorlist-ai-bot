@@ -1,0 +1,1004 @@
+{
+  "wersja": 1,
+  "problemy": {
+    "rec0HkYxKSU5T2GWx:cena": {
+      "typ": "cena",
+      "id": "rec0HkYxKSU5T2GWx",
+      "produkt": "Sofa 3-osobowa z funkcją spania Marsala",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec0S7ND9XkfFnb2R:cena": {
+      "typ": "cena",
+      "id": "rec0S7ND9XkfFnb2R",
+      "produkt": "Plakat Green Canopy",
+      "cena": 58.49,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec0iWYQ73ywCd11b:cena": {
+      "typ": "cena",
+      "id": "rec0iWYQ73ywCd11b",
+      "produkt": "Panel węglowy ścienny Bambu Naturale Jasnobrązowy",
+      "cena": 249.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec0iWYQ73ywCd11b:malo": {
+      "typ": "malo",
+      "id": "rec0iWYQ73ywCd11b",
+      "produkt": "Panel węglowy ścienny Bambu Naturale Jasnobrązowy",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec1DCNqOTafYC2Is:cena": {
+      "typ": "cena",
+      "id": "rec1DCNqOTafYC2Is",
+      "produkt": "Dywan Scala",
+      "cena": 1000.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec3KPalf28mqUjdo:cena": {
+      "typ": "cena",
+      "id": "rec3KPalf28mqUjdo",
+      "produkt": "Chaima - Kremowa Biel / BeżowyDywanDywan",
+      "cena": 640.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec3ayqHxZpgnTqdJ:cena": {
+      "typ": "cena",
+      "id": "rec3ayqHxZpgnTqdJ",
+      "produkt": "Zasłona AUSTRA 1x140x300 aksamit beżowy",
+      "cena": 50.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec4Ot5s6lILkMnX3:cena": {
+      "typ": "cena",
+      "id": "rec4Ot5s6lILkMnX3",
+      "produkt": "Plakat Beige Shell No.2",
+      "cena": 58.49,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec4qbodKMAr0SDvh:cena": {
+      "typ": "cena",
+      "id": "rec4qbodKMAr0SDvh",
+      "produkt": "Modułowa sofa narożna Sanremo",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec582uumvJCNeY4z:cena": {
+      "typ": "cena",
+      "id": "rec582uumvJCNeY4z",
+      "produkt": "Plakat Muted Abstract Shapes",
+      "cena": 322.99,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec76qHJJFtdAiLPU:cena": {
+      "typ": "cena",
+      "id": "rec76qHJJFtdAiLPU",
+      "produkt": "Abażur Hila",
+      "cena": 253.79,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec7IoNHwLHZPNaDQ:cena": {
+      "typ": "cena",
+      "id": "rec7IoNHwLHZPNaDQ",
+      "produkt": "Konsola Vimara",
+      "cena": 849.95,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec7XoAucMD0wTiGl:cena": {
+      "typ": "cena",
+      "id": "rec7XoAucMD0wTiGl",
+      "produkt": "Zestaw 2 krzeseł do jadalni LILLY Brązowy/ złamana biel",
+      "cena": 919.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec7Y2vRE94cNBD6t:cena": {
+      "typ": "cena",
+      "id": "rec7Y2vRE94cNBD6t",
+      "produkt": "Plakat Longing For France No.2",
+      "cena": 207.99,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec7tqG7PLDF7E412:cena": {
+      "typ": "cena",
+      "id": "rec7tqG7PLDF7E412",
+      "produkt": "Dywan Retro",
+      "cena": 521.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec7tqG7PLDF7E412:malo": {
+      "typ": "malo",
+      "id": "rec7tqG7PLDF7E412",
+      "produkt": "Dywan Retro",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec85CTHkTsNUAMNt:cena": {
+      "typ": "cena",
+      "id": "rec85CTHkTsNUAMNt",
+      "produkt": "HOVET Lustro, czarny",
+      "cena": 499.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec86MaRIfxcAsFR3:cena": {
+      "typ": "cena",
+      "id": "rec86MaRIfxcAsFR3",
+      "produkt": "Fotel jadalniany Maina tapicerowany, z szenilu, w kolorze kości słoniowej,",
+      "cena": 915.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec8YPVqywjCtwQIH:cena": {
+      "typ": "cena",
+      "id": "rec8YPVqywjCtwQIH",
+      "produkt": "Stolik pomocniczy ogrodowy okrągły Ø40 cm ze stali Yannik",
+      "cena": 494.95,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec8drHx3PVQLIDo9:cena": {
+      "typ": "cena",
+      "id": "rec8drHx3PVQLIDo9",
+      "produkt": "Panel gładki Japandi - Mocha Mousse L3D",
+      "cena": 158.86,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec92X4CEqRs9hvqx:cena": {
+      "typ": "cena",
+      "id": "rec92X4CEqRs9hvqx",
+      "produkt": "Stolik nocny HOKKSUND 1 szuflada ciemny dąb",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec99o4CoE8iLryR6:cena": {
+      "typ": "cena",
+      "id": "rec99o4CoE8iLryR6",
+      "produkt": "Yaso Stolik boczny, okrągły, Dąb Cremona Torro",
+      "cena": 149.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec9diwJxLfFL06gz:cena": {
+      "typ": "cena",
+      "id": "rec9diwJxLfFL06gz",
+      "produkt": "Niko komoda trzydrzwiowa Kaszmir",
+      "cena": 1499.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec9r2fp42rwtGSOa:cena": {
+      "typ": "cena",
+      "id": "rec9r2fp42rwtGSOa",
+      "produkt": "BESTÅ Ława TV z drzwiami, imitacja dębu bejcowanego na biało/Lappviken imitacja dębu bejcowanego na biało",
+      "cena": 720.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rec9z103qWdgDOxmX:cena": {
+      "typ": "cena",
+      "id": "rec9z103qWdgDOxmX",
+      "produkt": "Pure Dywan wełniany Rocco beżowo-czarny",
+      "cena": 1100.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recA0GTPAioGyWgQY:malo": {
+      "typ": "malo",
+      "id": "recA0GTPAioGyWgQY",
+      "produkt": "FADO Lampa stołowa, biały,",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recBw01TNYJ35wgxj:cena": {
+      "typ": "cena",
+      "id": "recBw01TNYJ35wgxj",
+      "produkt": "Beżowa lampa wisząca Versale 2 o prostym designie",
+      "cena": 695.78,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recByH29BJ8dpVVRW:cena": {
+      "typ": "cena",
+      "id": "recByH29BJ8dpVVRW",
+      "produkt": "Lampa stołowa Shiva",
+      "cena": 304.55,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recByH29BJ8dpVVRW:malo": {
+      "typ": "malo",
+      "id": "recByH29BJ8dpVVRW",
+      "produkt": "Lampa stołowa Shiva",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recCkgV8LYhrlWj3l:malo": {
+      "typ": "malo",
+      "id": "recCkgV8LYhrlWj3l",
+      "produkt": "Dekoracyjny kinkiet Tevo – zieleń butelkowa",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recCwmYOng8wCFnuF:malo": {
+      "typ": "malo",
+      "id": "recCwmYOng8wCFnuF",
+      "produkt": "DYVLINGE Fotel obrotowy, Kelinge czarny",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recDMHxjyRM1srCSz:cena": {
+      "typ": "cena",
+      "id": "recDMHxjyRM1srCSz",
+      "produkt": "Ramka podwójna Berker R.3 - biały",
+      "cena": 24.5,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recF3kjGHnmv9n1Y6:cena": {
+      "typ": "cena",
+      "id": "recF3kjGHnmv9n1Y6",
+      "produkt": "Szafka RTV Desin na metalowych nogach 220 cm - kaszmir / dąb nagano",
+      "cena": 1485.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recFHPfNHyAeH1gVJ:cena": {
+      "typ": "cena",
+      "id": "recFHPfNHyAeH1gVJ",
+      "produkt": "Stół Oda",
+      "cena": 1372.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recFdhjP5mptUy9M1:cena": {
+      "typ": "cena",
+      "id": "recFdhjP5mptUy9M1",
+      "produkt": "Kinkiet NIMAL 2310521003 oprawa w kolorze czarnym NORDLUX",
+      "cena": 151.63,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recFvv3O8A6AzM7LI:cena": {
+      "typ": "cena",
+      "id": "recFvv3O8A6AzM7LI",
+      "produkt": "Gniazdo z/u Q.1/Q.3/Q.7, szybkozłączka - antracyt mat",
+      "cena": 31.6,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recGYsnwH4bKOxJjy:cena": {
+      "typ": "cena",
+      "id": "recGYsnwH4bKOxJjy",
+      "produkt": "Loocky Regał niski, zaokrąglony, Orzech Warmia",
+      "cena": 599.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recGkihZlvPH9dQhw:cena": {
+      "typ": "cena",
+      "id": "recGkihZlvPH9dQhw",
+      "produkt": "Szafka RTV Desin 220 cm z metalowymi nogami - oliwka / dąb nagano",
+      "cena": 1485.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recHvBmpZaSEPol8r:cena": {
+      "typ": "cena",
+      "id": "recHvBmpZaSEPol8r",
+      "produkt": "Dywan wełniany - Avafors Wool Bubble (natural)",
+      "cena": 399.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recIwzaez4WInbYvt:cena": {
+      "typ": "cena",
+      "id": "recIwzaez4WInbYvt",
+      "produkt": "Panel ścienny SANDSTONE Stone Touch Flex FLS 01",
+      "cena": 199.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recJPZOA6atUOL2nn:cena": {
+      "typ": "cena",
+      "id": "recJPZOA6atUOL2nn",
+      "produkt": "Dziecięca szafka nocna Kiddy",
+      "cena": 351.9,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recKCxgatELFORlvP:cena": {
+      "typ": "cena",
+      "id": "recKCxgatELFORlvP",
+      "produkt": "Fotel obrotowy Mark Adler Manager 2.9 Black",
+      "cena": 349.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recNiFSFmTVcExW87:cena": {
+      "typ": "cena",
+      "id": "recNiFSFmTVcExW87",
+      "produkt": "Stolik pomocniczy ogrodowy okrągły Ø40 cm ze stali Yannik",
+      "cena": 294.95,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recNtU4lw3ugECiwk:cena": {
+      "typ": "cena",
+      "id": "recNtU4lw3ugECiwk",
+      "produkt": "Sofa 3-osobowa z funkcją spania Marsala",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recO0NTyFTaWdKUnL:cena": {
+      "typ": "cena",
+      "id": "recO0NTyFTaWdKUnL",
+      "produkt": "Sofa Nanea - Rozkładana/ze schowkiem, wodoodporna, kremowa, trzyosobowa",
+      "cena": 4902.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recO0NTyFTaWdKUnL:malo": {
+      "typ": "malo",
+      "id": "recO0NTyFTaWdKUnL",
+      "produkt": "Sofa Nanea - Rozkładana/ze schowkiem, wodoodporna, kremowa, trzyosobowa",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recO1kHEnnmABFuhV:cena": {
+      "typ": "cena",
+      "id": "recO1kHEnnmABFuhV",
+      "produkt": "Szafa pokojowa Sozilo I",
+      "cena": 1585.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recOFikPtkLCX0UEP:cena": {
+      "typ": "cena",
+      "id": "recOFikPtkLCX0UEP",
+      "produkt": "Fototapeta The Long Walk - Classic Grey",
+      "cena": 159.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recOsEvGYH3l21bnx:cena": {
+      "typ": "cena",
+      "id": "recOsEvGYH3l21bnx",
+      "produkt": "Red Flower plakat",
+      "cena": 50.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recOv2JLkEqXqLCim:cena": {
+      "typ": "cena",
+      "id": "recOv2JLkEqXqLCim",
+      "produkt": "Dywan Rocco Dark CreamOdpowiedni do prania, syntetyczny, bez włosia, szary/kremowy",
+      "cena": 314.17,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recP3nxkwcYFLVWnW:cena": {
+      "typ": "cena",
+      "id": "recP3nxkwcYFLVWnW",
+      "produkt": "Brie - stolik boczny",
+      "cena": 349.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recPKEbfIv7c1pz9T:cena": {
+      "typ": "cena",
+      "id": "recPKEbfIv7c1pz9T",
+      "produkt": "Modułowa sofa narożna Sanremo",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recQC9UVN19FcL2Gs:cena": {
+      "typ": "cena",
+      "id": "recQC9UVN19FcL2Gs",
+      "produkt": "Szafa NICEA kol. Gliniany",
+      "cena": 1819.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recRgEfoiFCc7Xoc4:cena": {
+      "typ": "cena",
+      "id": "recRgEfoiFCc7Xoc4",
+      "produkt": "Toaletka Desin 100 cm z szufladami i metalowymi nogami - kaszmir / dąb nagano",
+      "cena": 891.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recRiIp72664HFzUg:cena": {
+      "typ": "cena",
+      "id": "recRiIp72664HFzUg",
+      "produkt": "Nest Dywan shaggy Gobi kremowo-szary",
+      "cena": 1200.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recRtt1yTMHkzw7S1:cena": {
+      "typ": "cena",
+      "id": "recRtt1yTMHkzw7S1",
+      "produkt": "Toaletka Desin 100 cm z szufladami i metalowymi nogami - ceramic red / dąb nagano",
+      "cena": 891.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recS9ZCjrsDrMQ90Y:cena": {
+      "typ": "cena",
+      "id": "recS9ZCjrsDrMQ90Y",
+      "produkt": "Półki zestaw Boss",
+      "cena": 138.18,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recSReCi7byKUqjMZ:cena": {
+      "typ": "cena",
+      "id": "recSReCi7byKUqjMZ",
+      "produkt": "Nest Dywan tkany płasko Judith beżowo-czarny",
+      "cena": 1297.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recTLdhyCrhJb7Ztw:cena": {
+      "typ": "cena",
+      "id": "recTLdhyCrhJb7Ztw",
+      "produkt": "Czarny kinkiet ścienny Marlee nad lustro",
+      "cena": 260.78,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recTOlHsnJORfD1p5:cena": {
+      "typ": "cena",
+      "id": "recTOlHsnJORfD1p5",
+      "produkt": "Niko komoda trzydrzwiowa Cegła",
+      "cena": 1599.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recU5FlmVRZKtfo2y:cena": {
+      "typ": "cena",
+      "id": "recU5FlmVRZKtfo2y",
+      "produkt": "Nest Dywan shaggy Gobi kremowo-beżowy",
+      "cena": 1200.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recURXFiRMMWRjtFL:cena": {
+      "typ": "cena",
+      "id": "recURXFiRMMWRjtFL",
+      "produkt": "Stolik Yuba Metalowy, w kolorze terakoty",
+      "cena": 683.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recURXFiRMMWRjtFL:malo": {
+      "typ": "malo",
+      "id": "recURXFiRMMWRjtFL",
+      "produkt": "Stolik Yuba Metalowy, w kolorze terakoty",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recUi2FaxicTqOq7g:cena": {
+      "typ": "cena",
+      "id": "recUi2FaxicTqOq7g",
+      "produkt": "Pure Dywan wełniany Patch biało-czarny",
+      "cena": 2100.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recV0cQCgeM9VdU3P:cena": {
+      "typ": "cena",
+      "id": "recV0cQCgeM9VdU3P",
+      "produkt": "Serafina - Beżowy/Dywan wełniany",
+      "cena": 1184.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recWDck3lWX2FMTuc:cena": {
+      "typ": "cena",
+      "id": "recWDck3lWX2FMTuc",
+      "produkt": "Montego Plakat",
+      "cena": 227.46,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recWP7JQvv3vJ1k4x:cena": {
+      "typ": "cena",
+      "id": "recWP7JQvv3vJ1k4x",
+      "produkt": "PAX / FORSAND Szafa, imitacja dębu bejcowanego na biało/imitacja dębu bejcowanego na biało",
+      "cena": 2165.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recWT7XaoXMAdkuNh:cena": {
+      "typ": "cena",
+      "id": "recWT7XaoXMAdkuNh",
+      "produkt": "Dywan Boho 1.0 Structa",
+      "cena": 2123.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recWkjoKUmRO9SHfA:cena": {
+      "typ": "cena",
+      "id": "recWkjoKUmRO9SHfA",
+      "produkt": "System szynowy Lindby Linaro, GU10, 6-punktowa, czarny",
+      "cena": 909.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recXJ9QUdQnc1KtgG:cena": {
+      "typ": "cena",
+      "id": "recXJ9QUdQnc1KtgG",
+      "produkt": "regał wiszący jukon s 49 2s kaszmir",
+      "cena": 439.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recYnBppRzmxxgnwr:cena": {
+      "typ": "cena",
+      "id": "recYnBppRzmxxgnwr",
+      "produkt": "Plakat Muted Organic Flow II",
+      "cena": 136.49,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recZiAKvD2iaDWno8:malo": {
+      "typ": "malo",
+      "id": "recZiAKvD2iaDWno8",
+      "produkt": "Krzesła zestaw Helda - zestaw 2 krzeseł",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recb8ueY4TZGAzFfl:cena": {
+      "typ": "cena",
+      "id": "recb8ueY4TZGAzFfl",
+      "produkt": "BESTÅ Ława TV z drzwiami, czarnybrąz/Lappviken czarnybrąz",
+      "cena": 720.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recbAZ5S04IWdHfPS:cena": {
+      "typ": "cena",
+      "id": "recbAZ5S04IWdHfPS",
+      "produkt": "Sofa 3-osobowa z funkcją spania Marsala",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recbDmHQrINEGjgg1:malo": {
+      "typ": "malo",
+      "id": "recbDmHQrINEGjgg1",
+      "produkt": "Sofa Nanea",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recby5ORUUbtkMlUy:cena": {
+      "typ": "cena",
+      "id": "recby5ORUUbtkMlUy",
+      "produkt": "Dywan Astra",
+      "cena": 168.91,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recc4O7h9pWIaJ1fg:cena": {
+      "typ": "cena",
+      "id": "recc4O7h9pWIaJ1fg",
+      "produkt": "Biurko Sierra",
+      "cena": 1888.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recf68p9oV3tGt8td:cena": {
+      "typ": "cena",
+      "id": "recf68p9oV3tGt8td",
+      "produkt": "Modułowa sofa narożna Sanremo",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recf8ZCGKSbiTVc6V:cena": {
+      "typ": "cena",
+      "id": "recf8ZCGKSbiTVc6V",
+      "produkt": "Biurko Pensacola",
+      "cena": 1032.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recf8ZCGKSbiTVc6V:malo": {
+      "typ": "malo",
+      "id": "recf8ZCGKSbiTVc6V",
+      "produkt": "Biurko Pensacola",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recfcHHTZ2DBODib1:cena": {
+      "typ": "cena",
+      "id": "recfcHHTZ2DBODib1",
+      "produkt": "Granda Krzesło do jadalni, jasnobeżowe, czarne nóżki",
+      "cena": 349.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recfv3Pmio4mj4hbw:cena": {
+      "typ": "cena",
+      "id": "recfv3Pmio4mj4hbw",
+      "produkt": "Hærdaceous Peony By Kazumasa Ogawa Plakat",
+      "cena": 159.2,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recgVaON3bOVCBsna:cena": {
+      "typ": "cena",
+      "id": "recgVaON3bOVCBsna",
+      "produkt": "Tapeta Marmurowa Bryza - Róż",
+      "cena": 159.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recgXr7HE6T6VaX4v:cena": {
+      "typ": "cena",
+      "id": "recgXr7HE6T6VaX4v",
+      "produkt": "LASTARE Kombinacja szafy, biały/z nadstawką",
+      "cena": 1900.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recid0jyn34fYIg4x:cena": {
+      "typ": "cena",
+      "id": "recid0jyn34fYIg4x",
+      "produkt": "Stolik VentanaZe szklanym blatem, czarny",
+      "cena": 435.22,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recih5OWNtGeJC1gC:cena": {
+      "typ": "cena",
+      "id": "recih5OWNtGeJC1gC",
+      "produkt": "Panel węglowy ścienny Rovere Wood Dąb naturalny | Carbon Deco wodoodporny 2900×1220 mm | GT01",
+      "cena": 249.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "reciw3gAx6D2z00Hz:cena": {
+      "typ": "cena",
+      "id": "reciw3gAx6D2z00Hz",
+      "produkt": "dywan nowoczesny dkny atlantic avenue aav01 ivblc",
+      "cena": 499.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recjElTBHBf63siai:cena": {
+      "typ": "cena",
+      "id": "recjElTBHBf63siai",
+      "produkt": "Łóżko Firenze z pojemnikiem na pościel",
+      "cena": 3059.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recjccbdDWtVkdgqf:cena": {
+      "typ": "cena",
+      "id": "recjccbdDWtVkdgqf",
+      "produkt": "Fotel biurowy Mark Adler Manager 3.2 Grey",
+      "cena": 349.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "reclni41cXf6eIUK2:cena": {
+      "typ": "cena",
+      "id": "reclni41cXf6eIUK2",
+      "produkt": "Dywan wełniany - Avafors Wool Bubble (szary)",
+      "cena": 349.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recmCf5S0t3PtP352:cena": {
+      "typ": "cena",
+      "id": "recmCf5S0t3PtP352",
+      "produkt": "Niko szafa z półkami Cegła",
+      "cena": 2949.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recmDCOvaFtjRzChl:cena": {
+      "typ": "cena",
+      "id": "recmDCOvaFtjRzChl",
+      "produkt": "Łóżko Firenze z pojemnikiem na pościel",
+      "cena": 3059.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recmGOwobf1QCnkYo:cena": {
+      "typ": "cena",
+      "id": "recmGOwobf1QCnkYo",
+      "produkt": "Niko szafa z półkami Kaszmir",
+      "cena": 2949.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recmjtBDuwzFHZFFd:cena": {
+      "typ": "cena",
+      "id": "recmjtBDuwzFHZFFd",
+      "produkt": "Fototapeta The Long Walk - Classic Grey",
+      "cena": 159.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recmnWyoKzFXu959G:cena": {
+      "typ": "cena",
+      "id": "recmnWyoKzFXu959G",
+      "produkt": "Dywan Rocco Cream",
+      "cena": 857.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recn4WFZyatmjRJ7Y:cena": {
+      "typ": "cena",
+      "id": "recn4WFZyatmjRJ7Y",
+      "produkt": "Plakat Scribble",
+      "cena": 103.99,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recnQeDUeF8sJNbdc:cena": {
+      "typ": "cena",
+      "id": "recnQeDUeF8sJNbdc",
+      "produkt": "Gniazdo z/u Berker R.1/R.3, szybkozłączka - biały",
+      "cena": 43.05,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recnSEeBOOtC1cUbQ:cena": {
+      "typ": "cena",
+      "id": "recnSEeBOOtC1cUbQ",
+      "produkt": "Dywan Verona",
+      "cena": 485.8,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recnSEeBOOtC1cUbQ:malo": {
+      "typ": "malo",
+      "id": "recnSEeBOOtC1cUbQ",
+      "produkt": "Dywan Verona",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recnmG2v1Zu7dWBeO:cena": {
+      "typ": "cena",
+      "id": "recnmG2v1Zu7dWBeO",
+      "produkt": "Pure Dywan wełniany Livio beżowo-czarny",
+      "cena": 1400.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "reco98KLaYgh8xeMI:cena": {
+      "typ": "cena",
+      "id": "reco98KLaYgh8xeMI",
+      "produkt": "Biurko Sierra",
+      "cena": 1740.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recoN0C0bogWbOLBk:cena": {
+      "typ": "cena",
+      "id": "recoN0C0bogWbOLBk",
+      "produkt": "Vena Szafka nocna z szufladami, zielona/szara, zaokrąglona, glossy",
+      "cena": 569.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recogKO3vB4Gg5GO0:cena": {
+      "typ": "cena",
+      "id": "recogKO3vB4Gg5GO0",
+      "produkt": "Zasłona AUSTRA 1x140x300 aksamit taupe",
+      "cena": 50.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recpV0ReurRBwEUH0:cena": {
+      "typ": "cena",
+      "id": "recpV0ReurRBwEUH0",
+      "produkt": "Pax BASIC SEASHELL - drzwi lewe",
+      "cena": 429.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recpk7OL3w9ySOjzm:cena": {
+      "typ": "cena",
+      "id": "recpk7OL3w9ySOjzm",
+      "produkt": "Stolik YubaMetalowy, jasnoszary",
+      "cena": 516.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recpk7OL3w9ySOjzm:malo": {
+      "typ": "malo",
+      "id": "recpk7OL3w9ySOjzm",
+      "produkt": "Stolik YubaMetalowy, jasnoszary",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recq74gOKfiQp8PSJ:cena": {
+      "typ": "cena",
+      "id": "recq74gOKfiQp8PSJ",
+      "produkt": "Rattanowe krzesło do jadalni Tento",
+      "cena": 579.95,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recqLy6A5tZ3Uux4c:cena": {
+      "typ": "cena",
+      "id": "recqLy6A5tZ3Uux4c",
+      "produkt": "Krzesło Badalona",
+      "cena": 382.6,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recqLy6A5tZ3Uux4c:malo": {
+      "typ": "malo",
+      "id": "recqLy6A5tZ3Uux4c",
+      "produkt": "Krzesło Badalona",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recqakajIoUqdktzW:cena": {
+      "typ": "cena",
+      "id": "recqakajIoUqdktzW",
+      "produkt": "Krzesło CLAES biały z brązową podstawą",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recqalEvubbfdmkkv:cena": {
+      "typ": "cena",
+      "id": "recqalEvubbfdmkkv",
+      "produkt": "Biurko dziecięce Kiddy",
+      "cena": 890.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recqalEvubbfdmkkv:malo": {
+      "typ": "malo",
+      "id": "recqalEvubbfdmkkv",
+      "produkt": "Biurko dziecięce Kiddy",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recqxKQvPYmgnJus2:cena": {
+      "typ": "cena",
+      "id": "recqxKQvPYmgnJus2",
+      "produkt": "Stolik YubaMetalowy, czarny",
+      "cena": 646.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recr13xRGR0Xg99BF:cena": {
+      "typ": "cena",
+      "id": "recr13xRGR0Xg99BF",
+      "produkt": "Okrągły stół do jadalni Menorca - beżowy",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recrNWnYkX2WSUm5Y:cena": {
+      "typ": "cena",
+      "id": "recrNWnYkX2WSUm5Y",
+      "produkt": "Neutral Symphony Blocks Plakat",
+      "cena": 383.2,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recs5elPVtm5AkeDN:cena": {
+      "typ": "cena",
+      "id": "recs5elPVtm5AkeDN",
+      "produkt": "Solo - Beżowy / SzaryDywan",
+      "cena": 680.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recsXu5x1ZAKOJxlt:cena": {
+      "typ": "cena",
+      "id": "recsXu5x1ZAKOJxlt",
+      "produkt": "Whisper - Biały / BeżowyDywan",
+      "cena": 544.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recsdW17lj8o9kRUx:cena": {
+      "typ": "cena",
+      "id": "recsdW17lj8o9kRUx",
+      "produkt": "Dywan sznurkowy Arte Fener Grain Brown",
+      "cena": null,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "rect3Y2AjBjzo8Bnd:cena": {
+      "typ": "cena",
+      "id": "rect3Y2AjBjzo8Bnd",
+      "produkt": "Rattanowe krzesło do jadalni Tento",
+      "cena": 729.95,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recuNMJ6NxWwLn7i9:cena": {
+      "typ": "cena",
+      "id": "recuNMJ6NxWwLn7i9",
+      "produkt": "Półki zestaw Boss",
+      "cena": 128.48,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recvtNt5mTP6iQyVe:cena": {
+      "typ": "cena",
+      "id": "recvtNt5mTP6iQyVe",
+      "produkt": "Liva - białe/ Krzesło tapicerowane w tkaninie boucle w kolorze białym",
+      "cena": 199.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recwNIzaFrFgu5gbY:cena": {
+      "typ": "cena",
+      "id": "recwNIzaFrFgu5gbY",
+      "produkt": "Szafa pokojowa Sozilo I",
+      "cena": 1585.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recxCD9w0wtT7e8hf:cena": {
+      "typ": "cena",
+      "id": "recxCD9w0wtT7e8hf",
+      "produkt": "Stolik Sunny",
+      "cena": 807.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recxzwovQSmIjuZWZ:cena": {
+      "typ": "cena",
+      "id": "recxzwovQSmIjuZWZ",
+      "produkt": "Dywan GreenwichTkany ręcznie, wełniany, bez włosia, ciemnozielony",
+      "cena": 1134.0,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recyM6ifiWL7g0cZA:cena": {
+      "typ": "cena",
+      "id": "recyM6ifiWL7g0cZA",
+      "produkt": "Plakat Black and White Coast",
+      "cena": 100.69,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "recyl60KrOUov64Os:cena": {
+      "typ": "cena",
+      "id": "recyl60KrOUov64Os",
+      "produkt": "Plakat Terracotta",
+      "cena": 58.49,
+      "od": "2026-11-18T23:35+01:00"
+    },
+    "reczCAKRRxOJacHSM:cena": {
+      "typ": "cena",
+      "id": "reczCAKRRxOJacHSM",
+      "produkt": "Czarna lampa wisząca Versale 2 o prostym designie",
+      "cena": 695.78,
+      "od": "2026-11-18T23:35+01:00"
+    }
+  },
+  "bledy": {
+    "rec1wLAwEYuAwvTMP": 1,
+    "rec3lKdp4CQAt1zyn": 1,
+    "rec4kkIFqPuiLxMqH": 1,
+    "rec66OTG00r16vw1Q": 1,
+    "rec6i4EuVR4CGiJc5": 1,
+    "rec6r95LhXVBNECgX": 1,
+    "rec7AFSPg92pQORzr": 1,
+    "rec7yPHJcyAY14q3h": 1,
+    "rec8XxcRXTgzmlBMq": 1,
+    "rec9PRLh2zity50OO": 1,
+    "rec9ucVvUJwkji2zB": 1,
+    "rec9vaHAbQz9BRYbr": 1,
+    "recAIaas5zRNaYKUi": 1,
+    "recAnOQlfTJpcfzTu": 1,
+    "recBc1Z0L2ywC7jgp": 1,
+    "recBdCx8YnegelDlc": 1,
+    "recCZuGfQWSsDpQL1": 1,
+    "recCqCZA5zj4kv8ir": 1,
+    "recDHS40JhdlnwqOf": 1,
+    "recDz2IIratknSPaj": 1,
+    "recECOvudpFMfR415": 1,
+    "recEIvXkPK9Cov4Ax": 1,
+    "recF9pTkZDmehc6Yr": 1,
+    "recFVIB2q9vUclNWC": 1,
+    "recGJtc0zmgwEXZNI": 1,
+    "recGXFdOAG9RELiKe": 1,
+    "recGZOliFqj6Uss07": 1,
+    "recGweSGrPEAf8vFC": 1,
+    "recHA03atJGVePjaE": 1,
+    "recHVqcZHzhfGOaap": 1,
+    "recHdScm1zh9IxRMc": 1,
+    "recIVb2sFvTo3JfPR": 1,
+    "recIcsTemfu1gNMaB": 1,
+    "recInBCiQ0POh6FdW": 1,
+    "recJ1seJQmgG4hY9M": 1,
+    "recJTTWqDd6LnkIe4": 1,
+    "recKUu9donZgVRnqN": 1,
+    "recKVx43EGNVABXy4": 1,
+    "recMa87nWr9jYwKj7": 1,
+    "recN6s2wIdUvLXMSv": 1,
+    "recPSBPgEUXXrVL8U": 1,
+    "recQlGfNS2lmtEddx": 1,
+    "recR5w4hhCCKEUSRd": 1,
+    "recTiDURGB0Hy8ECV": 1,
+    "recUp9fJw7f22aLK5": 1,
+    "recVu9J7tGHQLKmSk": 1,
+    "recW8ZZ185VM8xrBh": 1,
+    "recWIFelhddwqdSb6": 1,
+    "recX5mHkUigSPdtLd": 1,
+    "recX9T3ecSr6ICViI": 1,
+    "recXCHi63oekzNuMM": 1,
+    "recZISHsjRKLfRqTJ": 1,
+    "recZyqKf5I03Nert9": 1,
+    "recaoXlgEbPVhC0bk": 1,
+    "recb7MltD4m6eHNHi": 1,
+    "recc2aau1dVmxgNCh": 1,
+    "recc3yy5i7aRZMG0W": 1,
+    "reccyb9Awsn1mMHaI": 1,
+    "recdYDywZG1NaG49O": 1,
+    "rece5RPC4FhoNnN3i": 1,
+    "receLiB901S5DgVAw": 1,
+    "recf1GQlWDOskIBI2": 1,
+    "recfci3wzfNMSi6d0": 1,
+    "recgiT3lXfMpoKFV3": 1,
+    "rechB2I8dkhhj3E24": 1,
+    "rechC5kidr5eNaNvZ": 1,
+    "rechiHNo5IvedXIJ3": 1,
+    "recipGKjqR8Xd2gQE": 1,
+    "recjmsQan5UGsSAzr": 1,
+    "recnKRW3LUzr91mni": 1,
+    "recnLmzWmGIyyaA02": 1,
+    "recqR1uYEzPoIfesI": 1,
+    "recqkE4I2M8uiwYQh": 1,
+    "recqkutVlKiLEad52": 1,
+    "recsSDWWnCJZRiKsQ": 1,
+    "rectMPPyvcV0mL7U3": 1,
+    "rectMbhXlVjPbw3Z2": 1,
+    "recu5SkgvyNGzWhvO": 1,
+    "recuYBIUgkZkA2nNZ": 1,
+    "recvFSCQYVNK8xedu": 1,
+    "recvpRLLuFM5cA04U": 1,
+    "recvue036WTWVM3ow": 1,
+    "recy6nfUFmvk5fpxv": 1,
+    "reczR8eINO0UucFj9": 1
+  },
+  "podejrzane": {
+    "rec0TApe9Ge0ERHqi": 1,
+    "rec5SLOX6vqbRRcTr": 1,
+    "recDp3durcH9Lyrgy": 1,
+    "recOEE8q1F5wgi89W": 1,
+    "recOQ5hzsMNB8EaZK": 1,
+    "recQkSdcHOewZ3Nvk": 1,
+    "recS0j5t7IoKvD6yc": 1,
+    "recSWoKVmnzlwMiL4": 1,
+    "recZFeoSJvDers9as": 1,
+    "recbEcwNfJrjSJjzo": 1,
+    "recc0owCmLjlIEO4d": 1,
+    "rece9ckEXDsKHv8AX": 1,
+    "recgcdT2diL8xw3IO": 1,
+    "rech2Vi3yZT1JdyzY": 1,
+    "recmhoPydVVnboJuZ": 1,
+    "recnRknvb41TxNzO5": 1,
+    "reconG8uzUUmTMom5": 1,
+    "recrxY8il3bTrLaNs": 1,
+    "rectTKXFrNngHmivm": 1,
+    "recwzfGi97ns3x511": 1
+  },
+  "zamienniki": {},
+  "ostatni_mail": "2026-11-18"
+}
