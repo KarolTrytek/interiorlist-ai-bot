@@ -1,0 +1,95 @@
+name: Sprawdzanie produktów
+
+on:
+  schedule:
+    # Godziny w UTC. Zimą to 7:00, 12:00, 17:00 i 21:00 w Polsce (latem o godzinę później).
+    - cron: "0 6,11,16,20 * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Tryb testowy: sprawdź tylko N produktów (puste = wszystkie)"
+        required: false
+      bez_maila:
+        description: "Nie wysyłaj maila"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # zapis pliku stan/stan.json (pamięć bota)
+
+concurrency:
+  group: sprawdzanie-produktow
+  cancel-in-progress: false
+
+jobs:
+  sprawdz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    env:
+      AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
+      BASE_ID: ${{ secrets.BASE_ID }}
+      AIRTABLE_TABELA_ID: ${{ vars.AIRTABLE_TABELA_ID }}
+      GMAIL_SENDER: ${{ vars.GMAIL_SENDER }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      GMAIL_RECEIVER: ${{ secrets.GMAIL_RECEIVER }}
+      # Token z `claude setup-token` — zamienniki liczą się do Twojej subskrypcji Claude, nie do API.
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      MODEL_ZAMIENNIKOW: ${{ vars.MODEL_ZAMIENNIKOW }}
+      PRZEGLADARKA: ${{ vars.PRZEGLADARKA }}
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalacja bibliotek
+        run: pip install -r requirements.txt
+
+      - name: Pamięć podręczna przeglądarki
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+
+      - name: Przeglądarka zapasowa (dla sklepów, które blokują zwykłe zapytania)
+        if: vars.PRZEGLADARKA != '0'
+        continue-on-error: true # bez niej bot i tak sprawdzi większość sklepów
+        run: python -m playwright install --with-deps chromium
+
+      - name: Claude Code (do zamienników)
+        continue-on-error: true # bez niego bot działa, tylko bez zamienników
+        run: |
+          curl -fsSL https://claude.ai/install.sh | bash
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Sprawdzenie produktów
+        env:
+          LIMIT: ${{ inputs.limit }}
+          BEZ_MAILA: ${{ inputs.bez_maila }}
+        run: |
+          ARGS=()
+          if [[ "$LIMIT" =~ ^[0-9]+$ ]]; then ARGS+=(--limit "$LIMIT" --podglad raport.html); fi
+          if [ "$BEZ_MAILA" = "true" ]; then ARGS+=(--bez-maila); fi
+          python sprawdz.py "${ARGS[@]}"
+
+      - name: Podgląd maila (tryb testowy)
+        if: inputs.limit != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: podglad-maila
+          path: raport.html
+          if-no-files-found: ignore
+
+      - name: Zapis pamięci bota
+        if: always() && hashFiles('stan/stan.json') != ''
+        run: |
+          git config user.name "interior-list-bot"
+          git config user.email "interior-list-bot@users.noreply.github.com"
+          git add stan/stan.json 2>/dev/null || exit 0
+          if git diff --cached --quiet; then echo "Bez zmian w stanie."; exit 0; fi
+          git commit -m "Stan bota $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          git pull --rebase --quiet || true
+          git push
