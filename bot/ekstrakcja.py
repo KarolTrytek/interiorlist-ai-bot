@@ -401,6 +401,49 @@ def _z_meta(soup: BeautifulSoup) -> list[Oferta]:
     return [Oferta(cena=cena, status=status)]
 
 
+# ---------------------------------------------------------------- cena widoczna na stronie
+
+# Klasy, którymi popularne platformy sklepowe (Shoper, WooCommerce, PrestaShop, IdoSell…)
+# oznaczają główną cenę produktu.
+_KLASY_CENY_GLOWNEJ = re.compile(
+    r"^(?:main-price|product-price|price-main|current-price|price--current|product__price|"
+    r"projector_price_value|price_value|our_price_display|woocommerce-Price-amount)$",
+    re.I,
+)
+_WZOR_CENY_W_TEKSCIE = re.compile(
+    r"\bcena\b(?:\s+brutto)?\s*:?\s*(?:od\s+)?(\d{1,3}(?:[ \u00a0\u202f.]?\d{3})*(?:[,.]\d{1,2})?)\s*(?:zł|pln)\b",
+    re.I,
+)
+
+
+def _z_widocznej_ceny(soup: BeautifulSoup) -> list[Oferta]:
+    """Ostatnia deska ratunku dla sklepów bez danych strukturalnych (np. część sklepów na Shoperze):
+    pierwsza cena oznaczona klasą „głównej ceny”, a jeśli takiej nie ma — tekst „Cena 5 289,00 zł”.
+    Dostępność nie jest stąd brana — o niej decydują frazy (cena bez informacji o braku = dostępny)."""
+    glowna = BeautifulSoup(str(soup), "lxml")
+    for el in glowna(_POMIJANE_TAGI):
+        el.decompose()
+    ceny = []
+    for el in glowna.find_all(class_=_KLASY_CENY_GLOWNEJ):
+        if el.find_parent(class_=_POWIAZANE) or el.find_parent(attrs={"style": _UKRYTY_STYL}):
+            continue
+        cena = parsuj_cene(el.get_text(" ", strip=True))
+        if cena and cena not in ceny:
+            ceny.append(cena)
+    if not ceny:
+        ceny = []
+        for m in _WZOR_CENY_W_TEKSCIE.finditer(tekst_strony(soup)):
+            cena = parsuj_cene(m.group(1))
+            if cena and cena not in ceny:
+                ceny.append(cena)
+    # Kilka różnych „głównych” cen to raczej lista produktów (np. kategoria po przekierowaniu
+    # usuniętego produktu) niż strona jednego produktu — wtedy nic nie odczytujemy.
+    # Dwie ceny dopuszczamy (cena promocyjna obok regularnej) i bierzemy pierwszą.
+    if not ceny or len(ceny) > 2:
+        return []
+    return [Oferta(cena=ceny[0])]
+
+
 # ---------------------------------------------------------------- tekst
 
 def tekst_strony(soup: BeautifulSoup) -> str:
@@ -473,6 +516,10 @@ def analizuj_html(html: str, prog_malo: int = 20) -> WynikStrony:
             oferty = _z_meta(soup)
             if oferty:
                 wynik.oferty, wynik.zrodlo = oferty, "meta tagi"
+            else:
+                oferty = _z_widocznej_ceny(soup)
+                if oferty:
+                    wynik.oferty, wynik.zrodlo = oferty, "cena widoczna na stronie"
     wynik.nazwa_produktu = nazwa
 
     # JSON-LD bez dostępności -> spróbuj z mikrodanych lub meta.

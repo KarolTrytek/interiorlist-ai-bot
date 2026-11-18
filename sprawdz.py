@@ -26,26 +26,19 @@ from bot.mail import odmiana, wyslij, zbuduj
 from bot.porownanie import BLAD, WYMAGA_ZAMIENNIKOW, ZMIANA_CENY, Problem, istotna_zmiana, ocen, zl
 from bot.stan import Stan, teraz
 from bot.strona import Strona, pobierz, zamknij_przegladarke
+from bot import sklepy
 from bot import zamienniki as modul_zamiennikow
 
 log = logging.getLogger("bot")
 MAX_PROB_ZAMIENNIKOW = 3
 
 
-def _przegladarka_potrzebna(strona) -> bool:
-    """Zwykłe zapytanie zwróciło stronę bez danych produktu — może sklep buduje ją JavaScriptem."""
-    if strona.nie_istnieje or not strona.html:
-        return False
-    return not analizuj_html(strona.html, config.PROG_MALO_SZTUK).jest_produkt
-
-
 def test_url(url: str) -> None:
-    strona = pobierz(url, potrzebna_przegladarka=_przegladarka_potrzebna)
+    strona, wynik = pobierz_i_odczytaj(url)
     print(f"HTTP: {strona.kod}  |  końcowy adres: {strona.url_koncowy}")
     print(f"Przez przeglądarkę: {strona.przez_przegladarke}  |  blokada: {strona.zablokowana}  |  błąd: {strona.blad or '—'}")
-    if not strona.html:
+    if wynik is None:
         return
-    wynik = analizuj_html(strona.html, config.PROG_MALO_SZTUK)
     print(f"Źródło danych: {wynik.zrodlo or 'brak'}  |  nazwa: {wynik.nazwa_produktu or '—'}")
     print(f"Strona produktu: {wynik.jest_produkt}  |  „nie znaleziono”: {wynik.soft_404}")
     for o in wynik.oferty[:20]:
@@ -69,13 +62,33 @@ def test_zamiennikow(id_rekordu: str) -> None:
         print(f" ✗ {o}")
 
 
+def pobierz_i_odczytaj(url: str):
+    """Pobiera stronę i odczytuje produkt: dane ze strony -> API platformy sklepu -> przeglądarka."""
+    z_api: dict = {}
+
+    def przegladarka_potrzebna(strona) -> bool:
+        if strona.nie_istnieje or not strona.html:
+            return False
+        if analizuj_html(strona.html, config.PROG_MALO_SZTUK).jest_produkt:
+            return False
+        z_api["wynik"] = sklepy.z_api(strona.url_koncowy or strona.url, strona.html)
+        return z_api["wynik"] is None  # API sklepu wystarczyło — przeglądarka zbędna
+
+    strona = pobierz(url, potrzebna_przegladarka=przegladarka_potrzebna)
+    wynik = analizuj_html(strona.html, config.PROG_MALO_SZTUK) if strona.html else None
+    if strona.html and not strona.nie_istnieje and (wynik is None or not wynik.jest_produkt):
+        zapas = z_api["wynik"] if "wynik" in z_api else sklepy.z_api(strona.url_koncowy or url, strona.html)
+        if zapas is not None:
+            wynik = zapas
+    return strona, wynik
+
+
 def _sprawdz_produkt(p, pamiec: dict) -> tuple[list[Problem], str]:
     """Sprawdza jeden produkt. Zwraca (problemy, adres zdjęcia ze strony sklepu)."""
     if p.url in pamiec:
         strona, wynik = pamiec[p.url]
     else:
-        strona = pobierz(p.url, potrzebna_przegladarka=_przegladarka_potrzebna)
-        wynik = analizuj_html(strona.html, config.PROG_MALO_SZTUK) if strona.html else None
+        strona, wynik = pobierz_i_odczytaj(p.url)
         pamiec[p.url] = (strona, wynik)
         time.sleep(config.PRZERWA_MIEDZY_STRONAMI_S + random.uniform(0, 1.5))
     return ocen(p, strona, wynik), zdjecie_og(strona.html)
