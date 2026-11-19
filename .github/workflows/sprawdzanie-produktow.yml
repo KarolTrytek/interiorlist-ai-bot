@@ -4,7 +4,7 @@ on:
   schedule:
     # Raz dziennie. Godzina w UTC: 5:00 UTC = 6:00 w Polsce zimą (latem 7:00).
     # GitHub potrafi opóźnić start o kilkanaście minut.
-    - cron: "0 5 * * *"
+    - cron: "43 4 * * *"
   workflow_dispatch:
     inputs:
       limit:
