@@ -29,6 +29,13 @@
       "cena": 53.6,
       "od": "2026-11-20T15:18+01:00"
     },
+    "rec0iWYQ73ywCd11b:cena": {
+      "typ": "cena",
+      "id": "rec0iWYQ73ywCd11b",
+      "produkt": "Panel węglowy ścienny Bambu Naturale Jasnobrązowy",
+      "cena": 299.0,
+      "od": "2026-11-22T14:31+01:00"
+    },
     "rec1wLAwEYuAwvTMP:blad": {
       "typ": "blad",
       "id": "rec1wLAwEYuAwvTMP",
@@ -350,6 +357,13 @@
       "produkt": "Beige Texture Art No2 Plakat",
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
+    },
+    "recETRYIAvD5UwMQX:cena": {
+      "typ": "cena",
+      "id": "recETRYIAvD5UwMQX",
+      "produkt": "Pax BASIC panel boczny 18 mm - Seashell",
+      "cena": 279.0,
+      "od": "2026-11-22T14:31+01:00"
     },
     "recF3kjGHnmv9n1Y6:cena": {
       "typ": "cena",
@@ -778,6 +792,13 @@
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
     },
+    "recY4EARCE6CaYme8:cena": {
+      "typ": "cena",
+      "id": "recY4EARCE6CaYme8",
+      "produkt": "Roleta rzymska Capri",
+      "cena": 225.06,
+      "od": "2026-11-22T14:31+01:00"
+    },
     "recY5mF9aOXU5K8og:cena": {
       "typ": "cena",
       "id": "recY5mF9aOXU5K8og",
@@ -861,6 +882,13 @@
       "produkt": "Stolik kawowy KENDALL Szkło hartowane Brązowy",
       "cena": null,
       "od": "2026-11-20T15:18+01:00"
+    },
+    "recbPoZBZkDaAmCt1:wycofany": {
+      "typ": "zniknal",
+      "id": "recbPoZBZkDaAmCt1",
+      "produkt": "Uchwyt LUCK inox 180",
+      "cena": null,
+      "od": "2026-11-22T14:31+01:00"
     },
     "recby5ORUUbtkMlUy:cena": {
       "typ": "cena",
@@ -1023,6 +1051,13 @@
       "cena": 413.46,
       "od": "2026-11-20T15:18+01:00"
     },
+    "recih5OWNtGeJC1gC:cena": {
+      "typ": "cena",
+      "id": "recih5OWNtGeJC1gC",
+      "produkt": "Panel węglowy ścienny Rovere Wood Dąb naturalny | Carbon Deco wodoodporny 2900×1220 mm | GT01",
+      "cena": 299.0,
+      "od": "2026-11-22T14:31+01:00"
+    },
     "recipGKjqR8Xd2gQE:blad": {
       "typ": "blad",
       "id": "recipGKjqR8Xd2gQE",
@@ -1057,6 +1092,27 @@
       "produkt": "Konsola QianoZ litego drewna akacjowego, brązowa",
       "cena": 1295.2,
       "od": "2026-11-20T15:18+01:00"
+    },
+    "reckgocc9wdJqRqGa:cena": {
+      "typ": "cena",
+      "id": "reckgocc9wdJqRqGa",
+      "produkt": "Crimson Dancers",
+      "cena": null,
+      "od": "2026-11-22T14:31+01:00"
+    },
+    "reclcCY8uH1NBiHAK:cena": {
+      "typ": "cena",
+      "id": "reclcCY8uH1NBiHAK",
+      "produkt": "Uchwyt drewniany HALF dąb",
+      "cena": 27.64,
+      "od": "2026-11-22T14:31+01:00"
+    },
+    "reclyItIc5rh39oQT:malo": {
+      "typ": "malo",
+      "id": "reclyItIc5rh39oQT",
+      "produkt": "Dziecięcy dywan do zabawy Happy Jumps",
+      "cena": null,
+      "od": "2026-11-22T14:31+01:00"
     },
     "recmDCOvaFtjRzChl:cena": {
       "typ": "cena",
@@ -1167,8 +1223,8 @@
       "typ": "cena",
       "id": "recpV0ReurRBwEUH0",
       "produkt": "Pax BASIC SEASHELL - drzwi lewe",
-      "cena": 429.0,
-      "od": "2026-11-18T23:35+01:00"
+      "cena": 339.0,
+      "od": "2026-11-22T14:31+01:00"
     },
     "recpk7OL3w9ySOjzm:cena": {
       "typ": "cena",
@@ -1317,12 +1373,19 @@
       "cena": null,
       "od": "2026-11-20T15:18+01:00"
     },
+    "rectq7jg9e6GFcYn9:cena": {
+      "typ": "cena",
+      "id": "rectq7jg9e6GFcYn9",
+      "produkt": "Panel węglowy ścienny Rovere Wood Dąb naturalny",
+      "cena": 299.0,
+      "od": "2026-11-22T14:31+01:00"
+    },
     "recuKrAHBv1rFgOYk:cena": {
       "typ": "cena",
       "id": "recuKrAHBv1rFgOYk",
       "produkt": "Pax BASIC SEASHELL - drzwi prawe",
-      "cena": 429.0,
-      "od": "2026-11-20T15:18+01:00"
+      "cena": 339.0,
+      "od": "2026-11-22T14:31+01:00"
     },
     "recuNMJ6NxWwLn7i9:cena": {
       "typ": "cena",
@@ -1438,89 +1501,84 @@
     }
   },
   "bledy": {
-    "rec1wLAwEYuAwvTMP": 3,
-    "rec3lKdp4CQAt1zyn": 3,
-    "rec4kkIFqPuiLxMqH": 3,
-    "rec66OTG00r16vw1Q": 3,
-    "rec6i4EuVR4CGiJc5": 3,
-    "rec6r95LhXVBNECgX": 3,
-    "rec7AFSPg92pQORzr": 3,
-    "rec7yPHJcyAY14q3h": 3,
-    "rec8XxcRXTgzmlBMq": 3,
-    "rec9PRLh2zity50OO": 3,
-    "rec9ucVvUJwkji2zB": 3,
-    "rec9vaHAbQz9BRYbr": 3,
-    "recAIaas5zRNaYKUi": 3,
-    "recAnOQlfTJpcfzTu": 3,
-    "recBc1Z0L2ywC7jgp": 3,
-    "recBdCx8YnegelDlc": 3,
-    "recCZuGfQWSsDpQL1": 3,
-    "recCqCZA5zj4kv8ir": 3,
-    "recDHS40JhdlnwqOf": 3,
-    "recDz2IIratknSPaj": 3,
-    "recECOvudpFMfR415": 3,
-    "recEIvXkPK9Cov4Ax": 3,
-    "recF9pTkZDmehc6Yr": 3,
-    "recFVIB2q9vUclNWC": 3,
-    "recGJtc0zmgwEXZNI": 3,
-    "recGXFdOAG9RELiKe": 3,
-    "recGZOliFqj6Uss07": 3,
-    "recGweSGrPEAf8vFC": 3,
-    "recHA03atJGVePjaE": 3,
-    "recHVqcZHzhfGOaap": 3,
-    "recIVb2sFvTo3JfPR": 3,
-    "recIcsTemfu1gNMaB": 3,
-    "recInBCiQ0POh6FdW": 3,
-    "recJ1seJQmgG4hY9M": 3,
-    "recJTTWqDd6LnkIe4": 3,
-    "recKUu9donZgVRnqN": 3,
-    "recKVx43EGNVABXy4": 3,
-    "recMa87nWr9jYwKj7": 3,
-    "recN6s2wIdUvLXMSv": 3,
-    "recPSBPgEUXXrVL8U": 3,
-    "recQlGfNS2lmtEddx": 1,
-    "recR5w4hhCCKEUSRd": 3,
-    "recTiDURGB0Hy8ECV": 1,
-    "recUp9fJw7f22aLK5": 3,
-    "recVu9J7tGHQLKmSk": 3,
-    "recW8ZZ185VM8xrBh": 3,
-    "recWIFelhddwqdSb6": 3,
-    "recX5mHkUigSPdtLd": 3,
-    "recX9T3ecSr6ICViI": 3,
-    "recXCHi63oekzNuMM": 1,
-    "recZISHsjRKLfRqTJ": 3,
-    "recZyqKf5I03Nert9": 3,
-    "recaoXlgEbPVhC0bk": 3,
-    "recb7MltD4m6eHNHi": 3,
-    "recc2aau1dVmxgNCh": 1,
-    "recc3yy5i7aRZMG0W": 3,
-    "reccyb9Awsn1mMHaI": 3,
-    "recdYDywZG1NaG49O": 3,
-    "rece5RPC4FhoNnN3i": 3,
-    "receLiB901S5DgVAw": 3,
-    "recf1GQlWDOskIBI2": 3,
-    "recfci3wzfNMSi6d0": 3,
-    "recgiT3lXfMpoKFV3": 3,
-    "rechB2I8dkhhj3E24": 3,
-    "rechC5kidr5eNaNvZ": 3,
-    "rechiHNo5IvedXIJ3": 3,
-    "recipGKjqR8Xd2gQE": 3,
-    "recjmsQan5UGsSAzr": 3,
-    "recnKRW3LUzr91mni": 3,
-    "recnLmzWmGIyyaA02": 3,
-    "recqR1uYEzPoIfesI": 3,
-    "recqkE4I2M8uiwYQh": 3,
-    "recqkutVlKiLEad52": 3,
-    "recsSDWWnCJZRiKsQ": 3,
-    "rectMPPyvcV0mL7U3": 3,
-    "rectMbhXlVjPbw3Z2": 3,
-    "recu5SkgvyNGzWhvO": 1,
-    "recuYBIUgkZkA2nNZ": 3,
-    "recvFSCQYVNK8xedu": 3,
-    "recvpRLLuFM5cA04U": 3,
-    "recvue036WTWVM3ow": 3,
-    "recy6nfUFmvk5fpxv": 3,
-    "reczR8eINO0UucFj9": 3
+    "rec1wLAwEYuAwvTMP": 4,
+    "rec3lKdp4CQAt1zyn": 4,
+    "rec4kkIFqPuiLxMqH": 4,
+    "rec66OTG00r16vw1Q": 4,
+    "rec6i4EuVR4CGiJc5": 4,
+    "rec6r95LhXVBNECgX": 4,
+    "rec7AFSPg92pQORzr": 4,
+    "rec7yPHJcyAY14q3h": 4,
+    "rec8XxcRXTgzmlBMq": 4,
+    "rec9PRLh2zity50OO": 4,
+    "rec9ucVvUJwkji2zB": 4,
+    "rec9vaHAbQz9BRYbr": 4,
+    "recAIaas5zRNaYKUi": 4,
+    "recAnOQlfTJpcfzTu": 4,
+    "recBc1Z0L2ywC7jgp": 4,
+    "recBdCx8YnegelDlc": 4,
+    "recCZuGfQWSsDpQL1": 4,
+    "recCqCZA5zj4kv8ir": 4,
+    "recDHS40JhdlnwqOf": 4,
+    "recDz2IIratknSPaj": 4,
+    "recECOvudpFMfR415": 4,
+    "recEIvXkPK9Cov4Ax": 4,
+    "recF9pTkZDmehc6Yr": 4,
+    "recFVIB2q9vUclNWC": 4,
+    "recGJtc0zmgwEXZNI": 4,
+    "recGXFdOAG9RELiKe": 4,
+    "recGZOliFqj6Uss07": 4,
+    "recGweSGrPEAf8vFC": 4,
+    "recHA03atJGVePjaE": 4,
+    "recHVqcZHzhfGOaap": 4,
+    "recIVb2sFvTo3JfPR": 4,
+    "recIcsTemfu1gNMaB": 4,
+    "recInBCiQ0POh6FdW": 4,
+    "recJ1seJQmgG4hY9M": 4,
+    "recJTTWqDd6LnkIe4": 4,
+    "recKUu9donZgVRnqN": 4,
+    "recKVx43EGNVABXy4": 4,
+    "recMa87nWr9jYwKj7": 4,
+    "recN6s2wIdUvLXMSv": 4,
+    "recPSBPgEUXXrVL8U": 4,
+    "recR5w4hhCCKEUSRd": 4,
+    "recUp9fJw7f22aLK5": 4,
+    "recVu9J7tGHQLKmSk": 4,
+    "recW8ZZ185VM8xrBh": 4,
+    "recWIFelhddwqdSb6": 4,
+    "recX5mHkUigSPdtLd": 4,
+    "recX9T3ecSr6ICViI": 4,
+    "recZISHsjRKLfRqTJ": 4,
+    "recZyqKf5I03Nert9": 4,
+    "recaoXlgEbPVhC0bk": 4,
+    "recb7MltD4m6eHNHi": 4,
+    "recc3yy5i7aRZMG0W": 4,
+    "reccyb9Awsn1mMHaI": 4,
+    "recdYDywZG1NaG49O": 4,
+    "rece5RPC4FhoNnN3i": 4,
+    "receLiB901S5DgVAw": 4,
+    "recf1GQlWDOskIBI2": 4,
+    "recfci3wzfNMSi6d0": 4,
+    "recgiT3lXfMpoKFV3": 4,
+    "rechB2I8dkhhj3E24": 4,
+    "rechC5kidr5eNaNvZ": 4,
+    "rechiHNo5IvedXIJ3": 4,
+    "recipGKjqR8Xd2gQE": 4,
+    "recjmsQan5UGsSAzr": 4,
+    "recnKRW3LUzr91mni": 4,
+    "recnLmzWmGIyyaA02": 4,
+    "recqR1uYEzPoIfesI": 4,
+    "recqkE4I2M8uiwYQh": 4,
+    "recqkutVlKiLEad52": 4,
+    "recsSDWWnCJZRiKsQ": 4,
+    "rectMPPyvcV0mL7U3": 4,
+    "rectMbhXlVjPbw3Z2": 4,
+    "recuYBIUgkZkA2nNZ": 4,
+    "recvFSCQYVNK8xedu": 4,
+    "recvpRLLuFM5cA04U": 4,
+    "recvue036WTWVM3ow": 4,
+    "recy6nfUFmvk5fpxv": 4,
+    "reczR8eINO0UucFj9": 4
   },
   "podejrzane": {
     "rec0TApe9Ge0ERHqi": 2,
@@ -1532,6 +1590,7 @@
     "recS0j5t7IoKvD6yc": 2,
     "recZFeoSJvDers9as": 2,
     "recbEcwNfJrjSJjzo": 2,
+    "recbPoZBZkDaAmCt1": 1,
     "recc0owCmLjlIEO4d": 2,
     "rece9ckEXDsKHv8AX": 2,
     "recgcdT2diL8xw3IO": 2,
@@ -1710,6 +1769,26 @@
       "data": "2026-11-21T14:45+01:00",
       "proby": 1
     },
+    "recbPoZBZkDaAmCt1": {
+      "propozycje": [
+        {
+          "nazwa": "KALLRÖR uchwyt, stal nierdzewna, 213 mm (2 szt.)",
+          "sklep": "IKEA",
+          "url": "https://www.ikea.com/pl/pl/p/kallroer-uchwyt-stal-nierdz-50357002/",
+          "cena": 15.0,
+          "cena_ze_strony": true,
+          "wymiary": "dł. 213 mm, rozstaw otworów 160 mm, gł. 38 mm, szer. 13 mm",
+          "uzasadnienie": "To minimalistyczny, zaokrąglony uchwyt ze stali nierdzewnej z tym samym rozstawem 160 mm, więc wizualnie i montażowo pasuje do nowoczesnej zabudowy, w której był inoxowy LUCK.",
+          "zdjecie": "https://www.ikea.com/pl/pl/images/products/kallroer-uchwyt-stal-nierdz__0602018_pe680085_s5.jpg",
+          "weryfikacja": "sprawdzony"
+        }
+      ],
+      "uwagi": "Oryginał to minimalistyczny uchwyt z matowej, szczotkowanej stali (inox) o długości 180 mm, w kształcie zamkniętej, zaokrąglonej ramki. Ma najpewniej rozstaw 160 mm. Jedyny pewny zamiennik to IKEA KALLRÖR. Ma ten sam materiał i rozstaw otworów, ale różni się od oryginału: to pełny pręt, a nie otwarta ramka, i jest dłuższy (213 mm, czyli +18%). Jest też dużo tańszy (15 zł za 2 sztuki wobec 62 zł). Strona produktu działa i podaje cenę, ale nie pokazała stanu magazynowego (tylko komunikat „Sprawdzanie dostępności…”), więc przed zamówieniem warto sprawdzić dostępność. Na Allegro znalazłem uchwyty inox 160 mm, które mogą lepiej przypominać oryginał (Gamet UU52, Gamet RE23 o długości 181 mm). Ich strony zwracały jednak błąd 403, więc nie mogłem potwierdzić kształtu, ceny ani dostępności i ich nie proponuję. Uchwytu ORRNÄS 170 mm nie znalazłem w polskim sklepie IKEA. Pozostałe sklepy z listy nie sprzedają raczej osobnych uchwytów meblowych.",
+      "odrzucone": [],
+      "blad": false,
+      "data": "2026-11-22T14:24+01:00",
+      "proby": 1
+    },
     "recc0owCmLjlIEO4d": {
       "propozycje": [
         {
@@ -1729,7 +1808,74 @@
       "blad": false,
       "data": "2026-11-21T14:49+01:00",
       "proby": 1
+    },
+    "rece9ckEXDsKHv8AX": {
+      "propozycje": [
+        {
+          "nazwa": "Lampa sufitowa wisząca z żelaza Hilma (kolor Czerwone Wino)",
+          "sklep": "Sklum",
+          "url": "https://www.sklum.com/pl/kup-lampy-wiszace/152484-metalowa-lampa-sufitowa-hilma.html",
+          "cena": 194.95,
+          "cena_ze_strony": true,
+          "wymiary": "⌀35 cm, wysokość całkowita 166,5 cm (klosz 14,5 cm), przewód 150 cm z regulacją wysokości",
+          "uzasadnienie": "Metalowa, minimalistyczna lampa wisząca na cienkim przewodzie, w niemal identycznym odcieniu czerwonego wina, więc zachowuje kolorowy akcent i lekki charakter oryginału we wnętrzu.",
+          "zdjecie": "https://cdn.sklum.com/pl/4283697-large_default/metalowa-lampa-sufitowa-hilma.jpg",
+          "weryfikacja": "sprawdzony"
+        }
+      ],
+      "uwagi": "Mam jedną potwierdzoną propozycję i jest to kompromis. Oryginał to minimalistyczna metalowa lampa wisząca w kolorze bordo/czerwonego wina: płaski dysk ⌀30 cm i mała kula ze źródłem światła pod spodem. Zdjęcie pokazuje tylko produkt, bez pokoju, więc nie mogłem ocenić dopasowania do wnętrza. Lampa Hilma ze Sklum ma zgodny kolor (wariant „Czerwone Wino” był wybrany na stronie i oznaczony „W magazynie”, dostawa 04–09.12.2026) i jest metalowa. Różnice: klosz jest półkulisty, a nie płaski dysk z kulą; średnica 35 cm jest większa o ok. 17%; jest na 2 żarówki E27, które trzeba dokupić; wysokość całkowita to 166,5 cm zamiast maks. 217 cm. Cena 194,95 zł jest dużo niższa od 531 zł. Przeszukałem też Sklum, Westwing, Beliani, Allegro, Miamo, Eye on Design i Comfort, ale nie znalazłem w nich bordowej lampy z płaskim dyskiem. Strona wyników Allegro zwróciła błąd 403, więc nie mogłem sprawdzić tamtejszych bordowych lamp (np. Luminex, Sigma). Jeśli architektowi zależy na kształcie dysku, warto ręcznie przejrzeć Allegro.",
+      "odrzucone": [],
+      "blad": false,
+      "data": "2026-11-22T14:25+01:00",
+      "proby": 1
+    },
+    "recgcdT2diL8xw3IO": {
+      "propozycje": [],
+      "uwagi": "Nie podaję żadnej propozycji, bo nie udało mi się otworzyć i sprawdzić strony żadnego pasującego produktu. Oryginał to biały, matowy, metalowy kinkiet w nowoczesnym stylu skandynawsko-loftowym. Ma długie, lekko wygięte ramię na okrągłej podstawie, chromowany przegub i szeroki, płaski klosz w kształcie kopuły (ok. 27 cm średnicy, wysięg ok. 60 cm, żarówka E27). Zdjęcie jest na białym tle i nie pokazuje pokoju. Prawie na pewno jest to Aldex ESPACE White 1036C (ta sama cena 228 zł i te same wymiary).\n\nNajlepsze tropy, których nie sprawdziłem na stronie produktu, więc trzeba to zrobić ręcznie:\n1) eyeon.design: https://pl.eyeon.design/en/products/espace-white-wall-lamp. Według wyników wyszukiwania to ten sam model za 189 zł, 27 x 60 cm, dostępny. Narzędzie odmówiło otwarcia strony (brak uprawnień).\n2) allegro.pl: https://allegro.pl/oferta/kinkiet-aldex-bialy-e27-60-w-17379991999. Według wyników wyszukiwania 228 zł i 49 sztuk dostępnych. Jest też oferta https://allegro.pl/oferta/kinkiet-espace-white-1036c-aldex-12701693377, prawdopodobnie niedostępna. Allegro zwracało błąd 403, więc nie potwierdziłem ceny ani dostępności.\n\nStrony, które otworzyłem, nie pasują. Sklum Lizz (184,95–219,95 zł, 69 x 35 cm) ma stożkowy klosz i nie ma wersji białej. Beliani BALIEM biały jest niedostępny. Szukałem też na beliani.pl, westwing.pl, miamo.pl, brw.pl i agatameble.pl, ale nie znalazłem białego kinkietu z długim ramieniem i szerokim kloszem, którego stronę dałoby się potwierdzić.",
+      "odrzucone": [],
+      "blad": false,
+      "data": "2026-11-22T14:27+01:00",
+      "proby": 1
+    },
+    "recmhoPydVVnboJuZ": {
+      "propozycje": [],
+      "uwagi": "Szukany produkt to wielkoformatowa, gładka płyta ścienna (tzw. płyta węglowa WPC/PCV) o wymiarach ok. 2900×1220 mm, z dekorem drewna w ciepłym, średnio-brązowym kolorze dębu (matowy, drobne pionowe usłojenie). Pasuje do minimalistycznego, jasnego wnętrza. Spośród wskazanych sklepów takie płyty sprzedaje praktycznie tylko allegro.pl. Wyszukiwarka pokazała tam kilka obiecujących ofert w formacie 2800×1220×5 mm (ok. 3,5% krótsze od oryginału), m.in. „Dąb czekoladowy mat”, „Dąb miodowy mat”, „Jasny dąb mat” (ok. 389 zł) oraz „Orzech/Ciemny dąb 2,80×1,22 m” (ok. 450 zł). Allegro blokuje jednak automatyczne otwieranie stron ofert (błąd HTTP 403), więc nie mogłem potwierdzić dostępności, aktualnej ceny ani odcienia żadnej z nich. Dlatego nie podaję ich jako pewnych propozycji. W pozostałych sklepach (beliani, westwing, jysk i innych) nie znalazłem płyt ściennych w takim formacie, są tam głównie meble i małe panele 3D lub lamelowe. Uwaga cenowa: ceny tych płyt na Allegro (389–599 zł) są wyraźnie wyższe niż 159 zł. Ostatnia cena oryginału mogła dotyczyć innego wariantu, np. próbki. Proponuję, żeby architekt ręcznie sprawdził na Allegro hasło „płyta węglowa dąb miodowy mat 280x122” lub „dąb czekoladowy mat 280x122”, bo te odcienie najbliżej pasują do zdjęcia.",
+      "odrzucone": [],
+      "blad": false,
+      "data": "2026-11-22T14:29+01:00",
+      "proby": 1
+    },
+    "recnRknvb41TxNzO5": {
+      "propozycje": [
+        {
+          "nazwa": "Stolik kawowy Stessle okrągły 80 cm bordowy mat",
+          "sklep": "Selsey",
+          "url": "https://selsey.pl/products/stolik-kawowy-stessle-okragly-80-cm-bordowy-mat",
+          "cena": 1899.0,
+          "cena_ze_strony": true,
+          "wymiary": "⌀80 cm x 50 cm",
+          "uzasadnienie": "Ma najbliższą formę do Everetta: okrągły blat ⌀80 cm na czterech pełnych, walcowych kolumnach, w tym samym bordowym kolorze, więc w każdym wnętrzu zagra tak samo mocnym akcentem, tyle że ma matowe aksamitne wykończenie zamiast połysku.",
+          "zdjecie": "",
+          "weryfikacja": "sprawdzony"
+        },
+        {
+          "nazwa": "Stolik kawowy Cherry 70 cm, burgund/wiśnia, glossy",
+          "sklep": "Lectus24",
+          "url": "https://lectus24.pl/produkty/stolik-kawowy-cherry-70-cm-burgundwisnia-glossy.html",
+          "cena": 679.0,
+          "cena_ze_strony": true,
+          "wymiary": "70 x 70 x 34 cm (blat kwadratowy z zaokrąglonymi narożnikami)",
+          "uzasadnienie": "Pochodzi z tego samego sklepu co oryginał, ma ten sam burgundowo-wiśniowy lakier w wysokim połysku i masywne, pełne nogi, więc wizualnie zastąpi Everetta w aranżacji, choć blat jest kwadratowy i mniejszy.",
+          "zdjecie": "https://lectus24.pl/414699-large_default/stolik-kawowy-cherry-70-cm-burgundwisnia-glossy.jpg",
+          "weryfikacja": "sprawdzony"
+        }
+      ],
+      "uwagi": "Oryginał to okrągły stolik ⌀80 x 40 cm z MDF, lakierowany na burgundowo w wysokim połysku, na czterech walcowych nogach (styl nowoczesny, organiczny). Na stronie Lectus24 ma status „Artykuł wyprzedany”, a w żadnym z dozwolonych sklepów nie znalazłem go w kolorze burgund. Zdjęcia pokoju nie było, więc dopasowałem propozycje tylko do samego mebla. Obie propozycje mają wyraźne kompromisy. (1) Selsey Stessle ma prawie identyczną formę i kolor, ale jest matowy, o 10 cm wyższy (50 cm, +25%) i znacznie droższy (1 899 zł, +73%). Wysyłka następuje w ciągu 5–6 tygodni. (2) Lectus24 Cherry ma taki sam połysk i kolor oraz niższą cenę (679 zł), ale blat jest kwadratowy, 70 x 70 cm, a wysokość to 34 cm. Produkt jest w przedsprzedaży z dostawą w 3–4 tygodnie. Lectus24 zastrzega, że może anulować zamówienie, jeśli nie dostanie towaru. Stolik Everett jest na Lectus24 także w kolorach kobaltowym i błękitnoszarym. Nie sprawdzałem, czy można je kupić, i nie wpisałem ich jako propozycji, bo nie są burgundowe. W Selsey są też bordowe stoliki z połyskiem Loccoli ⌀60 cm i Loca ⌀50 cm. Znalazłem je tylko w wyszukiwarce, ich stron nie otwierałem, a do tego są za małe. Wyszukiwanie w Sklum, Westwing, Beliani i na Allegro nie dało żadnego trafienia w bordowym kolorze.",
+      "odrzucone": [],
+      "blad": false,
+      "data": "2026-11-22T14:31+01:00",
+      "proby": 1
     }
   },
-  "ostatni_mail": "2026-11-21"
+  "ostatni_mail": "2026-11-22"
 }
