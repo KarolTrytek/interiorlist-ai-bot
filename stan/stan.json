@@ -29,13 +29,6 @@
       "cena": 53.6,
       "od": "2026-11-20T15:18+01:00"
     },
-    "rec0iWYQ73ywCd11b:cena": {
-      "typ": "cena",
-      "id": "rec0iWYQ73ywCd11b",
-      "produkt": "Panel węglowy ścienny Bambu Naturale Jasnobrązowy",
-      "cena": 299.0,
-      "od": "2026-11-22T14:31+01:00"
-    },
     "rec1wLAwEYuAwvTMP:blad": {
       "typ": "blad",
       "id": "rec1wLAwEYuAwvTMP",
@@ -98,13 +91,6 @@
       "produkt": "Plakat Muted Abstract Shapes",
       "cena": 322.99,
       "od": "2026-11-18T23:35+01:00"
-    },
-    "rec5SLOX6vqbRRcTr:wycofany": {
-      "typ": "zniknal",
-      "id": "rec5SLOX6vqbRRcTr",
-      "produkt": "Krzesło Nayme Beżowe Kave Home",
-      "cena": null,
-      "od": "2026-11-20T15:18+01:00"
     },
     "rec66OTG00r16vw1Q:blad": {
       "typ": "blad",
@@ -245,13 +231,6 @@
       "produkt": "Łóżko Minima z pojemnikiem na pościel (140x200)/ Angola Boucke 14",
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
-    },
-    "recAQCnVgsFOsgO7N:cena": {
-      "typ": "cena",
-      "id": "recAQCnVgsFOsgO7N",
-      "produkt": "Panel ścienny SANDSTONE Stone Touch Flex FLS 01",
-      "cena": 119.0,
-      "od": "2026-11-20T15:18+01:00"
     },
     "recAnOQlfTJpcfzTu:blad": {
       "typ": "blad",
@@ -463,6 +442,13 @@
       "cena": 445.0,
       "od": "2026-11-20T15:18+01:00"
     },
+    "recHeVayITQSZbdDA:cena": {
+      "typ": "cena",
+      "id": "recHeVayITQSZbdDA",
+      "produkt": "Tapeta Olof Mural, Garden Green",
+      "cena": 189.6,
+      "od": "2026-11-23T17:00+01:00"
+    },
     "recIVb2sFvTo3JfPR:blad": {
       "typ": "blad",
       "id": "recIVb2sFvTo3JfPR",
@@ -483,6 +469,13 @@
       "produkt": "Szafka RTV YUTO YTV02",
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
+    },
+    "recIwzaez4WInbYvt:cena": {
+      "typ": "cena",
+      "id": "recIwzaez4WInbYvt",
+      "produkt": "Panel ścienny SANDSTONE Stone Touch Flex FLS 01",
+      "cena": 199.0,
+      "od": "2026-11-23T17:00+01:00"
     },
     "recJ1seJQmgG4hY9M:blad": {
       "typ": "blad",
@@ -519,6 +512,13 @@
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
     },
+    "recK8iueqDQamRLKY:cena": {
+      "typ": "cena",
+      "id": "recK8iueqDQamRLKY",
+      "produkt": "Stolik pomocniczy ogrodowy okrągły Ø40 cm ze stali Yannik",
+      "cena": 254.95,
+      "od": "2026-11-23T17:00+01:00"
+    },
     "recKCxgatELFORlvP:cena": {
       "typ": "cena",
       "id": "recKCxgatELFORlvP",
@@ -554,6 +554,13 @@
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
     },
+    "recNiFSFmTVcExW87:cena": {
+      "typ": "cena",
+      "id": "recNiFSFmTVcExW87",
+      "produkt": "Stolik pomocniczy ogrodowy okrągły Ø40 cm ze stali Yannik",
+      "cena": 254.95,
+      "od": "2026-11-23T17:00+01:00"
+    },
     "recNtU4lw3ugECiwk:cena": {
       "typ": "cena",
       "id": "recNtU4lw3ugECiwk",
@@ -566,20 +573,6 @@
       "id": "recO0NTyFTaWdKUnL",
       "produkt": "Sofa Nanea - Rozkładana/ze schowkiem, wodoodporna, kremowa, trzyosobowa",
       "cena": 4656.0,
-      "od": "2026-11-20T15:18+01:00"
-    },
-    "recO0NTyFTaWdKUnL:malo": {
-      "typ": "malo",
-      "id": "recO0NTyFTaWdKUnL",
-      "produkt": "Sofa Nanea - Rozkładana/ze schowkiem, wodoodporna, kremowa, trzyosobowa",
-      "cena": null,
-      "od": "2026-11-18T23:35+01:00"
-    },
-    "recOEE8q1F5wgi89W:wycofany": {
-      "typ": "zniknal",
-      "id": "recOEE8q1F5wgi89W",
-      "produkt": "Metalowa lampka stołowa Bat",
-      "cena": null,
       "od": "2026-11-20T15:18+01:00"
     },
     "recOFikPtkLCX0UEP:cena": {
@@ -687,6 +680,13 @@
       "cena": 138.18,
       "od": "2026-11-18T23:35+01:00"
     },
+    "recSROhKkVxZU01j7:cena": {
+      "typ": "cena",
+      "id": "recSROhKkVxZU01j7",
+      "produkt": "Stolik pomocniczy ogrodowy okrągły Ø40 cm ze stali Yannik",
+      "cena": 254.95,
+      "od": "2026-11-23T17:00+01:00"
+    },
     "recSReCi7byKUqjMZ:cena": {
       "typ": "cena",
       "id": "recSReCi7byKUqjMZ",
@@ -699,13 +699,6 @@
       "id": "recSWoKVmnzlwMiL4",
       "produkt": "Stół rozkładany Oqui (Oakland) okrągły 120(200)x120cm",
       "cena": 2659.8,
-      "od": "2026-11-20T15:18+01:00"
-    },
-    "recUGcC2LPJrBuhKc:cena": {
-      "typ": "cena",
-      "id": "recUGcC2LPJrBuhKc",
-      "produkt": "Przewód szynowy - TRACER SET white VI 10596 TK Lighting",
-      "cena": 334.9,
       "od": "2026-11-20T15:18+01:00"
     },
     "recURXFiRMMWRjtFL:cena": {
@@ -743,6 +736,13 @@
       "cena": 1184.0,
       "od": "2026-11-18T23:35+01:00"
     },
+    "recVdU3rGYZ6LU2O5:cena": {
+      "typ": "cena",
+      "id": "recVdU3rGYZ6LU2O5",
+      "produkt": "Tapeta Bellewood, Sand",
+      "cena": 189.6,
+      "od": "2026-11-23T17:00+01:00"
+    },
     "recVu9J7tGHQLKmSk:blad": {
       "typ": "blad",
       "id": "recVu9J7tGHQLKmSk",
@@ -771,12 +771,26 @@
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
     },
+    "recWKWv4r8DpHzunl:cena": {
+      "typ": "cena",
+      "id": "recWKWv4r8DpHzunl",
+      "produkt": "Yannik Stolik pomocniczy ogrodowy okrągły Ø40 cm ze stali Yannik",
+      "cena": 254.95,
+      "od": "2026-11-23T17:00+01:00"
+    },
     "recWT7XaoXMAdkuNh:cena": {
       "typ": "cena",
       "id": "recWT7XaoXMAdkuNh",
       "produkt": "Dywan Boho 1.0 Structa",
       "cena": 2016.0,
       "od": "2026-11-20T15:18+01:00"
+    },
+    "recWkjoKUmRO9SHfA:malo": {
+      "typ": "malo",
+      "id": "recWkjoKUmRO9SHfA",
+      "produkt": "System szynowy Lindby Linaro, GU10, 6-punktowa, czarny",
+      "cena": null,
+      "od": "2026-11-23T17:00+01:00"
     },
     "recX5mHkUigSPdtLd:blad": {
       "typ": "blad",
@@ -792,12 +806,19 @@
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
     },
+    "recXYJho3acZa80ek:cena": {
+      "typ": "cena",
+      "id": "recXYJho3acZa80ek",
+      "produkt": "Fototapeta - Floating Tiles, Green",
+      "cena": 189.6,
+      "od": "2026-11-23T17:00+01:00"
+    },
     "recY4EARCE6CaYme8:cena": {
       "typ": "cena",
       "id": "recY4EARCE6CaYme8",
       "produkt": "Roleta rzymska Capri",
-      "cena": 225.06,
-      "od": "2026-11-22T14:31+01:00"
+      "cena": 232.44,
+      "od": "2026-11-23T17:00+01:00"
     },
     "recY5mF9aOXU5K8og:cena": {
       "typ": "cena",
@@ -882,13 +903,6 @@
       "produkt": "Stolik kawowy KENDALL Szkło hartowane Brązowy",
       "cena": null,
       "od": "2026-11-20T15:18+01:00"
-    },
-    "recbPoZBZkDaAmCt1:wycofany": {
-      "typ": "zniknal",
-      "id": "recbPoZBZkDaAmCt1",
-      "produkt": "Uchwyt LUCK inox 180",
-      "cena": null,
-      "od": "2026-11-22T14:31+01:00"
     },
     "recby5ORUUbtkMlUy:cena": {
       "typ": "cena",
@@ -1037,6 +1051,13 @@
       "cena": 659.0,
       "od": "2026-11-20T15:18+01:00"
     },
+    "rechPgbPAOoXSYiH9:cena": {
+      "typ": "cena",
+      "id": "rechPgbPAOoXSYiH9",
+      "produkt": "Clay Flow, Sand",
+      "cena": 189.6,
+      "od": "2026-11-23T17:00+01:00"
+    },
     "rechiHNo5IvedXIJ3:blad": {
       "typ": "blad",
       "id": "rechiHNo5IvedXIJ3",
@@ -1050,13 +1071,6 @@
       "produkt": "Stolik VentanaZe szklanym blatem, czarny",
       "cena": 413.46,
       "od": "2026-11-20T15:18+01:00"
-    },
-    "recih5OWNtGeJC1gC:cena": {
-      "typ": "cena",
-      "id": "recih5OWNtGeJC1gC",
-      "produkt": "Panel węglowy ścienny Rovere Wood Dąb naturalny | Carbon Deco wodoodporny 2900×1220 mm | GT01",
-      "cena": 299.0,
-      "od": "2026-11-22T14:31+01:00"
     },
     "recipGKjqR8Xd2gQE:blad": {
       "typ": "blad",
@@ -1121,12 +1135,12 @@
       "cena": 3059.0,
       "od": "2026-11-18T23:35+01:00"
     },
-    "recmhoPydVVnboJuZ:wycofany": {
-      "typ": "zniknal",
+    "recmhoPydVVnboJuZ:cena": {
+      "typ": "cena",
       "id": "recmhoPydVVnboJuZ",
-      "produkt": "Panel ścienny C-PANEL PRO GT01 2900×1220 mm – Płyta węglowa, drewno brąz",
-      "cena": null,
-      "od": "2026-11-20T15:18+01:00"
+      "produkt": "Rovere Wood dąb naturalny",
+      "cena": 299.0,
+      "od": "2026-11-23T17:00+01:00"
     },
     "recmjtBDuwzFHZFFd:cena": {
       "typ": "cena",
@@ -1211,13 +1225,6 @@
       "produkt": "Zasłona AUSTRA 1x140x300 aksamit taupe",
       "cena": 50.0,
       "od": "2026-11-18T23:35+01:00"
-    },
-    "reconG8uzUUmTMom5:wycofany": {
-      "typ": "zniknal",
-      "id": "reconG8uzUUmTMom5",
-      "produkt": "Płyta węglowa panel ścienny C-PANEL PRO A5895-2 2900x1220mm – Drewniany jasny",
-      "cena": null,
-      "od": "2026-11-20T15:18+01:00"
     },
     "recpV0ReurRBwEUH0:cena": {
       "typ": "cena",
@@ -1342,8 +1349,8 @@
       "typ": "cena",
       "id": "rect3Y2AjBjzo8Bnd",
       "produkt": "Rattanowe krzesło do jadalni Tento",
-      "cena": 729.95,
-      "od": "2026-11-18T23:35+01:00"
+      "cena": 619.95,
+      "od": "2026-11-23T17:00+01:00"
     },
     "rectDuLBK597dudfG:cena": {
       "typ": "cena",
@@ -1372,13 +1379,6 @@
       "produkt": "Biurko elektryczne ze szklanym blatem Mark Adler Leader 8.5 Black 120 cm",
       "cena": null,
       "od": "2026-11-20T15:18+01:00"
-    },
-    "rectq7jg9e6GFcYn9:cena": {
-      "typ": "cena",
-      "id": "rectq7jg9e6GFcYn9",
-      "produkt": "Panel węglowy ścienny Rovere Wood Dąb naturalny",
-      "cena": 299.0,
-      "od": "2026-11-22T14:31+01:00"
     },
     "recuKrAHBv1rFgOYk:cena": {
       "typ": "cena",
@@ -1450,13 +1450,6 @@
       "cena": 766.0,
       "od": "2026-11-20T15:18+01:00"
     },
-    "recxhjPdOKBJ4lT66:cena": {
-      "typ": "cena",
-      "id": "recxhjPdOKBJ4lT66",
-      "produkt": "Szafa pokojowa Sozilo I",
-      "cena": 1645.0,
-      "od": "2026-11-20T15:18+01:00"
-    },
     "recxzwovQSmIjuZWZ:cena": {
       "typ": "cena",
       "id": "recxzwovQSmIjuZWZ",
@@ -1492,6 +1485,13 @@
       "cena": 58.49,
       "od": "2026-11-18T23:35+01:00"
     },
+    "recz33CcGtTUi2au2:cena": {
+      "typ": "cena",
+      "id": "recz33CcGtTUi2au2",
+      "produkt": "Lustro ścienne z drewna dębowego Aldreu",
+      "cena": 519.95,
+      "od": "2026-11-23T17:00+01:00"
+    },
     "reczR8eINO0UucFj9:blad": {
       "typ": "blad",
       "id": "reczR8eINO0UucFj9",
@@ -1501,102 +1501,104 @@
     }
   },
   "bledy": {
-    "rec1wLAwEYuAwvTMP": 4,
-    "rec3lKdp4CQAt1zyn": 4,
-    "rec4kkIFqPuiLxMqH": 4,
-    "rec66OTG00r16vw1Q": 4,
-    "rec6i4EuVR4CGiJc5": 4,
-    "rec6r95LhXVBNECgX": 4,
-    "rec7AFSPg92pQORzr": 4,
-    "rec7yPHJcyAY14q3h": 4,
-    "rec8XxcRXTgzmlBMq": 4,
-    "rec9PRLh2zity50OO": 4,
-    "rec9ucVvUJwkji2zB": 4,
-    "rec9vaHAbQz9BRYbr": 4,
-    "recAIaas5zRNaYKUi": 4,
-    "recAnOQlfTJpcfzTu": 4,
-    "recBc1Z0L2ywC7jgp": 4,
-    "recBdCx8YnegelDlc": 4,
-    "recCZuGfQWSsDpQL1": 4,
-    "recCqCZA5zj4kv8ir": 4,
-    "recDHS40JhdlnwqOf": 4,
-    "recDz2IIratknSPaj": 4,
-    "recECOvudpFMfR415": 4,
-    "recEIvXkPK9Cov4Ax": 4,
-    "recF9pTkZDmehc6Yr": 4,
-    "recFVIB2q9vUclNWC": 4,
-    "recGJtc0zmgwEXZNI": 4,
-    "recGXFdOAG9RELiKe": 4,
-    "recGZOliFqj6Uss07": 4,
-    "recGweSGrPEAf8vFC": 4,
-    "recHA03atJGVePjaE": 4,
-    "recHVqcZHzhfGOaap": 4,
-    "recIVb2sFvTo3JfPR": 4,
-    "recIcsTemfu1gNMaB": 4,
-    "recInBCiQ0POh6FdW": 4,
-    "recJ1seJQmgG4hY9M": 4,
-    "recJTTWqDd6LnkIe4": 4,
-    "recKUu9donZgVRnqN": 4,
-    "recKVx43EGNVABXy4": 4,
-    "recMa87nWr9jYwKj7": 4,
-    "recN6s2wIdUvLXMSv": 4,
-    "recPSBPgEUXXrVL8U": 4,
-    "recR5w4hhCCKEUSRd": 4,
-    "recUp9fJw7f22aLK5": 4,
-    "recVu9J7tGHQLKmSk": 4,
-    "recW8ZZ185VM8xrBh": 4,
-    "recWIFelhddwqdSb6": 4,
-    "recX5mHkUigSPdtLd": 4,
-    "recX9T3ecSr6ICViI": 4,
-    "recZISHsjRKLfRqTJ": 4,
-    "recZyqKf5I03Nert9": 4,
-    "recaoXlgEbPVhC0bk": 4,
-    "recb7MltD4m6eHNHi": 4,
-    "recc3yy5i7aRZMG0W": 4,
-    "reccyb9Awsn1mMHaI": 4,
-    "recdYDywZG1NaG49O": 4,
-    "rece5RPC4FhoNnN3i": 4,
-    "receLiB901S5DgVAw": 4,
-    "recf1GQlWDOskIBI2": 4,
-    "recfci3wzfNMSi6d0": 4,
-    "recgiT3lXfMpoKFV3": 4,
-    "rechB2I8dkhhj3E24": 4,
-    "rechC5kidr5eNaNvZ": 4,
-    "rechiHNo5IvedXIJ3": 4,
-    "recipGKjqR8Xd2gQE": 4,
-    "recjmsQan5UGsSAzr": 4,
-    "recnKRW3LUzr91mni": 4,
-    "recnLmzWmGIyyaA02": 4,
-    "recqR1uYEzPoIfesI": 4,
-    "recqkE4I2M8uiwYQh": 4,
-    "recqkutVlKiLEad52": 4,
-    "recsSDWWnCJZRiKsQ": 4,
-    "rectMPPyvcV0mL7U3": 4,
-    "rectMbhXlVjPbw3Z2": 4,
-    "recuYBIUgkZkA2nNZ": 4,
-    "recvFSCQYVNK8xedu": 4,
-    "recvpRLLuFM5cA04U": 4,
-    "recvue036WTWVM3ow": 4,
-    "recy6nfUFmvk5fpxv": 4,
-    "reczR8eINO0UucFj9": 4
+    "rec1wLAwEYuAwvTMP": 5,
+    "rec3lKdp4CQAt1zyn": 5,
+    "rec4kkIFqPuiLxMqH": 5,
+    "rec66OTG00r16vw1Q": 5,
+    "rec6i4EuVR4CGiJc5": 5,
+    "rec6r95LhXVBNECgX": 5,
+    "rec7AFSPg92pQORzr": 5,
+    "rec7yPHJcyAY14q3h": 5,
+    "rec8XxcRXTgzmlBMq": 5,
+    "rec9PRLh2zity50OO": 5,
+    "rec9ucVvUJwkji2zB": 5,
+    "rec9vaHAbQz9BRYbr": 5,
+    "recAIaas5zRNaYKUi": 5,
+    "recAnOQlfTJpcfzTu": 5,
+    "recBc1Z0L2ywC7jgp": 5,
+    "recBdCx8YnegelDlc": 5,
+    "recCZuGfQWSsDpQL1": 5,
+    "recCqCZA5zj4kv8ir": 5,
+    "recDHS40JhdlnwqOf": 5,
+    "recDz2IIratknSPaj": 5,
+    "recECOvudpFMfR415": 5,
+    "recEIvXkPK9Cov4Ax": 5,
+    "recETRYIAvD5UwMQX": 1,
+    "recF9pTkZDmehc6Yr": 5,
+    "recFVIB2q9vUclNWC": 5,
+    "recGJtc0zmgwEXZNI": 5,
+    "recGXFdOAG9RELiKe": 5,
+    "recGZOliFqj6Uss07": 5,
+    "recGweSGrPEAf8vFC": 5,
+    "recHA03atJGVePjaE": 5,
+    "recHVqcZHzhfGOaap": 5,
+    "recIVb2sFvTo3JfPR": 5,
+    "recIcsTemfu1gNMaB": 5,
+    "recInBCiQ0POh6FdW": 5,
+    "recJ1seJQmgG4hY9M": 5,
+    "recJTTWqDd6LnkIe4": 5,
+    "recKUu9donZgVRnqN": 5,
+    "recKVx43EGNVABXy4": 5,
+    "recMa87nWr9jYwKj7": 5,
+    "recN6s2wIdUvLXMSv": 5,
+    "recPSBPgEUXXrVL8U": 5,
+    "recR5w4hhCCKEUSRd": 5,
+    "recTVJZBKiKtRN0UV": 1,
+    "recUp9fJw7f22aLK5": 5,
+    "recVu9J7tGHQLKmSk": 5,
+    "recW8ZZ185VM8xrBh": 5,
+    "recWIFelhddwqdSb6": 5,
+    "recX5mHkUigSPdtLd": 5,
+    "recX9T3ecSr6ICViI": 5,
+    "recZISHsjRKLfRqTJ": 5,
+    "recZyqKf5I03Nert9": 5,
+    "recaoXlgEbPVhC0bk": 5,
+    "recb7MltD4m6eHNHi": 5,
+    "recc3yy5i7aRZMG0W": 5,
+    "reccyb9Awsn1mMHaI": 5,
+    "recdYDywZG1NaG49O": 5,
+    "rece5RPC4FhoNnN3i": 5,
+    "receLiB901S5DgVAw": 5,
+    "recf1GQlWDOskIBI2": 5,
+    "recfci3wzfNMSi6d0": 5,
+    "recgiT3lXfMpoKFV3": 5,
+    "rechB2I8dkhhj3E24": 5,
+    "rechC5kidr5eNaNvZ": 5,
+    "rechiHNo5IvedXIJ3": 5,
+    "recipGKjqR8Xd2gQE": 5,
+    "recjmsQan5UGsSAzr": 5,
+    "reclUFRtLOjnzn0lS": 1,
+    "reclcCY8uH1NBiHAK": 1,
+    "recnKRW3LUzr91mni": 5,
+    "recnLmzWmGIyyaA02": 5,
+    "recpV0ReurRBwEUH0": 1,
+    "recqR1uYEzPoIfesI": 5,
+    "recqkE4I2M8uiwYQh": 5,
+    "recqkutVlKiLEad52": 5,
+    "recsSDWWnCJZRiKsQ": 5,
+    "rectMPPyvcV0mL7U3": 5,
+    "rectMbhXlVjPbw3Z2": 5,
+    "recuKrAHBv1rFgOYk": 1,
+    "recuYBIUgkZkA2nNZ": 5,
+    "recut7857w8dY0xpq": 1,
+    "recvFSCQYVNK8xedu": 5,
+    "recvpRLLuFM5cA04U": 5,
+    "recvue036WTWVM3ow": 5,
+    "recy6nfUFmvk5fpxv": 5,
+    "reczR8eINO0UucFj9": 5
   },
   "podejrzane": {
     "rec0TApe9Ge0ERHqi": 2,
-    "rec5SLOX6vqbRRcTr": 2,
     "recDp3durcH9Lyrgy": 2,
-    "recOEE8q1F5wgi89W": 2,
     "recOQ5hzsMNB8EaZK": 2,
     "recQkSdcHOewZ3Nvk": 2,
     "recS0j5t7IoKvD6yc": 2,
     "recZFeoSJvDers9as": 2,
     "recbEcwNfJrjSJjzo": 2,
-    "recbPoZBZkDaAmCt1": 1,
     "recc0owCmLjlIEO4d": 2,
     "rece9ckEXDsKHv8AX": 2,
     "recgcdT2diL8xw3IO": 2,
-    "recmhoPydVVnboJuZ": 2,
     "recnRknvb41TxNzO5": 2,
-    "reconG8uzUUmTMom5": 2,
     "recrxY8il3bTrLaNs": 2,
     "rectTKXFrNngHmivm": 2,
     "recwzfGi97ns3x511": 2
@@ -1875,7 +1877,66 @@
       "blad": false,
       "data": "2026-11-22T14:31+01:00",
       "proby": 1
+    },
+    "recrxY8il3bTrLaNs": {
+      "propozycje": [],
+      "uwagi": "Oryginał to Nowodvorski ORBIT IV (nr kat. 7945, kod lampy.pl 7022218). To minimalistyczna czarna lampa wisząca ze stali lakierowanej: na pionowym pręcie wisi oprawa z czterema poziomymi ramionami zakończonymi płaskimi, okrągłymi oprawkami GX53. Szerokość wynosi ok. 84,5 cm. Na zdjęciu jest tylko lampa na białym tle, więc nie widać, w jakim pokoju ma wisieć.\n\nNie znalazłem żadnego produktu, który mogę z pełnym przekonaniem polecić:\n- **Allegro:** w wynikach wyszukiwania są tylko strony listingów, bez konkretnej oferty ORBIT 7945. Strony Allegro zwracają błąd 403, więc nie mogłem potwierdzić ani dostępności, ani ceny.\n- **Agata Meble:** strona też zwraca błąd 403.\n- **Eyeon:** nie udało się otworzyć strony lampy APOLIN czarnej (wieloramienna, 120×40×25 cm), bo dostęp został zablokowany.\n- **BRW:** lampa FOYLE (4-punktowa, czarna, 122 cm) jest wyprzedana. CALAO (czarna, z falistymi ramionami LED, 160 cm, 927 zł) ma zupełnie inny styl i rozmiar.\n- **Beliani, Westwing, Selsey, Sklum, Miamo:** nie znalazłem tam czarnej lampy z ramionami i okrągłymi oprawkami.\n\nWarto sprawdzić ręcznie jedną lampę: Polux MIRELLA 5xGX53 w BRW (https://www.brw.pl/lampa-wiszaca-czarna-czarna-zloty-oksydowany-mirella-5xgx53x6w-polux,846323). Strona się otwiera i można ją kupić. Cena to 254,99 zł, wymiary 100×85×8,3 cm, sprzedawca Abazur. Ma jednak złote akcenty, a w opisie nie widać, jak wygląda konstrukcja ramion, więc nie mogłem potwierdzić, że wygląda podobnie do Orbita. Z tego powodu nie wpisałem jej jako propozycji.\n\nSam model ORBIT IV 7945 nadal jest w sprzedaży w sklepach spoza listy, np. lampomat.pl czy rossi.pl. Jeśli architekt zdobędzie dostęp do Allegro, najprościej będzie wyszukać tam „Nowodvorski 7945” i sprawdzić konkretną ofertę.",
+      "odrzucone": [],
+      "blad": false,
+      "data": "2026-11-23T16:55+01:00",
+      "proby": 1
+    },
+    "rectTKXFrNngHmivm": {
+      "propozycje": [
+        {
+          "nazwa": "TRAVSPORT Biurko z regulacją wysokości, elektryczny czarny, 120x70 cm",
+          "sklep": "IKEA",
+          "url": "https://www.ikea.com/pl/pl/p/travsport-biurko-z-regulacja-wysokosci-elektryczny-czarny-s09621043/",
+          "cena": 1099.0,
+          "cena_ze_strony": true,
+          "wymiary": "120 x 70 cm, wysokość 72–117 cm",
+          "uzasadnienie": "Ma całkowicie czarny prostokątny blat i czarną stalową ramę z nogami w kształcie litery T oraz prawie taką samą szerokość i zakres regulacji (72–117 cm wobec 72–118 cm), a cena jest zbliżona, więc w minimalistycznym, ciemnym gabinecie lub pokoju do gier wygląda niemal jak oryginał.",
+          "zdjecie": "https://www.ikea.com/pl/pl/images/products/travsport-biurko-z-regulacja-wysokosci-elektryczny-czarny__1531958_pe1015813_s5.jpg",
+          "weryfikacja": "sprawdzony"
+        },
+        {
+          "nazwa": "MITTZON Biurko z regulacją wysokości, elektryczny okl jesionowa bejcowana na czarno/czarny, 120x80 cm",
+          "sklep": "IKEA",
+          "url": "https://www.ikea.com/pl/pl/p/mittzon-biurko-z-regulacja-wysokosci-elektryczny-okl-jesionowa-bejcowana-na-czarno-czarny-s99527748/",
+          "cena": 1849.0,
+          "cena_ze_strony": true,
+          "wymiary": "120 x 80 cm (zakres wysokości nie jest podany w tekście strony)",
+          "uzasadnienie": "Matowy czarny blat z czarną ramą z dwoma silnikami daje ten sam ciemny, monolityczny wygląd i pasuje do tego samego wnętrza, ale jest głębsze o 20 cm i wyraźnie droższe, więc to propozycja zapasowa, wyższej klasy.",
+          "zdjecie": "https://www.ikea.com/pl/pl/images/products/mittzon-biurko-z-regulacja-wysokosci-elektryczny-okl-jesionowa-bejcowana-na-czarno-czarny__1205824_pe907236_s5.jpg",
+          "weryfikacja": "sprawdzony"
+        }
+      ],
+      "uwagi": "Znalazłem dwa biurka w IKEA. Lepszym zamiennikiem jest TRAVSPORT. Na stronach obu produktów dostępność wyświetla się dopiero po załadowaniu (widać tylko „Sprawdzanie dostępności…”), więc nie mogłem sprawdzić, czy da się je teraz kupić. Przed wstawieniem na listę trzeba to zobaczyć w przeglądarce.\n\nOryginał to czarne biurko elektryczne ze szklanym blatem w karbonowy wzór, 120 x 60 cm, wysokość 72–118 cm, na nogach w kształcie litery T. Na zdjęciu jest tylko sam produkt na białym tle, bez pokoju. Żadna propozycja nie ma szklanego blatu, oba mają matowe czarne blaty.\n\nTRAVSPORT: cena 1 099 zł, wymiary 120 x 70 cm, wysokość 72–117 cm. Jest bardzo blisko oryginału, tylko o 10 cm głębszy.\n\nMITTZON: cena 1 849 zł, czyli około 54% więcej niż oryginał, i jest głębsze (120 x 80 cm). Na stronie IKEA jest też wersja 120 x 60, ale nie otwierałem jej strony, więc nie znam jej ceny.\n\nPominąłem:\n- UTMANING z IKEA (czarne, 120 x 80 cm, 1 999 zł): jest za drogie, a strona podaje niespójne wymiary.\n- Beliani TAVARES (czarne, 120 x 60 cm, 75–110 cm): na stronie jest „niedostępny”.\n- Inne biurka Beliani 120 x 60 cm: są dwukolorowe (czarny z jasnym brązem lub z drewnem).\n\nAllegro zawiera trafne oferty, np. Sense7 i Spacetronik Astrid ze szklanym blatem 120 x 60 cm. Allegro i agatameble.pl blokują jednak automatyczny dostęp (błąd 403), a wyszukiwarka nie zwracała stron z jysk.pl, brw.pl, sklum, selsey, lectus24 ani meble-mwm. Warto ręcznie sprawdzić Allegro: Sense7 ze szklanym blatem za około 999 zł byłby najbliższy oryginałowi.",
+      "odrzucone": [],
+      "blad": false,
+      "data": "2026-11-23T16:58+01:00",
+      "proby": 1
+    },
+    "recwzfGi97ns3x511": {
+      "propozycje": [
+        {
+          "nazwa": "Regulowana lampa ścienna z żelaza Lizz (wariant: czarny)",
+          "sklep": "Sklum",
+          "url": "https://www.sklum.com/pl/kup-kinkiety-do-sypialni/98469-lampa-scienna-lizz.html",
+          "cena": 184.95,
+          "cena_ze_strony": true,
+          "wymiary": "wys. 35 cm × szer. 69 cm × gł. 20 cm, wysokość klosza 8,5 cm",
+          "uzasadnienie": "Ma tak jak oryginał długie, metalowe ramię z kloszem na końcu, występuje w czarnym kolorze ze złotymi detalami i podobnej szerokości (69 cm wobec 60 cm), więc pasuje do nowoczesnego, lekko industrialnego wnętrza, choć klosz jest stożkowy, a nie kopułowy.",
+          "zdjecie": "https://cdn.sklum.com/pl/4279388-large_default/lampa-scienna-lizz.jpg",
+          "weryfikacja": "sprawdzony"
+        }
+      ],
+      "uwagi": "Wycofana lampa to kinkiet z długim ramieniem i kopułowym kloszem, czarnym na zewnątrz i złotym w środku, z mosiężnym przegubem. Najprawdopodobniej to model Aldex ESPACE WALL BLACK 1036C1. Najlepszy zamiennik byłby więc właśnie ten model na Allegro, ale Allegro zwraca błąd 403. Nie udało mi się otworzyć żadnej oferty czarnego 1036C1, więc go nie proponuję. Sprawdź go ręcznie na Allegro, hasło „Aldex Espace 1036C1”; w innych sklepach kosztuje około 189–228 zł.\n\nProponowana lampa Lizz: strona działa i produkt jest „W magazynie”, ale tylko w wybranym domyślnie kolorze Celadón. Czarny jest na liście kolorów, jednak strona nie pokazała, czy jest dostępny. Przed dodaniem do listy wybierz czarny wariant na stronie i potwierdź dostępność.\n\nOdrzuciłem:\n- Beliani MARISA i NARVA: strony nie pokazują ceny i wyświetlają komunikat o powiadomieniu o dostępności.\n- Agata Meble APUS i ARIES: czarno-złote kinkiety na ramieniu, ale strona zwraca błąd 403, więc nie potwierdziłem ceny ani dostępności. APUS warto sprawdzić ręcznie.\n- Westwing Roda i Hilko: inny typ lampy, bez ramienia.",
+      "odrzucone": [],
+      "blad": false,
+      "data": "2026-11-23T17:00+01:00",
+      "proby": 1
     }
   },
-  "ostatni_mail": "2026-11-22"
+  "ostatni_mail": "2026-11-23"
 }
