@@ -57,13 +57,6 @@
       "cena": 58.49,
       "od": "2026-11-18T23:35+01:00"
     },
-    "rec4XZabcScbSywTo:cena": {
-      "typ": "cena",
-      "id": "rec4XZabcScbSywTo",
-      "produkt": "Biurko z litego drewna Tova",
-      "cena": 1349.0,
-      "od": "2026-11-20T15:18+01:00"
-    },
     "rec4kkIFqPuiLxMqH:blad": {
       "typ": "blad",
       "id": "rec4kkIFqPuiLxMqH",
@@ -323,6 +316,13 @@
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
     },
+    "recETRYIAvD5UwMQX:blad": {
+      "typ": "blad",
+      "id": "recETRYIAvD5UwMQX",
+      "produkt": "Pax BASIC panel boczny 18 mm - Seashell",
+      "cena": null,
+      "od": "2026-11-25T16:27+01:00"
+    },
     "recETRYIAvD5UwMQX:cena": {
       "typ": "cena",
       "id": "recETRYIAvD5UwMQX",
@@ -462,6 +462,13 @@
       "produkt": "Panel ścienny SANDSTONE Stone Touch Flex FLS 01",
       "cena": 199.0,
       "od": "2026-11-23T17:00+01:00"
+    },
+    "recIwzaez4WInbYvt:malo": {
+      "typ": "malo",
+      "id": "recIwzaez4WInbYvt",
+      "produkt": "Panel ścienny SANDSTONE Stone Touch Flex FLS 01",
+      "cena": null,
+      "od": "2026-11-25T16:27+01:00"
     },
     "recJ1seJQmgG4hY9M:blad": {
       "typ": "blad",
@@ -687,6 +694,13 @@
       "cena": 2659.8,
       "od": "2026-11-20T15:18+01:00"
     },
+    "recTVJZBKiKtRN0UV:blad": {
+      "typ": "blad",
+      "id": "recTVJZBKiKtRN0UV",
+      "produkt": "Pax Flat - drzwi prawe, kol. Light Cream",
+      "cena": null,
+      "od": "2026-11-25T16:27+01:00"
+    },
     "recURXFiRMMWRjtFL:cena": {
       "typ": "cena",
       "id": "recURXFiRMMWRjtFL",
@@ -796,8 +810,8 @@
       "typ": "cena",
       "id": "recY4EARCE6CaYme8",
       "produkt": "Roleta rzymska Capri",
-      "cena": 205.0,
-      "od": "2026-11-24T16:47+01:00"
+      "cena": 193.41,
+      "od": "2026-11-25T16:27+01:00"
     },
     "recY5mF9aOXU5K8og:cena": {
       "typ": "cena",
@@ -876,12 +890,12 @@
       "cena": null,
       "od": "2026-11-20T15:18+01:00"
     },
-    "recby5ORUUbtkMlUy:cena": {
-      "typ": "cena",
+    "recby5ORUUbtkMlUy:wycofany": {
+      "typ": "niedostepny",
       "id": "recby5ORUUbtkMlUy",
       "produkt": "Dywan Astra",
-      "cena": 160.46,
-      "od": "2026-11-20T15:18+01:00"
+      "cena": null,
+      "od": "2026-11-25T16:27+01:00"
     },
     "recc0owCmLjlIEO4d:wycofany": {
       "typ": "niedostepny",
@@ -1079,6 +1093,20 @@
       "cena": null,
       "od": "2026-11-22T14:31+01:00"
     },
+    "reclUFRtLOjnzn0lS:blad": {
+      "typ": "blad",
+      "id": "reclUFRtLOjnzn0lS",
+      "produkt": "Pax Flat - drzwi lewe, kol. Light Cream",
+      "cena": null,
+      "od": "2026-11-25T16:27+01:00"
+    },
+    "reclcCY8uH1NBiHAK:blad": {
+      "typ": "blad",
+      "id": "reclcCY8uH1NBiHAK",
+      "produkt": "Uchwyt drewniany HALF dąb",
+      "cena": null,
+      "od": "2026-11-25T16:27+01:00"
+    },
     "reclcCY8uH1NBiHAK:cena": {
       "typ": "cena",
       "id": "reclcCY8uH1NBiHAK",
@@ -1190,6 +1218,13 @@
       "produkt": "Zasłona AUSTRA 1x140x300 aksamit taupe",
       "cena": 50.0,
       "od": "2026-11-18T23:35+01:00"
+    },
+    "recpV0ReurRBwEUH0:blad": {
+      "typ": "blad",
+      "id": "recpV0ReurRBwEUH0",
+      "produkt": "Pax BASIC SEASHELL - drzwi lewe",
+      "cena": null,
+      "od": "2026-11-25T16:27+01:00"
     },
     "recpV0ReurRBwEUH0:cena": {
       "typ": "cena",
@@ -1345,6 +1380,13 @@
       "cena": null,
       "od": "2026-11-20T15:18+01:00"
     },
+    "recuKrAHBv1rFgOYk:blad": {
+      "typ": "blad",
+      "id": "recuKrAHBv1rFgOYk",
+      "produkt": "Pax BASIC SEASHELL - drzwi prawe",
+      "cena": null,
+      "od": "2026-11-25T16:27+01:00"
+    },
     "recuKrAHBv1rFgOYk:cena": {
       "typ": "cena",
       "id": "recuKrAHBv1rFgOYk",
@@ -1365,6 +1407,13 @@
       "produkt": "Spiral Study Plakat",
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
+    },
+    "recut7857w8dY0xpq:blad": {
+      "typ": "blad",
+      "id": "recut7857w8dY0xpq",
+      "produkt": "Pax BASIC panel boczny 18 mm -  Light Cream",
+      "cena": null,
+      "od": "2026-11-25T16:27+01:00"
     },
     "recvFSCQYVNK8xedu:blad": {
       "typ": "blad",
@@ -1466,91 +1515,91 @@
     }
   },
   "bledy": {
-    "rec1wLAwEYuAwvTMP": 6,
-    "rec3lKdp4CQAt1zyn": 6,
-    "rec4kkIFqPuiLxMqH": 6,
-    "rec66OTG00r16vw1Q": 6,
-    "rec6i4EuVR4CGiJc5": 6,
-    "rec6r95LhXVBNECgX": 6,
-    "rec7AFSPg92pQORzr": 6,
-    "rec7yPHJcyAY14q3h": 6,
-    "rec8XxcRXTgzmlBMq": 6,
-    "rec9PRLh2zity50OO": 6,
-    "rec9ucVvUJwkji2zB": 6,
-    "rec9vaHAbQz9BRYbr": 6,
-    "recAIaas5zRNaYKUi": 6,
-    "recAnOQlfTJpcfzTu": 6,
-    "recBc1Z0L2ywC7jgp": 6,
-    "recBdCx8YnegelDlc": 6,
-    "recCZuGfQWSsDpQL1": 6,
-    "recCqCZA5zj4kv8ir": 6,
-    "recDHS40JhdlnwqOf": 6,
-    "recDz2IIratknSPaj": 6,
-    "recECOvudpFMfR415": 6,
-    "recEIvXkPK9Cov4Ax": 6,
-    "recETRYIAvD5UwMQX": 2,
-    "recF9pTkZDmehc6Yr": 6,
-    "recFVIB2q9vUclNWC": 6,
-    "recGJtc0zmgwEXZNI": 6,
-    "recGXFdOAG9RELiKe": 6,
-    "recGZOliFqj6Uss07": 6,
-    "recGweSGrPEAf8vFC": 6,
-    "recHA03atJGVePjaE": 6,
-    "recHVqcZHzhfGOaap": 6,
-    "recIVb2sFvTo3JfPR": 6,
-    "recIcsTemfu1gNMaB": 6,
-    "recInBCiQ0POh6FdW": 6,
-    "recJ1seJQmgG4hY9M": 6,
-    "recJTTWqDd6LnkIe4": 6,
-    "recKUu9donZgVRnqN": 6,
-    "recKVx43EGNVABXy4": 6,
-    "recMa87nWr9jYwKj7": 6,
-    "recN6s2wIdUvLXMSv": 6,
-    "recPSBPgEUXXrVL8U": 6,
-    "recR5w4hhCCKEUSRd": 6,
-    "recTVJZBKiKtRN0UV": 2,
-    "recUp9fJw7f22aLK5": 6,
-    "recVu9J7tGHQLKmSk": 6,
-    "recW8ZZ185VM8xrBh": 6,
-    "recWIFelhddwqdSb6": 6,
-    "recX5mHkUigSPdtLd": 6,
-    "recX9T3ecSr6ICViI": 6,
-    "recZISHsjRKLfRqTJ": 6,
-    "recZyqKf5I03Nert9": 6,
-    "recaoXlgEbPVhC0bk": 6,
-    "recb7MltD4m6eHNHi": 6,
-    "recc3yy5i7aRZMG0W": 6,
-    "reccyb9Awsn1mMHaI": 6,
-    "recdYDywZG1NaG49O": 6,
-    "rece5RPC4FhoNnN3i": 6,
-    "receLiB901S5DgVAw": 6,
-    "recf1GQlWDOskIBI2": 6,
-    "recfci3wzfNMSi6d0": 6,
-    "recgiT3lXfMpoKFV3": 6,
-    "rechB2I8dkhhj3E24": 6,
-    "rechC5kidr5eNaNvZ": 6,
-    "rechiHNo5IvedXIJ3": 6,
-    "recipGKjqR8Xd2gQE": 6,
-    "recjmsQan5UGsSAzr": 6,
-    "reclUFRtLOjnzn0lS": 2,
-    "reclcCY8uH1NBiHAK": 2,
-    "recnKRW3LUzr91mni": 6,
-    "recnLmzWmGIyyaA02": 6,
-    "recpV0ReurRBwEUH0": 2,
-    "recqR1uYEzPoIfesI": 6,
-    "recqkE4I2M8uiwYQh": 6,
-    "recqkutVlKiLEad52": 6,
-    "recsSDWWnCJZRiKsQ": 6,
-    "rectMPPyvcV0mL7U3": 6,
-    "rectMbhXlVjPbw3Z2": 6,
-    "recuKrAHBv1rFgOYk": 2,
-    "recuYBIUgkZkA2nNZ": 6,
-    "recut7857w8dY0xpq": 2,
-    "recvFSCQYVNK8xedu": 6,
-    "recvpRLLuFM5cA04U": 6,
-    "recvue036WTWVM3ow": 6,
-    "recy6nfUFmvk5fpxv": 6,
-    "reczR8eINO0UucFj9": 6
+    "rec1wLAwEYuAwvTMP": 7,
+    "rec3lKdp4CQAt1zyn": 7,
+    "rec4kkIFqPuiLxMqH": 7,
+    "rec66OTG00r16vw1Q": 7,
+    "rec6i4EuVR4CGiJc5": 7,
+    "rec6r95LhXVBNECgX": 7,
+    "rec7AFSPg92pQORzr": 7,
+    "rec7yPHJcyAY14q3h": 7,
+    "rec8XxcRXTgzmlBMq": 7,
+    "rec9PRLh2zity50OO": 7,
+    "rec9ucVvUJwkji2zB": 7,
+    "rec9vaHAbQz9BRYbr": 7,
+    "recAIaas5zRNaYKUi": 7,
+    "recAnOQlfTJpcfzTu": 7,
+    "recBc1Z0L2ywC7jgp": 7,
+    "recBdCx8YnegelDlc": 7,
+    "recCZuGfQWSsDpQL1": 7,
+    "recCqCZA5zj4kv8ir": 7,
+    "recDHS40JhdlnwqOf": 7,
+    "recDz2IIratknSPaj": 7,
+    "recECOvudpFMfR415": 7,
+    "recEIvXkPK9Cov4Ax": 7,
+    "recETRYIAvD5UwMQX": 3,
+    "recF9pTkZDmehc6Yr": 7,
+    "recFVIB2q9vUclNWC": 7,
+    "recGJtc0zmgwEXZNI": 7,
+    "recGXFdOAG9RELiKe": 7,
+    "recGZOliFqj6Uss07": 7,
+    "recGweSGrPEAf8vFC": 7,
+    "recHA03atJGVePjaE": 7,
+    "recHVqcZHzhfGOaap": 7,
+    "recIVb2sFvTo3JfPR": 7,
+    "recIcsTemfu1gNMaB": 7,
+    "recInBCiQ0POh6FdW": 7,
+    "recJ1seJQmgG4hY9M": 7,
+    "recJTTWqDd6LnkIe4": 7,
+    "recKUu9donZgVRnqN": 7,
+    "recKVx43EGNVABXy4": 7,
+    "recMa87nWr9jYwKj7": 7,
+    "recN6s2wIdUvLXMSv": 7,
+    "recPSBPgEUXXrVL8U": 7,
+    "recR5w4hhCCKEUSRd": 7,
+    "recTVJZBKiKtRN0UV": 3,
+    "recUp9fJw7f22aLK5": 7,
+    "recVu9J7tGHQLKmSk": 7,
+    "recW8ZZ185VM8xrBh": 7,
+    "recWIFelhddwqdSb6": 7,
+    "recX5mHkUigSPdtLd": 7,
+    "recX9T3ecSr6ICViI": 7,
+    "recZISHsjRKLfRqTJ": 7,
+    "recZyqKf5I03Nert9": 7,
+    "recaoXlgEbPVhC0bk": 7,
+    "recb7MltD4m6eHNHi": 7,
+    "recc3yy5i7aRZMG0W": 7,
+    "reccyb9Awsn1mMHaI": 7,
+    "recdYDywZG1NaG49O": 7,
+    "rece5RPC4FhoNnN3i": 7,
+    "receLiB901S5DgVAw": 7,
+    "recf1GQlWDOskIBI2": 7,
+    "recfci3wzfNMSi6d0": 7,
+    "recgiT3lXfMpoKFV3": 7,
+    "rechB2I8dkhhj3E24": 7,
+    "rechC5kidr5eNaNvZ": 7,
+    "rechiHNo5IvedXIJ3": 7,
+    "recipGKjqR8Xd2gQE": 7,
+    "recjmsQan5UGsSAzr": 7,
+    "reclUFRtLOjnzn0lS": 3,
+    "reclcCY8uH1NBiHAK": 3,
+    "recnKRW3LUzr91mni": 7,
+    "recnLmzWmGIyyaA02": 7,
+    "recpV0ReurRBwEUH0": 3,
+    "recqR1uYEzPoIfesI": 7,
+    "recqkE4I2M8uiwYQh": 7,
+    "recqkutVlKiLEad52": 7,
+    "recsSDWWnCJZRiKsQ": 7,
+    "rectMPPyvcV0mL7U3": 7,
+    "rectMbhXlVjPbw3Z2": 7,
+    "recuKrAHBv1rFgOYk": 3,
+    "recuYBIUgkZkA2nNZ": 7,
+    "recut7857w8dY0xpq": 3,
+    "recvFSCQYVNK8xedu": 7,
+    "recvpRLLuFM5cA04U": 7,
+    "recvue036WTWVM3ow": 7,
+    "recy6nfUFmvk5fpxv": 7,
+    "reczR8eINO0UucFj9": 7
   },
   "podejrzane": {
     "rec0TApe9Ge0ERHqi": 2,
@@ -1560,6 +1609,7 @@
     "recS0j5t7IoKvD6yc": 2,
     "recZFeoSJvDers9as": 2,
     "recbEcwNfJrjSJjzo": 2,
+    "recby5ORUUbtkMlUy": 1,
     "recc0owCmLjlIEO4d": 2,
     "rece9ckEXDsKHv8AX": 2,
     "recgcdT2diL8xw3IO": 2,
@@ -1756,6 +1806,14 @@
       "data": "2026-11-22T14:24+01:00",
       "proby": 1
     },
+    "recby5ORUUbtkMlUy": {
+      "propozycje": [],
+      "uwagi": "Nie mogłem otworzyć żadnej strony produktu, bo narzędzie WebFetch jest zablokowane w tym trybie uprawnień („don't ask mode”). Dlatego nie potwierdziłem dostępności, ceny ani wymiarów żadnego kandydata i zgodnie z zasadami nie podaję propozycji.\n\nCzego szukałem: oryginał to płaski dywan w szachownicę 80x150 cm, styl skandynawski/retro. Ma kremowe pola i ceglaste (terakotowe) prostokąty, a pola rozdzielają cienkie paski w czerni i beżu. Kolekcja to Astra marki Universal, cena ok. 254 zł.\n\nWyniki z wyszukiwarki:\n- Zapytania z „site:” do allegro.pl, westwing.pl i beliani.pl zwracały głównie oferty spoza listy dozwolonych sklepów (kaufland.pl, leroymerlin.pl, favi.pl). Tych nie proponuję.\n- Westwing ma bawełniany dywan „Gambit” w kolorze terakota. Znalazłem go tylko na zagranicznych stronach Westwing (np. westwing.de), w rozmiarze 160x230 cm. Nie znalazłem go na westwing.pl ani w rozmiarze 80x150 cm.\n- Na Kauflandzie (sklep spoza listy) jest dywan „Blox Fringe Terakota” marki Volero w szachownicę, 80x150 cm, za ok. 258–291 zł. Warto sprawdzić, czy ta sama marka lub model jest na allegro.pl.\n\nCo zrobić dalej: po włączeniu WebFetch mogę sprawdzić konkretne strony. Najlepiej zacząć od Allegro: dywan szachownica terakota 80x150 (np. Volero Blox) albo dywany marki Universal (Astra lub Parma, kolor ceglasty).",
+      "odrzucone": [],
+      "blad": false,
+      "data": "2026-11-25T16:27+01:00",
+      "proby": 1
+    },
     "recc0owCmLjlIEO4d": {
       "propozycje": [
         {
@@ -1903,5 +1961,5 @@
       "proby": 1
     }
   },
-  "ostatni_mail": "2026-11-24"
+  "ostatni_mail": "2026-11-25"
 }
