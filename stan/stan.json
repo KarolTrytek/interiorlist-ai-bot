@@ -22,6 +22,20 @@
       "cena": null,
       "od": "2026-11-20T15:18+01:00"
     },
+    "rec0cbgGKHdftNFgr:cena": {
+      "typ": "cena",
+      "id": "rec0cbgGKHdftNFgr",
+      "produkt": "Kabel do lamp wiszących Fulvia",
+      "cena": 53.6,
+      "od": "2026-11-27T15:54+01:00"
+    },
+    "rec1DCNqOTafYC2Is:cena": {
+      "typ": "cena",
+      "id": "rec1DCNqOTafYC2Is",
+      "produkt": "Dywan Scala",
+      "cena": 906.0,
+      "od": "2026-11-27T15:54+01:00"
+    },
     "rec1wLAwEYuAwvTMP:blad": {
       "typ": "blad",
       "id": "rec1wLAwEYuAwvTMP",
@@ -99,6 +113,13 @@
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
     },
+    "rec76qHJJFtdAiLPU:cena": {
+      "typ": "cena",
+      "id": "rec76qHJJFtdAiLPU",
+      "produkt": "Abażur Hila",
+      "cena": 203.03,
+      "od": "2026-11-27T15:54+01:00"
+    },
     "rec7AFSPg92pQORzr:blad": {
       "typ": "blad",
       "id": "rec7AFSPg92pQORzr",
@@ -125,13 +146,6 @@
       "id": "rec7tqG7PLDF7E412",
       "produkt": "Dywan Retro",
       "cena": 521.0,
-      "od": "2026-11-18T23:35+01:00"
-    },
-    "rec7tqG7PLDF7E412:malo": {
-      "typ": "malo",
-      "id": "rec7tqG7PLDF7E412",
-      "produkt": "Dywan Retro",
-      "cena": null,
       "od": "2026-11-18T23:35+01:00"
     },
     "rec7yPHJcyAY14q3h:blad": {
@@ -238,6 +252,13 @@
       "produkt": "Szafka RTV SKRA SKR16",
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
+    },
+    "recByH29BJ8dpVVRW:cena": {
+      "typ": "cena",
+      "id": "recByH29BJ8dpVVRW",
+      "produkt": "Lampa stołowa Shiva",
+      "cena": 243.64,
+      "od": "2026-11-27T15:54+01:00"
     },
     "recByH29BJ8dpVVRW:malo": {
       "typ": "malo",
@@ -663,8 +684,8 @@
       "typ": "cena",
       "id": "recS9ZCjrsDrMQ90Y",
       "produkt": "Półki zestaw Boss",
-      "cena": 138.18,
-      "od": "2026-11-18T23:35+01:00"
+      "cena": 110.25,
+      "od": "2026-11-27T15:54+01:00"
     },
     "recSROhKkVxZU01j7:cena": {
       "typ": "cena",
@@ -768,8 +789,8 @@
       "typ": "cena",
       "id": "recWT7XaoXMAdkuNh",
       "produkt": "Dywan Boho 1.0 Structa",
-      "cena": 2016.0,
-      "od": "2026-11-20T15:18+01:00"
+      "cena": 1874.0,
+      "od": "2026-11-27T15:54+01:00"
     },
     "recX5mHkUigSPdtLd:blad": {
       "typ": "blad",
@@ -827,12 +848,12 @@
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
     },
-    "recZiAKvD2iaDWno8:malo": {
-      "typ": "malo",
+    "recZiAKvD2iaDWno8:cena": {
+      "typ": "cena",
       "id": "recZiAKvD2iaDWno8",
       "produkt": "Krzesła zestaw Helda - zestaw 2 krzeseł",
-      "cena": null,
-      "od": "2026-11-18T23:35+01:00"
+      "cena": 1516.8,
+      "od": "2026-11-27T15:54+01:00"
     },
     "recZyqKf5I03Nert9:blad": {
       "typ": "blad",
@@ -861,6 +882,13 @@
       "produkt": "Sofa 3-osobowa z funkcją spania Marsala",
       "cena": null,
       "od": "2026-11-18T23:35+01:00"
+    },
+    "recbDmHQrINEGjgg1:cena": {
+      "typ": "cena",
+      "id": "recbDmHQrINEGjgg1",
+      "produkt": "Sofa Nanea",
+      "cena": 5271.2,
+      "od": "2026-11-27T15:54+01:00"
     },
     "recbDmHQrINEGjgg1:malo": {
       "typ": "malo",
@@ -901,8 +929,8 @@
       "typ": "cena",
       "id": "recc4O7h9pWIaJ1fg",
       "produkt": "Biurko Sierra",
-      "cena": 1793.0,
-      "od": "2026-11-20T15:18+01:00"
+      "cena": 1667.0,
+      "od": "2026-11-27T15:54+01:00"
     },
     "reccyb9Awsn1mMHaI:blad": {
       "typ": "blad",
@@ -1041,8 +1069,8 @@
       "typ": "cena",
       "id": "recid0jyn34fYIg4x",
       "produkt": "Stolik VentanaZe szklanym blatem, czarny",
-      "cena": 413.46,
-      "od": "2026-11-20T15:18+01:00"
+      "cena": 347.25,
+      "od": "2026-11-27T15:54+01:00"
     },
     "recipGKjqR8Xd2gQE:blad": {
       "typ": "blad",
@@ -1071,6 +1099,13 @@
       "produkt": "Szafka nocna ASKA ASK02",
       "cena": null,
       "od": "2026-11-21T14:49+01:00"
+    },
+    "reck0viVy0Tg3qB4f:cena": {
+      "typ": "cena",
+      "id": "reck0viVy0Tg3qB4f",
+      "produkt": "Konsola QianoZ litego drewna akacjowego, brązowa",
+      "cena": 1247.2,
+      "od": "2026-11-27T15:54+01:00"
     },
     "reckgocc9wdJqRqGa:cena": {
       "typ": "cena",
@@ -1125,8 +1160,8 @@
       "typ": "cena",
       "id": "recmnWyoKzFXu959G",
       "produkt": "Dywan Rocco Cream",
-      "cena": 814.0,
-      "od": "2026-11-20T15:18+01:00"
+      "cena": 779.0,
+      "od": "2026-11-27T15:54+01:00"
     },
     "recn4WFZyatmjRJ7Y:cena": {
       "typ": "cena",
@@ -1258,8 +1293,8 @@
       "typ": "cena",
       "id": "recqalEvubbfdmkkv",
       "produkt": "Biurko dziecięce Kiddy",
-      "cena": 845.0,
-      "od": "2026-11-20T15:18+01:00"
+      "cena": 824.0,
+      "od": "2026-11-27T15:54+01:00"
     },
     "recqalEvubbfdmkkv:malo": {
       "typ": "malo",
@@ -1426,8 +1461,8 @@
       "typ": "cena",
       "id": "recxzwovQSmIjuZWZ",
       "produkt": "Dywan GreenwichTkany ręcznie, wełniany, bez włosia, ciemnozielony",
-      "cena": 1134.0,
-      "od": "2026-11-18T23:35+01:00"
+      "cena": 996.0,
+      "od": "2026-11-27T15:54+01:00"
     },
     "recy6nfUFmvk5fpxv:blad": {
       "typ": "blad",
@@ -1473,85 +1508,98 @@
     }
   },
   "bledy": {
-    "rec1wLAwEYuAwvTMP": 8,
-    "rec3lKdp4CQAt1zyn": 8,
-    "rec4kkIFqPuiLxMqH": 8,
-    "rec66OTG00r16vw1Q": 8,
-    "rec6i4EuVR4CGiJc5": 8,
-    "rec6r95LhXVBNECgX": 8,
-    "rec7AFSPg92pQORzr": 8,
-    "rec7yPHJcyAY14q3h": 8,
-    "rec8XxcRXTgzmlBMq": 8,
-    "rec9PRLh2zity50OO": 8,
-    "rec9ucVvUJwkji2zB": 8,
-    "rec9vaHAbQz9BRYbr": 8,
-    "recAIaas5zRNaYKUi": 8,
-    "recAnOQlfTJpcfzTu": 8,
-    "recBc1Z0L2ywC7jgp": 8,
-    "recBdCx8YnegelDlc": 8,
-    "recCZuGfQWSsDpQL1": 8,
-    "recCqCZA5zj4kv8ir": 8,
-    "recDHS40JhdlnwqOf": 8,
-    "recDz2IIratknSPaj": 8,
-    "recECOvudpFMfR415": 8,
-    "recEIvXkPK9Cov4Ax": 8,
-    "recF9pTkZDmehc6Yr": 8,
-    "recFVIB2q9vUclNWC": 8,
-    "recGJtc0zmgwEXZNI": 8,
-    "recGXFdOAG9RELiKe": 8,
-    "recGZOliFqj6Uss07": 8,
-    "recGweSGrPEAf8vFC": 8,
-    "recHA03atJGVePjaE": 8,
-    "recHVqcZHzhfGOaap": 8,
-    "recIVb2sFvTo3JfPR": 8,
-    "recIcsTemfu1gNMaB": 8,
-    "recInBCiQ0POh6FdW": 8,
-    "recJ1seJQmgG4hY9M": 8,
-    "recJTTWqDd6LnkIe4": 8,
-    "recKUu9donZgVRnqN": 8,
-    "recKVx43EGNVABXy4": 8,
-    "recMa87nWr9jYwKj7": 8,
-    "recN6s2wIdUvLXMSv": 8,
-    "recPSBPgEUXXrVL8U": 8,
-    "recR5w4hhCCKEUSRd": 8,
-    "recUp9fJw7f22aLK5": 8,
-    "recVu9J7tGHQLKmSk": 8,
-    "recW8ZZ185VM8xrBh": 8,
-    "recWIFelhddwqdSb6": 8,
-    "recX5mHkUigSPdtLd": 8,
-    "recX9T3ecSr6ICViI": 8,
-    "recZISHsjRKLfRqTJ": 8,
-    "recZyqKf5I03Nert9": 8,
-    "recaoXlgEbPVhC0bk": 8,
-    "recb7MltD4m6eHNHi": 8,
-    "recc3yy5i7aRZMG0W": 8,
-    "reccyb9Awsn1mMHaI": 8,
-    "recdYDywZG1NaG49O": 8,
-    "rece5RPC4FhoNnN3i": 8,
-    "receLiB901S5DgVAw": 8,
-    "recf1GQlWDOskIBI2": 8,
-    "recfci3wzfNMSi6d0": 8,
-    "recgiT3lXfMpoKFV3": 8,
-    "rechB2I8dkhhj3E24": 8,
-    "rechC5kidr5eNaNvZ": 8,
-    "rechiHNo5IvedXIJ3": 8,
-    "recipGKjqR8Xd2gQE": 8,
-    "recjmsQan5UGsSAzr": 8,
-    "reclcCY8uH1NBiHAK": 4,
-    "recnKRW3LUzr91mni": 8,
-    "recnLmzWmGIyyaA02": 8,
-    "recqR1uYEzPoIfesI": 8,
-    "recqkE4I2M8uiwYQh": 8,
-    "recqkutVlKiLEad52": 8,
-    "recsSDWWnCJZRiKsQ": 8,
-    "rectMPPyvcV0mL7U3": 8,
-    "rectMbhXlVjPbw3Z2": 8,
-    "recuYBIUgkZkA2nNZ": 8,
-    "recvFSCQYVNK8xedu": 8,
-    "recvpRLLuFM5cA04U": 8,
-    "recvue036WTWVM3ow": 8,
-    "recy6nfUFmvk5fpxv": 8,
-    "reczR8eINO0UucFj9": 8
+    "rec1wLAwEYuAwvTMP": 9,
+    "rec3lKdp4CQAt1zyn": 9,
+    "rec4kkIFqPuiLxMqH": 9,
+    "rec66OTG00r16vw1Q": 9,
+    "rec6i4EuVR4CGiJc5": 9,
+    "rec6r95LhXVBNECgX": 9,
+    "rec7AFSPg92pQORzr": 9,
+    "rec7yPHJcyAY14q3h": 9,
+    "rec8XxcRXTgzmlBMq": 9,
+    "rec9PRLh2zity50OO": 9,
+    "rec9ucVvUJwkji2zB": 9,
+    "rec9vaHAbQz9BRYbr": 9,
+    "recAIaas5zRNaYKUi": 9,
+    "recAnOQlfTJpcfzTu": 9,
+    "recBc1Z0L2ywC7jgp": 9,
+    "recBdCx8YnegelDlc": 9,
+    "recCZuGfQWSsDpQL1": 9,
+    "recCqCZA5zj4kv8ir": 9,
+    "recDHS40JhdlnwqOf": 9,
+    "recDz2IIratknSPaj": 9,
+    "recECOvudpFMfR415": 9,
+    "recEIvXkPK9Cov4Ax": 9,
+    "recETRYIAvD5UwMQX": 1,
+    "recF9pTkZDmehc6Yr": 9,
+    "recFVIB2q9vUclNWC": 9,
+    "recGJtc0zmgwEXZNI": 9,
+    "recGXFdOAG9RELiKe": 9,
+    "recGZOliFqj6Uss07": 9,
+    "recGweSGrPEAf8vFC": 9,
+    "recHA03atJGVePjaE": 9,
+    "recHVqcZHzhfGOaap": 9,
+    "recIVb2sFvTo3JfPR": 9,
+    "recIcsTemfu1gNMaB": 9,
+    "recInBCiQ0POh6FdW": 9,
+    "recJ1seJQmgG4hY9M": 9,
+    "recJTTWqDd6LnkIe4": 9,
+    "recKUu9donZgVRnqN": 9,
+    "recKVx43EGNVABXy4": 9,
+    "recMa87nWr9jYwKj7": 9,
+    "recN6s2wIdUvLXMSv": 9,
+    "recPSBPgEUXXrVL8U": 9,
+    "recQlGfNS2lmtEddx": 1,
+    "recR5w4hhCCKEUSRd": 9,
+    "recTVJZBKiKtRN0UV": 1,
+    "recTYy244yE1DbMpw": 1,
+    "recTiDURGB0Hy8ECV": 1,
+    "recUp9fJw7f22aLK5": 9,
+    "recVu9J7tGHQLKmSk": 9,
+    "recW8ZZ185VM8xrBh": 9,
+    "recWIFelhddwqdSb6": 9,
+    "recX5mHkUigSPdtLd": 9,
+    "recX9T3ecSr6ICViI": 9,
+    "recXCHi63oekzNuMM": 1,
+    "recZISHsjRKLfRqTJ": 9,
+    "recZyqKf5I03Nert9": 9,
+    "recaoXlgEbPVhC0bk": 9,
+    "recb7MltD4m6eHNHi": 9,
+    "recc2aau1dVmxgNCh": 1,
+    "recc3yy5i7aRZMG0W": 9,
+    "reccyb9Awsn1mMHaI": 9,
+    "recdYDywZG1NaG49O": 9,
+    "rece5RPC4FhoNnN3i": 9,
+    "receLiB901S5DgVAw": 9,
+    "recf1GQlWDOskIBI2": 9,
+    "recfci3wzfNMSi6d0": 9,
+    "recgiT3lXfMpoKFV3": 9,
+    "rechB2I8dkhhj3E24": 9,
+    "rechC5kidr5eNaNvZ": 9,
+    "rechiHNo5IvedXIJ3": 9,
+    "recipGKjqR8Xd2gQE": 9,
+    "recjmsQan5UGsSAzr": 9,
+    "reclUFRtLOjnzn0lS": 1,
+    "reclcCY8uH1NBiHAK": 5,
+    "recnKRW3LUzr91mni": 9,
+    "recnLmzWmGIyyaA02": 9,
+    "recpV0ReurRBwEUH0": 1,
+    "recqR1uYEzPoIfesI": 9,
+    "recqkE4I2M8uiwYQh": 9,
+    "recqkutVlKiLEad52": 9,
+    "recsSDWWnCJZRiKsQ": 9,
+    "recsXu5x1ZAKOJxlt": 1,
+    "rectMPPyvcV0mL7U3": 9,
+    "rectMbhXlVjPbw3Z2": 9,
+    "recu5SkgvyNGzWhvO": 1,
+    "recuKrAHBv1rFgOYk": 1,
+    "recuYBIUgkZkA2nNZ": 9,
+    "recut7857w8dY0xpq": 1,
+    "recvFSCQYVNK8xedu": 9,
+    "recvpRLLuFM5cA04U": 9,
+    "recvue036WTWVM3ow": 9,
+    "recy6nfUFmvk5fpxv": 9,
+    "reczR8eINO0UucFj9": 9
   },
   "podejrzane": {
     "rec0TApe9Ge0ERHqi": 2,
@@ -1591,52 +1639,12 @@
       "data": "2026-11-20T15:07+01:00",
       "proby": 1
     },
-    "rec5SLOX6vqbRRcTr": {
-      "propozycje": [
-        {
-          "nazwa": "Krzesło jadalniane tapicerowane tkaniną i drewnem Cloda (wariant Natural Wood - Linen Beige)",
-          "sklep": "Sklum",
-          "url": "https://www.sklum.com/pl/kup-krzesla-do-jadalni/76100-krzeslo-do-jadalni-z-tkaniny-i-drewna-cloda.html",
-          "cena": 374.95,
-          "cena_ze_strony": true,
-          "wymiary": "47 cm (szer.) x 55 cm (gł.) x 80 cm (wys.), wysokość siedziska 48 cm",
-          "uzasadnienie": "To skandynawskie krzesło ma ramę z jasnego drewna kauczukowego, wygięte drewniane oparcie i beżowe tapicerowane siedzisko, więc niemal powtarza sylwetkę i kolorystykę Nayme i tak samo pasuje do jasnej, naturalnej jadalni.",
-          "zdjecie": "https://cdn.sklum.com/pl/3643685-large_default/krzeslo-do-jadalni-z-tkaniny-cloda-i-drewna.jpg",
-          "weryfikacja": "sprawdzony"
-        }
-      ],
-      "uwagi": "Na stronie pojedynczego krzesła Cloda domyślnie wybrany jest wariant „Dark Wood - Grey”. Przy zamówieniu trzeba zaznaczyć kolor „Natural Wood - Linen Beige”, który jest dostępny na tej samej stronie. Krzesło jest w magazynie, dostawa 27–30.11.2026. Wygięte oparcie potwierdza opis zestawu 2 krzeseł Cloda (https://www.sklum.com/pl/kup-zestaw-2-krzesel/164851-zestaw-2-krzesel-do-jadalni-z-tkaniny-cloda-i-drewna.html). Ten zestaw ma domyślnie wariant naturalny/beż i kosztuje 709,95 zł, czyli ok. 355 zł za sztukę. Cena 374,95 zł jest ok. 33% niższa od 561 zł, czyli tylko trochę poza przedziałem. Wymiary mieszczą się w ±15%. Odrzucone: Beliani MAROA (zestaw 2 szt., ok. 1049 zł) ma półokrągłe oparcie ze sklejki, a strona nie podaje jednoznacznie dostępności. Beliani ANOKA: brak ceny i niepewna dostępność. Westwing Maia/Julie: podłokietniki, ciemne drewno lub cena ok. 1000–1240 zł. Sklum Nairea: tapicerowane oparcie i metalowe nogi. Strona Agata NIKAS nie otworzyła się (403). Wyszukiwanie w Westwing i Allegro nie dało wyników dla modelu Nayme.",
-      "odrzucone": [],
-      "blad": false,
-      "data": "2026-11-20T15:09+01:00",
-      "proby": 1
-    },
     "recDp3durcH9Lyrgy": {
       "propozycje": [],
       "uwagi": "Szukałem białego, metalowego kinkietu w stylu industrialnym, podobnego do Aldex Dron 997C. To lampa z długim (ok. 80 cm) ramieniem z regulacją przegubu, zawieszona na pionowym drążku o wysokości ok. 113 cm, z małym kloszem na żarówkę E27. Przeszukałem allegro.pl, beliani.pl, sklum.com/pl, westwing.pl, ikea.com/pl i miamo.pl. W żadnym z nich nie znalazłem pewnego zamiennika, którego stronę dałoby się otworzyć i sprawdzić.\n1) Allegro: wyszukiwarka pokazuje ten sam model (Aldex Dron 997C, biały) na liście wyników za ok. 499 zł, w 3 ofertach. Allegro blokuje jednak automatyczny dostęp (błąd 403 i przekroczony czas), więc nie mogłem otworzyć żadnej oferty ani potwierdzić jej dostępności i ceny. Warto, żeby architekt sam wpisał w Allegro „Aldex Dron 997C” — to byłby identyczny produkt.\n2) Beliani MISSISSIPPI L (biały, kinkiet z długim ramieniem, ok. 78 cm): strona produktu na beliani.pl przekierowuje do kategorii, co wskazuje, że model jest wycofany.\n3) IKEA: kinkiety z ramieniem (NYMÅNE, ÅRSTID, RANARP) są wielokrotnie mniejsze, a NYMÅNE z obrotowym ramieniem nie jest sprzedawany przez internet.\n4) Sklum: Lizz ma 69 cm szerokości, ale nie ma wersji białej i jest dużo mniejszy w pionie. Westwing: kinkiety regulowane w kolorze białym są wyprzedane albo kosztują 1149–2249 zł (Tolomeo, Multi-Lite) i wyglądają inaczej.\nInne sklepy, w których model Dron 997C jest nadal dostępny (np. kolory-swiatla.pl, polskielampy.pl, mamadecor.pl), nie są na liście dozwolonych, więc ich nie proponuję.",
       "odrzucone": [],
       "blad": false,
       "data": "2026-11-20T15:14+01:00",
-      "proby": 1
-    },
-    "recOEE8q1F5wgi89W": {
-      "propozycje": [
-        {
-          "nazwa": "Lampa stołowa z metalu Almo, czarna (Westwing Collection)",
-          "sklep": "Westwing",
-          "url": "https://www.westwing.pl/metal-table-lamp-almo-ii-en-24wes34717.html",
-          "cena": 239.9,
-          "cena_ze_strony": true,
-          "wymiary": "⌀ 15 cm (podstawa) x 44 cm wys.; klosz ⌀ 12 cm x 12 cm",
-          "uzasadnienie": "Ma to samo co oryginał: matowy czarny metal malowany proszkowo, okrągłą podstawę ⌀ 15 cm, mały klosz z regulacją i cenę bliską 260 zł, więc pasuje do minimalistycznego, jasnego wnętrza w stylu industrialnym, ale jest niższa o około 18 cm.",
-          "zdjecie": "",
-          "weryfikacja": "sprawdzony"
-        }
-      ],
-      "uwagi": "Wycofany produkt to lampka Aldex Beryl Black 976B1: czarny metal, klosz w kształcie kopuły z jasnym wnętrzem na krótkim wysięgniku z boku pionowego pręta, okrągła podstawa, żarówka E27 typu industrial. Na zdjęciu stoi na tle jasnoszarej ściany, w minimalistycznym wnętrzu w stylu loft. W dozwolonych sklepach nie znalazłem tego samego modelu ani dokładnego odpowiednika o wysokości około 60 cm, który dałoby się kupić.\n\nJedyną propozycją jest Westwing Almo. Na stronie sprawdziłem, że jest dostępna (przycisk „Do koszyka”, dostawa w 3–5 dni roboczych), kosztuje 239,90 zł, jest w kolorze czarnym, ma regulowany klosz, podstawę ⌀ 15 cm, oprawkę E14 i przełącznik kołyskowy. Zastrzeżenia:\n1) Ma 44 cm wysokości zamiast 62 cm (około 29% mniej), więc wychodzi poza tolerancję wymiarów.\n2) Strona nie opisuje dokładnie kształtu klosza ani konstrukcji. Podaje tylko klosz 12 x 12 cm, metalowy i regulowany. Architekt powinien obejrzeć zdjęcia, zanim ją zatwierdzi.\n3) Oprawka E14 zamiast E27, więc nie zmieści się duża dekoracyjna żarówka jak w oryginale.\n\nOdrzuciłem:\n- Beliani PINKEEN, FLINT i CABRIS oraz Sklum Clayt: strony produktów przekierowują do kategorii, czyli produkty zostały wycofane.\n- Sklum Deyan: ma podobną formę i 63 cm, ale jest tylko w kolorze białym, z drewnem.\n- Sklum Idina: lampa z wysięgnikiem, o innej formie.\n- Westwing Cal: 279 zł i 50 cm, ale strona nie potwierdza kształtu klosza.\n- Westwing Cassandra: wąski klosz typu spot.\n\nAllegro i agatameble.pl blokują pobieranie stron (błąd 403), więc nie mogłem tam potwierdzić żadnej oferty. Warto ręcznie sprawdzić na Allegro hasło „Aldex Beryl 976B1”, bo inne sklepy wciąż mają ten model w cenie 260 zł.",
-      "odrzucone": [],
-      "blad": false,
-      "data": "2026-11-20T15:17+01:00",
       "proby": 1
     },
     "recOQ5hzsMNB8EaZK": {
@@ -1913,5 +1921,5 @@
       "proby": 1
     }
   },
-  "ostatni_mail": "2026-11-26"
+  "ostatni_mail": "2026-11-27"
 }
